@@ -12,27 +12,12 @@
     {{-- <script src="{{ asset('js/app.js') }}" defer></script> --}}
     <script src="{{ asset('js/app.js') }}"></script>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Poppins:400,500,600,700|Roboto:400,500"
-        rel="stylesheet" />
+    {{-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> --}}
     <link href="https://cdn.materialdesignicons.com/3.0.39/css/materialdesignicons.min.css" rel="stylesheet" />
-    <link href="{{ asset('css/table.css') }}" rel="stylesheet">
     <link href="{{ asset('css/nprogress.css') }}" rel="stylesheet">
 
     @stack('styles')
-    <!--
-    HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
-  -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
-    <!-- {{-- <script src="assets/plugins/nprogress/nprogress.js"></script> --}} -->
     <script type="text/javascript" src="{{ asset('js/nprogress.js') }}"></script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
 </head>
 
 <body class="header-fixed sidebar-static sidebar-dark header-light" id="body">
@@ -96,10 +81,7 @@
                             results: $.map(data, function (item) {
                                 return {
                                     text: item.email,
-                                    id: item.id,
-                                    url: function (params) {
-                                        return '/some/url/' + params.term;
-                                    }
+                                    id: item.id
                                 }
                             })
                         };
