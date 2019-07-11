@@ -1,0 +1,19 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// theme
+@import '~sleek-dashboard/dist/assets/plugins/jvectormap/jquery-jvectormap-2.0.3.css';
+@import '~sleek-dashboard/dist/assets/plugins/daterangepicker/daterangepicker.css';
+@import '~sleek-dashboard/dist/assets/css/sleek.css';
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+@import '~sweetalert2/src/sweetalert2.scss';
+
+//select2
+@import '~select2/dist/css/select2.css';
+@import '~select2-theme-bootstrap4/dist/select2-bootstrap.css';
