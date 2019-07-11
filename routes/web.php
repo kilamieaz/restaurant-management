@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::prefix('admin')->group(function () {
+    // Route::resource('user', 'Admin\UserController');
+    // Route::get('dashboard', 'Admin\DashboardController@index')->name('dashboard.index');
+    Route::resource('menu', 'Admin\MenuController');
+});
+
+Route::prefix('datatable')->group(function () {
+    Route::get('menu-datatable', 'DataTable\MenuDataTableController@index')->name('datatable.menu');
+});
