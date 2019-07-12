@@ -20,11 +20,13 @@ Route::prefix('admin')->group(function () {
     // Route::get('dashboard', 'Admin\DashboardController@index')->name('dashboard.index');
     Route::resource('menu', 'Admin\MenuController');
     Route::resource('category', 'Admin\CategoryController');
+    Route::resource('role', 'Admin\RoleController');
 });
 
 Route::prefix('datatable')->group(function () {
     Route::get('menu-datatable', 'DataTable\MenuDataTableController@index')->name('datatable.menu');
     Route::get('category-datatable', 'DataTable\CategoryDataTableController@index')->name('datatable.category');
+    Route::get('role-datatable', 'DataTable\RoleDataTableController@index')->name('datatable.role');
 });
 Auth::routes();
 
