@@ -21,12 +21,14 @@ Route::prefix('admin')->group(function () {
     Route::resource('menu', 'Admin\MenuController');
     Route::resource('category', 'Admin\CategoryController');
     Route::resource('role', 'Admin\RoleController');
+    Route::resource('employee', 'Admin\EmployeeController');
 });
 
 Route::prefix('datatable')->group(function () {
     Route::get('menu-datatable', 'DataTable\MenuDataTableController@index')->name('datatable.menu');
     Route::get('category-datatable', 'DataTable\CategoryDataTableController@index')->name('datatable.category');
     Route::get('role-datatable', 'DataTable\RoleDataTableController@index')->name('datatable.role');
+    Route::get('employee-datatable', 'DataTable\EmployeeDataTableController@index')->name('datatable.employee');
 });
 Auth::routes();
 
