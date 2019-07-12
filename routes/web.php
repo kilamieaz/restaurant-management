@@ -22,6 +22,7 @@ Route::prefix('admin')->group(function () {
     Route::resource('category', 'Admin\CategoryController');
     Route::resource('role', 'Admin\RoleController');
     Route::resource('employee', 'Admin\EmployeeController');
+    Route::resource('member', 'Admin\MemberController');
 });
 
 Route::prefix('datatable')->group(function () {
@@ -29,6 +30,7 @@ Route::prefix('datatable')->group(function () {
     Route::get('category-datatable', 'DataTable\CategoryDataTableController@index')->name('datatable.category');
     Route::get('role-datatable', 'DataTable\RoleDataTableController@index')->name('datatable.role');
     Route::get('employee-datatable', 'DataTable\EmployeeDataTableController@index')->name('datatable.employee');
+    Route::get('member-datatable', 'DataTable\MemberDataTableController@index')->name('datatable.member');
 });
 Auth::routes();
 
