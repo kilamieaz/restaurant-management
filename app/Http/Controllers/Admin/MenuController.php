@@ -6,6 +6,7 @@ use App\Menu;
 use App\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 
 class MenuController extends Controller
 {

@@ -42,7 +42,8 @@
 'label_category_menu'],
 ['name' => 'stock', 'type' => 'text' , 'value' => '', 'header' => 'Stock', 'label_id' => 'label_stock_menu'],
 ['name' => 'price', 'type' => 'text' , 'value' => '', 'header' => 'Price', 'label_id' => 'label_price_menu'],
-['name' => 'description', 'type' => 'text' , 'value' => '', 'header' => 'Description', 'label_id' => 'label_description_menu'],
+['name' => 'description', 'type' => 'text' , 'value' => '', 'header' => 'Description', 'label_id' =>
+'label_description_menu'],
 ['name' => 'photo', 'type' => 'file' , 'value' => '', 'header' => 'Photo', 'label_id' => 'label_photo_menu'],
 ]
 ])
@@ -51,9 +52,6 @@
 @endsection
 
 @push('scripts')
-<script type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-
 <script type="text/javascript">
     var save_method;
     $(document).ready(function () {
