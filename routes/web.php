@@ -19,8 +19,13 @@ Route::prefix('admin')->group(function () {
     // Route::resource('user', 'Admin\UserController');
     // Route::get('dashboard', 'Admin\DashboardController@index')->name('dashboard.index');
     Route::resource('menu', 'Admin\MenuController');
+    Route::resource('category', 'Admin\CategoryController');
 });
 
 Route::prefix('datatable')->group(function () {
     Route::get('menu-datatable', 'DataTable\MenuDataTableController@index')->name('datatable.menu');
+    Route::get('category-datatable', 'DataTable\CategoryDataTableController@index')->name('datatable.category');
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
