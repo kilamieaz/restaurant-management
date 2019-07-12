@@ -19,7 +19,9 @@
                 'columns' => [
                 ['header' => 'Nama'],
                 ['header' => 'Category'],
+                ['header' => 'Stock'],
                 ['header' => 'Price'],
+                ['header' => 'Description'],
                 ['header' => 'Photo'],
                 ]
                 ])
@@ -38,7 +40,9 @@
 ['name' => 'name', 'type' => 'text' , 'value' => '', 'header' => 'Name', 'label_id' => 'label_name_menu'],
 ['name' => 'category_id', 'type' => 'select', 'value' => $categories, 'header' => 'Category', 'label_id' =>
 'label_category_menu'],
+['name' => 'stock', 'type' => 'text' , 'value' => '', 'header' => 'Stock', 'label_id' => 'label_stock_menu'],
 ['name' => 'price', 'type' => 'text' , 'value' => '', 'header' => 'Price', 'label_id' => 'label_price_menu'],
+['name' => 'description', 'type' => 'text' , 'value' => '', 'header' => 'Description', 'label_id' => 'label_description_menu'],
 ['name' => 'photo', 'type' => 'file' , 'value' => '', 'header' => 'Photo', 'label_id' => 'label_photo_menu'],
 ]
 ])
