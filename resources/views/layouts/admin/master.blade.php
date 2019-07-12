@@ -12,7 +12,11 @@
     {{-- <script src="{{ asset('js/app.js') }}" defer></script> --}}
     <script src="{{ asset('js/app.js') }}"></script>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    {{-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> --}}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Poppins:400,500,600,700|Roboto:400,500"
+        rel="stylesheet" />
     <link href="https://cdn.materialdesignicons.com/3.0.39/css/materialdesignicons.min.css" rel="stylesheet" />
     <link href="{{ asset('css/nprogress.css') }}" rel="stylesheet">
 
@@ -31,7 +35,7 @@
     <div class="mobile-sticky-body-overlay"></div>
     <div class="wrapper">
         <!-- Github Link -->
-        <a href="https://github.com/kilamieaz/sistem-akademik" class="github-link">
+        <a href="https://github.com/kilamieaz/restaurant-management" class="github-link">
             <svg width="70" height="70" viewBox="0 0 250 250" aria-hidden="true">
                 <defs>
                     <linearGradient id="grad1" x1="0%" y1="75%" x2="100%" y2="0%">

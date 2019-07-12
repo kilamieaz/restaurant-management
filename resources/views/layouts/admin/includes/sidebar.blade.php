@@ -26,6 +26,41 @@
                 </li>
 
                 <li class="has-sub active expand">
+                    <a class="sidenav-item-link" href="{{ route('employee.index') }}" aria-expanded="false">
+                        <i class="mdi mdi-view-dashboard-outline"></i>
+                        <span class="nav-text">Manage Employee</span>
+                    </a>
+                </li>
+
+                <li class="has-sub active expand">
+                    <a class="sidenav-item-link" href="{{ route('member.index') }}" aria-expanded="false">
+                        <i class="mdi mdi-view-dashboard-outline"></i>
+                        <span class="nav-text">Manage Member</span>
+                    </a>
+                </li>
+
+                <li class="has-sub active expand">
+                    <a class="sidenav-item-link" href="{{ route('menu.index') }}" aria-expanded="false">
+                        <i class="mdi mdi-view-dashboard-outline"></i>
+                        <span class="nav-text">Manage Menu</span>
+                    </a>
+                </li>
+
+                <li class="has-sub active expand">
+                    <a class="sidenav-item-link" href="{{ route('category.index') }}" aria-expanded="false">
+                        <i class="mdi mdi-view-dashboard-outline"></i>
+                        <span class="nav-text">Manage Category</span>
+                    </a>
+                </li>
+
+                <li class="has-sub active expand">
+                    <a class="sidenav-item-link" href="{{ route('role.index') }}" aria-expanded="false">
+                        <i class="mdi mdi-view-dashboard-outline"></i>
+                        <span class="nav-text">Manage Position</span>
+                    </a>
+                </li>
+
+                {{-- <li class="has-sub active expand">
                     <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
                         data-target="#dashboard" aria-expanded="false" aria-controls="dashboard">
                         <i class="mdi mdi-view-dashboard-outline"></i>
@@ -53,7 +88,7 @@
                             </li>
                         </div>
                     </ul>
-                </li>
+                </li> --}}
                 <hr class="separator" />
 
                 <div class="sidebar-footer">

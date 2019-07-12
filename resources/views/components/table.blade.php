@@ -1,6 +1,6 @@
-<div class="table-responsive">
+<div class="table-responsive ">
     <table class="table table-bordered" id="{{ $table_id }}">
-        <thead>
+        <thead class="thead-dark">
             <tr>
                 {{ $thead ?? '' }}
             </tr>
