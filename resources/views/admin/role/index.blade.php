@@ -13,11 +13,12 @@
             <div class="card-body">
                 {{-- datatable --}}
                 @component('components.datatable', [
-                'table_id' => 'role-datatable',
-                'route_name' => 'datatable.role',
+                'table_id' => 'menu-datatable',
+                'route_name' => 'datatable.menu',
                 'columns' => [
-                ['header' => 'Name'],
-                ['header' => 'Description'],
+                ['header' => 'Nama', 'class' => 'all'],
+                ['header' => 'Description', 'class' => 'all'],
+                ['header' => 'Action', 'class' => 'all'],
                 ]
                 ])
                 @endcomponent

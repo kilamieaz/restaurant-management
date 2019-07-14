@@ -14,14 +14,15 @@
             <div class="card-body">
                 {{-- datatable --}}
                 @component('components.datatable', [
-                'table_id' => 'employee-datatable',
-                'route_name' => 'datatable.employee',
+                'table_id' => 'menu-datatable',
+                'route_name' => 'datatable.menu',
                 'columns' => [
-                ['header' => 'Nama'],
-                ['header' => 'Position'],
-                ['header' => 'Email'],
-                ['header' => 'Handphone'],
-                ['header' => 'Photo'],
+                ['header' => 'Nama', 'class' => 'all'],
+                ['header' => 'Position', 'class' => 'all'],
+                ['header' => 'Email', 'class' => 'all'],
+                ['header' => 'Handphone', 'class' => 'all'],
+                ['header' => 'Photo', 'class' => 'all'],
+                ['header' => 'Action', 'class' => 'all'],
                 ]
                 ])
                 @endcomponent
