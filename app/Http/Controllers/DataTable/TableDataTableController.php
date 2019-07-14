@@ -16,6 +16,7 @@ class TableDataTableController extends Controller
             $row = [];
             $row[] = ++$index;
             $row[] = $list->name;
+            $row[] = $list->capacity;
             $row[] = '<div class="text-center"><div class="btn-group">
                <button type="button" onclick="editForm(' . $list->id . ')" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></button>
                <button type="button" onclick="deleteData(' . $list->id . ')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button></div></div>';
