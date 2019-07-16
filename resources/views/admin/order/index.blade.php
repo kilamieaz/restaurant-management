@@ -11,22 +11,48 @@
             </div>
             <div class="card-body">
                 <div class="row">
+                    <div class="col-md-12 border p-2">
+                        <h2>List Table</h2>
+                        {{-- datatable --}}
+                        @component('components.datatable', [
+                        'table_id' => 'table-datatable',
+                        'code' => '',
+                        'route_name' => 'datatable.table',
+                        'columns' => [
+                        ['header' => 'id', 'class' => 'never'],
+                        ['header' => 'Nama', 'class' => 'all'],
+                        ['header' => 'Capacity', 'class' => 'all'],
+                        ['header' => 'Action', 'class' => 'never'],
+                        ]
+                        ])
+                        @endcomponent
+                        {{-- end datatable --}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card card-default">
+            <div class="card-header card-header-border-bottom">
+            </div>
+            <div class="card-body">
+                <div class="row">
                     <div class="col-md-7 border p-2">
-                        <h2>List</h2>
+                        <h2>List Menu</h2>
                         {{-- datatable --}}
                         @component('components.datatable', [
                         'table_id' => 'menu-datatable',
                         'code' => '',
                         'route_name' => 'datatable.menu',
                         'columns' => [
-                        ['header' => 'id', 'class' => 'none'],
+                        ['header' => 'id', 'class' => 'never'],
                         ['header' => 'Nama', 'class' => 'all'],
-                        ['header' => 'Category', 'class' => 'none'],
-                        ['header' => 'Stock', 'class' => 'none'],
+                        ['header' => 'Category', 'class' => 'never'],
+                        ['header' => 'Stock', 'class' => 'never'],
                         ['header' => 'Price', 'class' => 'all'],
-                        ['header' => 'Description', 'class' => 'none'],
+                        ['header' => 'Description', 'class' => 'never'],
                         ['header' => 'Photo', 'class' => 'all'],
-                        ['header' => 'Action', 'class' => 'none'],
+                        ['header' => 'Action', 'class' => 'never'],
                         ]
                         ])
                         @endcomponent
@@ -41,16 +67,10 @@
                                 @method('POST')
                                 <input type="hidden" name="order_code" value="{{ $order_code }}">
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-12">
                                         <div class="form-group">
-                                            <input type="text" name="name" class="form-control" placeholder="name"
-                                                readonly>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="number" name="price" class="form-control" placeholder="price"
-                                                readonly>
+                                            <input type="text" id="table_name" name="table_name" class="form-control"
+                                                placeholder="name table" readonly>
                                         </div>
                                     </div>
                                 </div>
@@ -58,15 +78,30 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="number" name="discount" class="form-control"
+                                            <input type="text" id="menu_name" name="name" class="form-control"
+                                                placeholder="name menu" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="number" id="menu_price" name="price" class="form-control"
+                                                placeholder="price" readonly>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="number" id="menu_discount" name="discount" class="form-control"
                                                 placeholder="Discount" readonly>
                                         </div>
                                     </div>
 
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="number" name="final_price" class="form-control"
-                                                placeholder="final price" value="" disabled>
+                                            <input type="number" id="menu_final_price" name="final_price"
+                                                class="form-control" placeholder="final price" value="" disabled>
                                         </div>
                                     </div>
                                 </div>
@@ -75,10 +110,12 @@
                                     <div class="col-md-4 m-auto p-auto">
                                         <div class="form-group">
                                             <label for="quantity">Quantity</label>
-                                            <input type="number" name="quantity" value="1" class="form-control">
+                                            <input type="number" id="menu_quantity" name="quantity" value="1"
+                                                class="form-control">
                                         </div>
                                     </div>
                                     <input type="hidden" name="menu_id" id="menu_id" value="">
+                                    <input type="hidden" name="table_id" id="table_id" value="">
                                 </div>
 
                                 <button type="submit" onclick="addForm()" class="btn btn-primary btn-block"><span
@@ -124,8 +161,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="bayar">Bayar (Rp)</label>
-                                <input type="number" name="bayar" class="form-control" id="bayar"
-                                    placeholder="Bayar">
+                                <input type="number" name="bayar" class="form-control" id="bayar" placeholder="Bayar">
                             </div>
                             <button type="submit" class="btn btn-primary btn-block btn-selesai">Selesai <span
                                     class="glyphicon glyphicon-ok" aria-hidden="true"></span></button>
@@ -142,7 +178,8 @@
 'modal_id' => 'input-order-modal',
 'modal_header' => 'Role',
 'inputs' => [
-['name' => 'quantity', 'type' => 'number' , 'value' => '', 'header' => 'Quantity', 'label_id' => 'label_quantity_order'],
+['name' => 'quantity', 'type' => 'number' , 'value' => '', 'header' => 'Quantity', 'label_id' =>
+'label_quantity_order'],
 ]
 ])
 @endcomponent
@@ -152,16 +189,30 @@
 @push('scripts')
 <script type="text/javascript">
     $(document).ready(function () {
-        var table = $('#menu-datatable').DataTable();
+        var table_table = $('#table-datatable').DataTable();
         // row table on click
+        $('#table-datatable').on('click', 'tr', function () {
+            var id = table_table.row(this).data()[1];
+            var url = "table/" + id;
+            $.ajax({
+                type: 'get',
+                url: url,
+                success: function (data) {
+                    $("#table_id").val(data.id);
+                    $("#table_name").val(data.name);
+                }
+            })
+        });
+        var table_menu = $('#menu-datatable').DataTable();
+        // row menu on click
         $('#menu-datatable').on('click', 'tr', function () {
-            var id = table.row(this).data()[1];
+            var id = table_menu.row(this).data()[1];
             var url = "menu/" + id;
             $.ajax({
                 type: 'get',
                 url: url,
                 success: function (data) {
-                    $("input[name='menu_id']").val(data.id);
+                    $("#menu_id").val(data.id);
                     $("input[name='name']").val(data.name);
                     $("input[name='price']").val(data.price);
                     $("input[name='discount']").val(0);
@@ -189,6 +240,8 @@
                         $('form#order')[0].reset();
                         $("input[name='order_code']").val(data.code);
                         $("input[name='total']").val(data.total);
+                        $("#table_id").val(data.table_id);
+                        $("#table_name").val(data.table_name);
                         table.ajax.reload();
                         Swal.fire(
                             'Good job!',

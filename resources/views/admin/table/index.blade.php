@@ -17,6 +17,7 @@
                 'code' => '',
                 'route_name' => 'datatable.table',
                 'columns' => [
+                ['header' => 'id', 'class' => 'never'],
                 ['header' => 'Nama', 'class' => 'all'],
                 ['header' => 'Capacity', 'class' => 'all'],
                 ['header' => 'Action', 'class' => 'all'],

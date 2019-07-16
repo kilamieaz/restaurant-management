@@ -28,6 +28,7 @@ class AddForeignKey extends Migration
         Schema::table('orders', function (Blueprint $table) {
             $table->foreign('member_id')->references('id')->on('members');
             $table->foreign('employee_id')->references('id')->on('employees');
+            $table->foreign('table_id')->references('id')->on('tables');
         });
 
         // foreign employee

@@ -15,6 +15,7 @@ class TableDataTableController extends Controller
         foreach ($tables as $index => $list) {
             $row = [];
             $row[] = ++$index;
+            $row[] = $list->id;
             $row[] = $list->name;
             $row[] = $list->capacity;
             $row[] = '<div class="text-center"><div class="btn-group">

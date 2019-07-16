@@ -16,6 +16,10 @@ class TableController extends Controller
     {
         $table = Table::create($request->all());    
     }
+    public function show(Table $table)
+    {
+        return $table;
+    }
     public function edit(Table $table)
     {
         echo json_encode($table);

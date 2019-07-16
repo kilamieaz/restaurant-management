@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Menu;
 use App\Order;
+use App\Table;
 use App\DetailOrder;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -19,11 +20,13 @@ class OrderController extends Controller
     public function store(Request $request)
     {
         $menu = Menu::find($request->menu_id);
+        $table = Table::find($request->table_id);
         $order = Order::firstOrCreate([
             // 'member_id' => 1,
             // 'employee_id' => Auth::user()->id,
             // 'employee_id' => 1,
-            'order_code' => $request->order_code
+            'order_code' => $request->order_code,
+            // 'table_id' => $request->table_id
         ]);
 
         $menuList = Order::find($order->id)->detailOrders()->where('menu_id', $request->menu_id);
@@ -44,7 +47,7 @@ class OrderController extends Controller
             ]);
         }
         $total = $order->detailOrders->sum('sub_total');
-        $data = ['code' => $order->order_code, 'total' => $total];
+        $data = ['code' => $order->order_code, 'total' => $total, 'table_name' => $table->name, 'table_id' => $table->id];
         return $data;
     }
 

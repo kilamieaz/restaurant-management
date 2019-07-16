@@ -18,7 +18,7 @@
                 'code' => '',
                 'route_name' => 'datatable.menu',
                 'columns' => [
-                ['header' => 'id', 'class' => 'none'],
+                ['header' => 'id', 'class' => 'never'],
                 ['header' => 'Nama', 'class' => 'all'],
                 ['header' => 'Category', 'class' => 'all'],
                 ['header' => 'Stock', 'class' => 'all'],
