@@ -14,6 +14,7 @@
                 {{-- datatable --}}
                 @component('components.datatable', [
                 'table_id' => 'table-datatable',
+                'code' => '',
                 'route_name' => 'datatable.table',
                 'columns' => [
                 ['header' => 'Nama', 'class' => 'all'],

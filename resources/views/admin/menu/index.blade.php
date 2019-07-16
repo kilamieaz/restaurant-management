@@ -15,6 +15,7 @@
                 {{-- datatable --}}
                 @component('components.datatable', [
                 'table_id' => 'menu-datatable',
+                'code' => '',
                 'route_name' => 'datatable.menu',
                 'columns' => [
                 ['header' => 'id', 'class' => 'none'],

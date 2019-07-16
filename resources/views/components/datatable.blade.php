@@ -9,6 +9,7 @@
 <th class="{{ $column['class']}}">{{ $column['header'] }}</th>
 @endforeach
 {{-- <th class="all" id="action">Action</th> --}}
+<input type="hidden" name="code" value={{ $code }}>
 @endslot
 @endcomponent
 
@@ -17,11 +18,16 @@
 <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
+        var id = $("input[name='code']").val();
+        if (id) url = "{!! route('order.show',"$code") !!}";
+
+        else url = "{!! route($route_name) !!}";
+        // console.log(url)
         $("#{{$table_id}}").DataTable({
             "responsive": true,
             "processing": true,
             "ajax": {
-                'url': '{!! route($route_name) !!}',
+                'url': url,
                 "type": "GET",
             }
         });

@@ -13,8 +13,9 @@
             <div class="card-body">
                 {{-- datatable --}}
                 @component('components.datatable', [
-                'table_id' => 'menu-datatable',
-                'route_name' => 'datatable.menu',
+                'table_id' => 'category-datatable',
+                'code' => '',
+                'route_name' => 'datatable.category',
                 'columns' => [
                 ['header' => 'Nama', 'class' => 'all'],
                 ['header' => 'Description', 'class' => 'all'],
