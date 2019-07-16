@@ -18,8 +18,9 @@ class CreateDetailOrdersTable extends Migration
             $table->unsignedBigInteger('order_id')->index();
             $table->unsignedBigInteger('menu_id')->index();
             $table->integer('quantity');
-            $table->integer('price');
-            $table->string('message');
+            $table->integer('sub_total');
+            $table->string('message')->nullable();
+            // $table->string('message');
             $table->timestamps();
         });
     }
