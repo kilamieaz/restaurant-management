@@ -25,6 +25,7 @@ Route::prefix('admin')->group(function () {
     Route::resource('member', 'Admin\MemberController');
     Route::resource('table', 'Admin\TableController');
     Route::resource('order', 'Admin\OrderController');
+    Route::resource('transaction', 'Admin\TransactionController');
 });
 
 Route::prefix('datatable')->group(function () {

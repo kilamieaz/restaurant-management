@@ -19,7 +19,7 @@
 <script type="text/javascript">
     $(document).ready(function () {
         var id = $("input[name='code']").val();
-        if (id) url = "{!! route('order.show',"$code") !!}";
+        if (id) url = "{!! route('transaction.show',"$code") !!}";
 
         else url = "{!! route($route_name) !!}";
         // console.log(url)
