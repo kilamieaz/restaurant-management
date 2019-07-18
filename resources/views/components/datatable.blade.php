@@ -15,7 +15,6 @@
 
 @push('scripts')
 <script type="text/javascript" src="{{ asset('js/datatable.js') }}"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
         var id = $("input[name='code']").val();
