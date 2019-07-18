@@ -27,6 +27,7 @@
         "@fortawesome/fontawesome-free": "^5.9.0",
         "datatables.net": "^1.10.19",
         "datatables.net-bs4": "^1.10.19",
+        "datatables.net-responsive": "^2.2.3",
         "moment": "^2.24.0",
         "nprogress": "^0.2.0",
         "select2": "^4.0.7",
