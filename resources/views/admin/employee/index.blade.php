@@ -21,6 +21,7 @@
                 ['header' => 'Nama', 'class' => 'all'],
                 ['header' => 'Position', 'class' => 'all'],
                 ['header' => 'Email', 'class' => 'all'],
+                // ['header' => 'Email', 'class' => 'all'],
                 ['header' => 'Handphone', 'class' => 'all'],
                 ['header' => 'Photo', 'class' => 'all'],
                 ['header' => 'Action', 'class' => 'all'],
@@ -41,7 +42,8 @@
 ['name' => 'name', 'type' => 'text' , 'value' => '', 'header' => 'Name', 'label_id' => 'label_name_employee'],
 ['name' => 'role_id', 'type' => 'select', 'value' => $roles, 'header' => 'Position', 'label_id' =>
 'label_role_employee'],
-['name' => 'email', 'type' => 'text' , 'value' => '', 'header' => 'Email', 'label_id' => 'label_email_employee'],
+['name' => 'email', 'type' => 'email' , 'value' => '', 'header' => 'Email', 'label_id' => 'label_email_employee'],
+['name' => 'password', 'type' => 'password' , 'value' => '', 'header' => 'Password', 'label_id' => 'label_password_employee'],
 ['name' => 'handphone', 'type' => 'text' , 'value' => '', 'header' => 'Handphone', 'label_id' =>
 'label_handphone_employee'],
 ['name' => 'photo', 'type' => 'file' , 'value' => '', 'header' => 'Photo', 'label_id' => 'label_photo_employee'],

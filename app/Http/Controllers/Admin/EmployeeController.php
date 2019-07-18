@@ -6,6 +6,7 @@ use App\Role;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 
 class EmployeeController extends Controller
@@ -19,8 +20,8 @@ class EmployeeController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        $data['password'] = 'employee';
-        // $data['role_id'] = UserRole::Staff;
+        $data['password'] = Hash::make($request->password);
+        // $data['role_id'] = UserRole::Chef;
         if ($request->hasFile('photo')) {
             $uploadedFile = $request->file('photo');
             $path = $uploadedFile->store('public/photo');
