@@ -22,13 +22,14 @@ class AddForeignKey extends Migration
         Schema::table('detail_orders', function (Blueprint $table) {
             $table->foreign('order_id')->references('id')->on('orders');
             $table->foreign('menu_id')->references('id')->on('menus');
+            $table->foreign('table_id')->references('id')->on('tables');
         });
 
         // foreign order
         Schema::table('orders', function (Blueprint $table) {
             $table->foreign('member_id')->references('id')->on('members');
             $table->foreign('employee_id')->references('id')->on('employees');
-            $table->foreign('table_id')->references('id')->on('tables');
+            // $table->foreign('table_id')->references('id')->on('tables');
         });
 
         // foreign employee
