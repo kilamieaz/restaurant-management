@@ -44,4 +44,30 @@ class User extends Authenticatable
         // return $this->belongsTo(Role::class, 'role_id');
         return $this->belongsTo(Role::class);
     }
+
+    public function authorizeRole($role)
+    {
+        if (is_array($role)) {
+            return $this->hasAnyRole($role) || null;
+        }
+        return $this->hasRole($role) || null;
+    }
+
+    /**
+    * Check multiple role
+    * @param array $role
+    */
+    public function hasAnyRole($role)
+    {
+        return null !== $this->role()->whereIn('name', $role)->first();
+    }
+
+    /**
+    * Check one role
+    * @param string $role
+    */
+    public function hasRole($role)
+    {
+        return null !== $this->role()->where('name', $role)->first();
+    }
 }
