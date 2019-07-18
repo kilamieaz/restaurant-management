@@ -15,11 +15,13 @@
                 {{-- datatable --}}
                 @component('components.datatable', [
                 'table_id' => 'member-datatable',
+                'code' => '',
                 'route_name' => 'datatable.member',
                 'columns' => [
-                ['header' => 'Nama'],
-                ['header' => 'Email'],
-                ['header' => 'Handphone'],
+                ['header' => 'Nama', 'class' => 'all'],
+                ['header' => 'Email', 'class' => 'all'],
+                ['header' => 'Handphone', 'class' => 'all'],
+                ['header' => 'Action', 'class' => 'all'],
                 ]
                 ])
                 @endcomponent

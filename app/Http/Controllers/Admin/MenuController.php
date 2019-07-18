@@ -38,6 +38,12 @@ class MenuController extends Controller
         Menu::create($data);
     }
 
+    public function show($id)
+    {
+        $menu = Menu::find($id);
+        return $menu;
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

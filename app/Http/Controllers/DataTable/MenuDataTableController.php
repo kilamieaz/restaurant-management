@@ -16,6 +16,7 @@ class MenuDataTableController extends Controller
         foreach ($menus as $index => $list) {
             $row = [];
             $row[] = ++$index;
+            $row[] = $list->id;
             $row[] = $list->name;
             $row[] = $list->category->name;
             $row[] = $list->stock;

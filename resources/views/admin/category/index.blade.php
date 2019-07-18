@@ -14,10 +14,12 @@
                 {{-- datatable --}}
                 @component('components.datatable', [
                 'table_id' => 'category-datatable',
+                'code' => '',
                 'route_name' => 'datatable.category',
                 'columns' => [
-                ['header' => 'Name'],
-                ['header' => 'Description'],
+                ['header' => 'Nama', 'class' => 'all'],
+                ['header' => 'Description', 'class' => 'all'],
+                ['header' => 'Action', 'class' => 'all'],
                 ]
                 ])
                 @endcomponent

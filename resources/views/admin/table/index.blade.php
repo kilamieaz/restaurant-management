@@ -14,9 +14,13 @@
                 {{-- datatable --}}
                 @component('components.datatable', [
                 'table_id' => 'table-datatable',
+                'code' => '',
                 'route_name' => 'datatable.table',
                 'columns' => [
-                ['header' => 'Name'],
+                ['header' => 'id', 'class' => 'never'],
+                ['header' => 'Nama', 'class' => 'all'],
+                ['header' => 'Capacity', 'class' => 'all'],
+                ['header' => 'Action', 'class' => 'all'],
                 ]
                 ])
                 @endcomponent
@@ -32,6 +36,7 @@
 'modal_header' => 'Tables',
 'inputs' => [
 ['name' => 'name', 'type' => 'text' , 'value' => '', 'header' => 'Name', 'label_id' => 'label_name_table'],
+['name' => 'capacity', 'type' => 'number' , 'value' => '', 'header' => 'Capacity', 'label_id' => 'label_capacity_table'],
 ]
 ])
 @endcomponent

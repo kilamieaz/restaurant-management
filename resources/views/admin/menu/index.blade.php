@@ -15,14 +15,17 @@
                 {{-- datatable --}}
                 @component('components.datatable', [
                 'table_id' => 'menu-datatable',
+                'code' => '',
                 'route_name' => 'datatable.menu',
                 'columns' => [
-                ['header' => 'Nama'],
-                ['header' => 'Category'],
-                ['header' => 'Stock'],
-                ['header' => 'Price'],
-                ['header' => 'Description'],
-                ['header' => 'Photo'],
+                ['header' => 'id', 'class' => 'never'],
+                ['header' => 'Nama', 'class' => 'all'],
+                ['header' => 'Category', 'class' => 'all'],
+                ['header' => 'Stock', 'class' => 'all'],
+                ['header' => 'Price', 'class' => 'all'],
+                ['header' => 'Description', 'class' => 'all'],
+                ['header' => 'Photo', 'class' => 'all'],
+                ['header' => 'Action', 'class' => 'all'],
                 ]
                 ])
                 @endcomponent
