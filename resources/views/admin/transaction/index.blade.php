@@ -152,7 +152,7 @@
                         {{-- end datatable --}}
                     </div>
                     <div class="col-md-4 border p-2">
-                        <form method="POST" action="#">
+                        <form method="POST" id="calculate">
                             @csrf
                             <div class="form-group">
                                 <label for="total">Total Harga</label>
@@ -160,11 +160,11 @@
                                     placeholder="Total Harga" value="" disabled="">
                             </div>
                             <div class="form-group">
-                                <label for="bayar">Bayar (Rp)</label>
-                                <input type="number" name="bayar" class="form-control" id="bayar" placeholder="Bayar">
+                                <label for="pay">Bayar (Rp)</label>
+                                <input type="number" name="pay" class="form-control" id="pay" placeholder="Bayar">
                             </div>
-                            <button type="submit" class="btn btn-primary btn-block btn-selesai">Selesai <span
-                                    class="glyphicon glyphicon-ok" aria-hidden="true"></span></button>
+                            <button type="button" onclick="calculate()" class="btn btn-primary btn-block">Selesai <span
+                                    class="glyphicon glyphicon-ok" aria-hidden="true" id="transaction_complete"></span></button>
                         </form>
                     </div>
                 </div>
@@ -379,6 +379,18 @@
                 )
             }
         })
+    }
+
+    function calculate() {
+        var total = $('#total').val();
+        // console.log(total);
+        var pay = $('#pay').val();
+        var calculate = pay - total;
+        Swal.fire(
+            'Change',
+            calculate.toString(),
+            'success'
+        )
     }
 
 </script>

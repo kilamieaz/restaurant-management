@@ -26,7 +26,6 @@ class TransactionController extends Controller
             // 'employee_id' => Auth::user()->id,
             // 'employee_id' => 1,
             'order_code' => $request->order_code,
-            // 'table_id' => $request->table_id
         ]);
 
         $menuList = Order::find($order->id)->detailOrders()->where('menu_id', $request->menu_id);
@@ -36,6 +35,7 @@ class TransactionController extends Controller
             $detailOrder = DetailOrder::create([
                 'order_id' => $order->id,
                 'menu_id' => $menu->id,
+                'table_id' => $request->table_id,
                 'quantity' => $request->quantity,
                 'sub_total' => $menu->price * $request->quantity,
             ]);
