@@ -16,4 +16,10 @@ class Category extends Model
     {
         return $this->name;
     }
+
+    public function menus()
+    {
+        // return $this->belongsTo(Role::class, 'role_id');
+        return $this->hasMany(Menu::class, 'category_id');
+    }
 }
