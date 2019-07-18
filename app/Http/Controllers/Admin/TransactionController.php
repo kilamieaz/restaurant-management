@@ -6,6 +6,7 @@ use App\Menu;
 use App\Order;
 use App\Table;
 use App\DetailOrder;
+use App\Enums\OrderStatus;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -38,6 +39,7 @@ class TransactionController extends Controller
                 'table_id' => $request->table_id,
                 'quantity' => $request->quantity,
                 'sub_total' => $menu->price * $request->quantity,
+                'status' => OrderStatus::Ordered,
             ]);
         }
         else {

@@ -22,6 +22,7 @@ class CreateDetailOrdersTable extends Migration
             $table->integer('sub_total');
             $table->string('message')->nullable();
             // $table->string('message');
+            $table->integer('status');
             $table->timestamps();
         });
     }
