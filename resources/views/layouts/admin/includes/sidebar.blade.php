@@ -18,16 +18,17 @@
             <!-- sidebar menu -->
             <ul class="nav sidebar-inner" id="sidebar-menu">
 
+                @if(Auth::user()->authorizeRole('admin'))
                 <li class="has-sub active expand">
-                    <a class="sidenav-item-link" href="#" aria-expanded="false">
+                    <a class="sidenav-item-link" href="{{ route('dashboard.index') }}" aria-expanded="false">
                         <i class="mdi mdi-view-dashboard-outline"></i>
                         <span class="nav-text">Dashboard</span>
                     </a>
                 </li>
 
                 <li class="has-sub active expand">
-                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
-                        data-target="#kitchen" aria-expanded="false" aria-controls="kitchen">
+                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#kitchen"
+                        aria-expanded="false" aria-controls="kitchen">
                         <i class="mdi mdi-view-dashboard-outline"></i>
                         <span class="nav-text">KITCHEN</span> <b class="caret"></b>
                     </a>
@@ -57,7 +58,37 @@
 
                 <li class="has-sub active expand">
                     <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
-                        data-target="#users" aria-expanded="false" aria-controls="users">
+                        data-target="#transaction" aria-expanded="false" aria-controls="transaction">
+                        <i class="mdi mdi-view-dashboard-outline"></i>
+                        <span class="nav-text">Transaction</span> <b class="caret"></b>
+                    </a>
+                    <ul class="collapse" id="transaction" data-parent="#sidebar-menu">
+                        <div class="sub-menu">
+                            <li>
+                                <a class="sidenav-item-link" href="{{ route('transaction.index') }}">
+                                    <span class="nav-text">Transaction</span>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a class="sidenav-item-link" href="{{ route('order.index') }}">
+                                    <span class="nav-text">Order</span>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a class="sidenav-item-link" href="#">
+                                    <span class="nav-text">Detail Order</span>
+
+                                </a>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+
+                <li class="has-sub active expand">
+                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#users"
+                        aria-expanded="false" aria-controls="users">
                         <i class="mdi mdi-view-dashboard-outline"></i>
                         <span class="nav-text">USERS</span> <b class="caret"></b>
                     </a>
@@ -85,6 +116,87 @@
                         <span class="nav-text">Manage Position</span>
                     </a>
                 </li>
+                @elseif(Auth::user()->authorizeRole('cashier'))
+                <li class="has-sub active expand">
+                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
+                        data-target="#transaction" aria-expanded="false" aria-controls="transaction">
+                        <i class="mdi mdi-view-dashboard-outline"></i>
+                        <span class="nav-text">Transaction</span> <b class="caret"></b>
+                    </a>
+                    <ul class="collapse" id="transaction" data-parent="#sidebar-menu">
+                        <div class="sub-menu">
+                            <li>
+                                <a class="sidenav-item-link" href="{{ route('transaction.index') }}">
+                                    <span class="nav-text">Transaction</span>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a class="sidenav-item-link" href="{{ route('order.index') }}">
+                                    <span class="nav-text">Order</span>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a class="sidenav-item-link" href="#">
+                                    <span class="nav-text">Detail Order</span>
+
+                                </a>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+                @elseif(Auth::user()->authorizeRole('waiter'))
+                <li class="has-sub active expand">
+                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
+                        data-target="#transaction" aria-expanded="false" aria-controls="transaction">
+                        <i class="mdi mdi-view-dashboard-outline"></i>
+                        <span class="nav-text">Transaction</span> <b class="caret"></b>
+                    </a>
+                    <ul class="collapse" id="transaction" data-parent="#sidebar-menu">
+                        <div class="sub-menu">
+                            <li>
+                                <a class="sidenav-item-link" href="{{ route('order.index') }}">
+                                    <span class="nav-text">Order</span>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a class="sidenav-item-link" href="#">
+                                    <span class="nav-text">Detail Order</span>
+
+                                </a>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+                @elseif(Auth::user()->authorizeRole('chef'))
+                <li class="has-sub active expand">
+                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
+                        data-target="#transaction" aria-expanded="false" aria-controls="transaction">
+                        <i class="mdi mdi-view-dashboard-outline"></i>
+                        <span class="nav-text">Transaction</span> <b class="caret"></b>
+                    </a>
+                    <ul class="collapse" id="transaction" data-parent="#sidebar-menu">
+                        <div class="sub-menu">
+                            <li>
+                                <a class="sidenav-item-link" href="{{ route('order.index') }}">
+                                    <span class="nav-text">Order</span>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a class="sidenav-item-link" href="#">
+                                    <span class="nav-text">Detail Order</span>
+
+                                </a>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+                @else
+                -name-
+                @endif
 
                 <hr class="separator" />
             </ul>

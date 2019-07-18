@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Route::prefix('admin')->group(function () {
     // Route::resource('user', 'Admin\UserController');
-    // Route::get('dashboard', 'Admin\DashboardController@index')->name('dashboard.index');
+    Route::get('dashboard', 'Admin\DashboardController@index')->name('dashboard.index');
     Route::resource('menu', 'Admin\MenuController');
     Route::resource('category', 'Admin\CategoryController');
     Route::resource('role', 'Admin\RoleController');
