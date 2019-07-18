@@ -27,14 +27,10 @@ class AddForeignKey extends Migration
 
         // foreign order
         Schema::table('orders', function (Blueprint $table) {
-            $table->foreign('member_id')->references('id')->on('members');
-            $table->foreign('employee_id')->references('id')->on('employees');
-            // $table->foreign('table_id')->references('id')->on('tables');
-        });
-
-        // foreign employee
-        Schema::table('employees', function (Blueprint $table) {
-            $table->foreign('role_id')->references('id')->on('roles');
+            $table->foreign('cashier_id')->references('id')->on('users');
+            $table->foreign('chef_id')->references('id')->on('users');
+            $table->foreign('waiter_id')->references('id')->on('users');
+            $table->foreign('member_id')->references('id')->on('users');
         });
 
         // foreign users
