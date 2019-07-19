@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::prefix('frontend')->group( function () {
+    Route::get('home', 'Frontend\HomeController@index')->name('frontend.home.index');
+});
+
 Route::group(['middleware' => ['auth']], function () {
     Route::prefix('admin')->group( function () {
         // Route::resource('user', 'Admin\UserController');
