@@ -23,6 +23,8 @@ use Illuminate\Http\Request;
 // });
 
 Route::get('order', 'Api\OrderController@index');
+Route::get('chef', 'Api\ChefOrderController@index');
+Route::get('waiter', 'Api\WaiterOrderController@index');
 Route::middleware('auth:api')->group(function () {
     Route::post('order/{order}', 'Api\OrderController@store');
 });
