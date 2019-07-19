@@ -1,5 +1,12 @@
 @extends('layouts.admin.master')
-
+@push('styles')
+ <style>
+     #table-datatable tbody tr.selected {
+    color: white;
+    background-color: #eeeeee;
+}
+ </style>   
+@endpush
 @section('content')
 <div class="breadcrumb-wrapper">
     <h1>Transaction {{ $order_code }}</h1>

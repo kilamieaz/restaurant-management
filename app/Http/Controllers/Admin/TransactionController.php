@@ -8,6 +8,7 @@ use App\Table;
 use App\DetailOrder;
 use App\Enums\OrderStatus;
 use Illuminate\Http\Request;
+use App\Events\NewTransaction;
 use App\Http\Controllers\Controller;
 
 class TransactionController extends Controller
@@ -48,8 +49,13 @@ class TransactionController extends Controller
                 'sub_total' => $menu->price * $menuList->first()->quantity,
             ]);
         }
+        // dd('test');
+
         $total = $order->detailOrders()->sum('sub_total');
         $data = ['code' => $order->order_code, 'total' => $total, 'table_name' => $table->name, 'table_id' => $table->id];
+        $orderWithDetail = Order::find($order->id)->with('detailOrders')->first();
+        event(new NewTransaction($orderWithDetail));
+        // dd($orderWithDetail);
         return $data;
     }
 
