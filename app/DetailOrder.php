@@ -8,7 +8,7 @@ class DetailOrder extends Model
 {
     protected $guarded = [];
     protected $table = 'detail_orders';
-    protected $with = ['menu', 'table', 'order'];
+    protected $with = ['menu', 'table'];
 
     public function order()
     {
