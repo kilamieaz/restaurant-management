@@ -21,6 +21,11 @@ use Illuminate\Http\Request;
 // Route::middleware('auth:api')->group(function () {
 //     Route::post('posts/{post}/comment', 'CommentController@store');
 // });
+Route::post('login', 'Api\UserController@login');
+Route::post('register', 'Api\UserController@register');
+Route::group(['middleware' => 'auth:api'], function(){
+    Route::post('details', 'Api\UserController@details');
+});
 
 Route::get('order', 'Api\OrderController@index');
 Route::get('chef', 'Api\ChefOrderController@index');
