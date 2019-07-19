@@ -60,7 +60,7 @@ class AllSeeder extends Seeder
         }
 
         // data user
-        factory(User::class, 5)->create([
+        factory(User::class, 2)->create([
             'role_id' => $roleMember->id
         ])->each(function ($userMember) use ($userAdmin){
             //data category
