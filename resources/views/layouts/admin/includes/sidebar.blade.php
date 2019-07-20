@@ -109,12 +109,12 @@
                     </ul>
                 </li>
 
-                <li class="has-sub active expand">
+                {{-- <li class="has-sub active expand">
                     <a class="sidenav-item-link" href="{{ route('role.index') }}" aria-expanded="false">
                         <i class="mdi mdi-view-dashboard-outline"></i>
                         <span class="nav-text">Manage Position</span>
                     </a>
-                </li>
+                </li> --}}
                 @elseif(Auth::user()->authorizeRole('cashier'))
                 <li class="has-sub active expand">
                     <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
