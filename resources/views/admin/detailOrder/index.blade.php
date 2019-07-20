@@ -5,7 +5,7 @@
 @endpush
 @section('content')
 <div class="breadcrumb-wrapper">
-    <h1>Order Status</h1>
+    <h1>Detail Orders</h1>
 </div>
 <div class="row">
     <div class="col-lg-12">
@@ -42,6 +42,7 @@
         data: {
             orders: {},
             dataTable: null,
+            userRole: {!! $userRole !!},
         },
         mounted() {
             this.getOrders();
@@ -53,7 +54,16 @@
                     'Ordered', 'Cooked', 'Delivered'
                 ]
                 let orders = [];
-                this.dataTable = $('#order-table').DataTable({});
+                this.dataTable = $('#order-table').DataTable({
+                    "order": [[ 0, "desc" ]]
+                });
+                if (this.userRole === 1 || this.userRole === 2) {
+                    var url = '/api/order'
+                } else if(this.userRole === 3) {
+                    var url = '/api/chef'
+                } else {
+                    var url = '/api/waiter'
+                }
                 axios.get('/api/order')
                     .then((response) => {
                         this.orders = response.data

@@ -71,13 +71,12 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="sidenav-item-link" href="{{ route('order.index') }}">
+                                <a class="sidenav-item-link" href="#">
                                     <span class="nav-text">Order</span>
-
                                 </a>
                             </li>
                             <li>
-                                <a class="sidenav-item-link" href="#">
+                                <a class="sidenav-item-link" href="{{ route('detail-order.index') }}">
                                     <span class="nav-text">Detail Order</span>
 
                                 </a>
@@ -132,15 +131,13 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="sidenav-item-link" href="{{ route('order.index') }}">
+                                <a class="sidenav-item-link" href="#">
                                     <span class="nav-text">Order</span>
-
                                 </a>
                             </li>
                             <li>
-                                <a class="sidenav-item-link" href="#">
+                                <a class="sidenav-item-link" href="{{ route('detail-order.index') }}">
                                     <span class="nav-text">Detail Order</span>
-
                                 </a>
                             </li>
                         </div>
@@ -156,15 +153,13 @@
                     <ul class="collapse" id="transaction" data-parent="#sidebar-menu">
                         <div class="sub-menu">
                             <li>
-                                <a class="sidenav-item-link" href="{{ route('order.index') }}">
+                                <a class="sidenav-item-link" href="#">
                                     <span class="nav-text">Order</span>
-
                                 </a>
                             </li>
                             <li>
-                                <a class="sidenav-item-link" href="#">
+                                <a class="sidenav-item-link" href="{{ route('detail-order.index') }}">
                                     <span class="nav-text">Detail Order</span>
-
                                 </a>
                             </li>
                         </div>
@@ -178,24 +173,20 @@
                         <span class="nav-text">Transaction</span> <b class="caret"></b>
                     </a>
                     <ul class="collapse" id="transaction" data-parent="#sidebar-menu">
-                        <div class="sub-menu">
-                            <li>
-                                <a class="sidenav-item-link" href="{{ route('order.index') }}">
-                                    <span class="nav-text">Order</span>
-
-                                </a>
-                            </li>
-                            <li>
-                                <a class="sidenav-item-link" href="#">
-                                    <span class="nav-text">Detail Order</span>
-
-                                </a>
-                            </li>
-                        </div>
+                        <li>
+                            <a class="sidenav-item-link" href="#">
+                                <span class="nav-text">Order</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="sidenav-item-link" href="{{ route('detail-order.index') }}">
+                                <span class="nav-text">Detail Order</span>
+                            </a>
+                        </li>
                     </ul>
                 </li>
                 @else
-                -name-
+                ?
                 @endif
 
                 <hr class="separator" />
