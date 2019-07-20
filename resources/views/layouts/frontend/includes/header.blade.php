@@ -1,11 +1,11 @@
 <header>
-    <div class="header-main_area header-main_area-2">
+    <div class="header-main_area header-main_area-3">
         <div class="container">
             <div class="row">
                 <div class="col-lg-2 col-5">
                     <div class="header-logo">
-                        <a href="index.html">
-                            <img src="{{ asset('frontend/images/menu/logo/2.png')}}" alt="Munoz's Header Logo">
+                        <a href="{{ route('frontend.home.index') }}">
+                            <img src="{{ asset('frontend/images/menu/logo/1.png')}}" alt="Munoz's Header Logo">
                         </a>
                     </div>
                 </div>
@@ -13,9 +13,9 @@
                     <div class="main-menu_area">
                         <nav class="main_nav">
                             <ul>
-                                <li><a href="index.html">Home</a></li>
+                                <li><a href="{{ route('frontend.home.index') }}">Home</a></li>
                                 <li><a href="about-us.html">About Us</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="{{ route('frontend.contact.index') }}">Contact</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -28,7 +28,7 @@
             <div class="row">
                 <div class="col-lg-2 col-5">
                     <div class="header-logo">
-                        <a href="index.html">
+                        <a href="{{ route('frontend.home.index') }}">
                             <img src="{{ asset('frontend/images/menu/logo/1.png') }}" alt="Munoz's Header Logo">
                         </a>
                     </div>
@@ -39,7 +39,7 @@
                             <ul>
                                 <li><a href="{{ route('frontend.home.index') }}">Home</a></li>
                                 <li><a href="about-us.html">About Us</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="{{ route('frontend.contact.index') }}">Contact</a></li>
                             </ul>
                         </nav>
                     </div>

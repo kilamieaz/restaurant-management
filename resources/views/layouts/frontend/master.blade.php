@@ -41,6 +41,7 @@
     <!-- Main Style CSS (Please use minify version for better website load performance) -->
     <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}">
     <!--<link rel="stylesheet" href="frontend/css/style.min.css">-->
+    @stack('styles')
 
 </head>
 <body class="template-color-2">
@@ -119,6 +120,6 @@
 
     <!-- Main JS -->
     <script src="{{ asset('frontend/js/main.js') }}"></script>
-
+    @stack('scripts')
 </body>
 </html>
