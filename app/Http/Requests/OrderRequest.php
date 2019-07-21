@@ -29,7 +29,7 @@ class OrderRequest extends FormRequest
             'cashier_id' => 'integer',
             'chef_id' => 'integer',
             'waiter_id' => 'integer',
-            'member_id' => 'integer',
+            'member_id' => 'nullable|integer',
         ];
     }
 }

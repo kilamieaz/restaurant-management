@@ -27,13 +27,20 @@ class TransactionRequest extends FormRequest
             OrderRequest::class,
             DetailOrderRequest::class
         ];
-        $rules = [];
+        $rules = [
+            'name' => 'required', 
+            'table_name' => 'required',
+            'price' => 'required',
+            'discount' => 'required',
+            'final_price' => 'required'
+        ];
         foreach ($formRequests as $source) {
             $rules = array_merge(
                 $rules,
                 (new $source)->rules()
             );
         }
+        // dd($rules);
         return $rules;
     }
 }
