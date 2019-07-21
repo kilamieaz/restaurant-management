@@ -24,4 +24,9 @@ class DetailOrder extends Model
     {
         return $this->belongsTo(Table::class, 'table_id');
     }
+
+    public function scopeTotal($query)
+    {
+        return $query->sum('sub_total');
+    }
 }

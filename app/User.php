@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Enums\UserRole;
 use Laravel\Passport\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -71,5 +72,15 @@ class User extends Authenticatable
     public function hasRole($role)
     {
         return null !== $this->role()->where('name', $role)->first();
+    }
+
+    public function scopeEmployees($query)
+    {
+        return $query->where('role_id', 'not like', UserRole::Member)->get();
+    }
+
+    public function scopeMember($query)
+    {
+        return $query->where('role_id', UserRole::Member)->get();
     }
 }

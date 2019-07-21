@@ -81,20 +81,13 @@
                                 <i class="mdi mdi-account"></i> My Profile
                             </a>
                         </li>
-                        <li>
-                            <a href="#">
-                                <i class="mdi mdi-email"></i> Message
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#"> <i class="mdi mdi-diamond-stone"></i> Projects </a>
-                        </li>
-                        <li>
-                            <a href="#"> <i class="mdi mdi-settings"></i> Account Setting </a>
-                        </li>
 
                         <li class="dropdown-footer">
-                            <a href="index.html"> <i class="mdi mdi-logout"></i> Log Out </a>
+                            <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();"><i class="mdi mdi-logout"></i> Log Out </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
                         </li>
                     </ul>
                 </li>
