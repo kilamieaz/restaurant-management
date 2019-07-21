@@ -19,6 +19,13 @@ mix.js('resources/js/app.js', 'public/js')
         'node_modules/datatables.net-responsive/js/dataTables.responsive.min.js'
     ], 'public/js/datatable.js')
     .styles(['node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css'], 'public/css/datatable.css')
+    // for chart.js
+    .scripts([
+        'node_modules\chart.js\dist\Chart.min.js'
+    ], 'public/js/chart.js')
+    .styles([
+        'node_modules\chart.js\dist\Chart.min.css'
+    ], 'public/css/chart.css')
     // for moment.js
     .scripts([
         'node_modules/moment/moment.js'

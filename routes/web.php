@@ -31,7 +31,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::resource('employee', 'Admin\EmployeeController');
         Route::resource('member', 'Admin\MemberController');
         Route::resource('table', 'Admin\TableController');
-        Route::resource('order', 'Admin\OrderController');
+        // Route::resource('order', 'Admin\OrderController');
         Route::resource('detail-order', 'Admin\DetailOrderController');
         Route::resource('transaction', 'Admin\TransactionController');
     });
