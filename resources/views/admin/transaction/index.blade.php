@@ -76,7 +76,7 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <input type="text" id="table_name" name="table_name" class="form-control"
-                                                placeholder="name table" readonly>
+                                                placeholder="Table Name" readonly>
                                         </div>
                                     </div>
                                 </div>
@@ -85,13 +85,13 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <input type="text" id="menu_name" name="name" class="form-control"
-                                                placeholder="name menu" readonly>
+                                                placeholder="Menu Name" readonly>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <input type="number" id="menu_price" name="price" class="form-control"
-                                                placeholder="price" readonly>
+                                                placeholder="Price" readonly>
                                         </div>
                                     </div>
                                 </div>
@@ -107,7 +107,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <input type="number" id="menu_final_price" name="final_price"
-                                                class="form-control" placeholder="final price" value="" disabled>
+                                                class="form-control" placeholder="Final Price" value="" readonly>
                                         </div>
                                     </div>
                                 </div>
@@ -195,6 +195,9 @@
 @endsection
 
 @push('scripts')
+<!-- Laravel Javascript Validation -->
+<script type="text/javascript" src="{{ asset('vendor/jsvalidation/js/jsvalidation.js')}}"></script>
+{!! JsValidator::formRequest('App\Http\Requests\TransactionRequest') !!}
 <script type="text/javascript">
     $(document).ready(function () {
             $(".select2-modal").select2({
