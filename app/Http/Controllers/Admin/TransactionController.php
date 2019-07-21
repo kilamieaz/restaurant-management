@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Auth;
+use App\User;
 use App\Menu;
 use App\Order;
 use App\Table;
@@ -10,23 +12,24 @@ use App\Enums\OrderStatus;
 use Illuminate\Http\Request;
 use App\Events\NewTransaction;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\TransactionRequest;
 
 class TransactionController extends Controller
 {
     public function index()
     {
         $order_code = uniqid();
-        return view('admin.transaction.index', compact('order_code'));
+        $member = User::member();
+        return view('admin.transaction.index', compact('order_code', 'member'));
     }
 
-    public function store(Request $request)
+    public function store(TransactionRequest $request)
     {
         $menu = Menu::find($request->menu_id);
         $table = Table::find($request->table_id);
         $order = Order::firstOrCreate([
-            // 'member_id' => 1,
-            // 'employee_id' => Auth::user()->id,
-            // 'employee_id' => 1,
+            'member_id' => $request->member_id,
+            'cashier_id' => Auth::user()->id,
             'order_code' => $request->order_code,
         ]);
 
@@ -49,13 +52,11 @@ class TransactionController extends Controller
                 'sub_total' => $menu->price * $menuList->first()->quantity,
             ]);
         }
-        // dd('test');
 
         $total = $order->detailOrders()->sum('sub_total');
         $data = ['code' => $order->order_code, 'total' => $total, 'table_name' => $table->name, 'table_id' => $table->id];
         $orderWithDetail = Order::find($order->id)->with('detailOrders')->first();
-        event(new NewTransaction($orderWithDetail));
-        // dd($orderWithDetail);
+        // event(new NewTransaction($orderWithDetail));
         return $data;
     }
 

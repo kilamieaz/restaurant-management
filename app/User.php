@@ -83,4 +83,9 @@ class User extends Authenticatable
     {
         return $query->where('role_id', UserRole::Member)->get();
     }
+
+    public function scopeSearchMember($query, $search)
+    {
+        return $query->select('id', 'name', 'email','role_id')->where([['role_id', UserRole::Member], ['email', 'LIKE', "%$search%"]])->get();
+    }
 }
