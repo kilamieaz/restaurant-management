@@ -11,6 +11,6 @@ $factory->define(Menu::class, function (Faker $faker) {
         'description' => $faker->lexify('Description Menu ???'),
         'price' => $faker->randomNumber(3),
         'stock' => $faker->numberBetween(10, 20),
-        'photo' => $faker->image('public/storage/photo', 800, 800, 'cats', false),
+        'photo' => 'public/photo/'. $faker->image('public/storage/photo', 800, 800, 'cats', false),
     ];
 });
