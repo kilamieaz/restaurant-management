@@ -100,7 +100,7 @@
                 $('.modal-title').text('Edit Tables');
                 $('#id_hidden').val(data.id);
                 $('#name').val(data.name);
-                $('#description').val(data.description);
+                $('#capacity').val(data.capacity);
             },
             error: function () {
                 Swal.fire({
