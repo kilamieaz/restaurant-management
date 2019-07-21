@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Role;
 use Illuminate\Http\Request;
+use App\Http\Requests\RoleRequest;
 use App\Http\Controllers\Controller;
 
 class RoleController extends Controller
@@ -13,7 +14,7 @@ class RoleController extends Controller
         return view('admin.role.index');
     }
 
-    public function store(Request $request)
+    public function store(RoleRequest $request)
     {
         $role = Role::create([
             'name' => $request->name,
@@ -26,7 +27,7 @@ class RoleController extends Controller
         echo json_encode($role);
     }
 
-    public function update(Request $request, Role $role)
+    public function update(RoleRequest $request, Role $role)
     {
         $role->update($request->all());
     }

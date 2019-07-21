@@ -1,12 +1,4 @@
 @extends('layouts.admin.master')
-@push('styles')
- <style>
-     #table-datatable tbody tr.selected {
-    color: white;
-    background-color: #eeeeee;
-}
- </style>   
-@endpush
 @section('content')
 <div class="breadcrumb-wrapper">
     <h1>Transaction {{ $order_code }}</h1>
@@ -18,7 +10,7 @@
             </div>
             <div class="card-body">
                 <div class="row">
-                    <div class="col-md-12 border p-2">
+                    <div class="col-md-8 border p-2">
                         <h2>List Table</h2>
                         {{-- datatable --}}
                         @component('components.datatable', [
@@ -34,6 +26,13 @@
                         ])
                         @endcomponent
                         {{-- end datatable --}}
+                    </div>
+                    <div class="col-md-4 border p-2">
+                        <h2>Member</h2>
+                        <select data-placeholder="Member" class="form-control select2-modal"
+                            id="transaction_member_id" name="member_id">
+                            
+                        </select>
                     </div>
                 </div>
             </div>
@@ -77,7 +76,7 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <input type="text" id="table_name" name="table_name" class="form-control"
-                                                placeholder="name table" readonly>
+                                                placeholder="Table Name" readonly>
                                         </div>
                                     </div>
                                 </div>
@@ -86,13 +85,13 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <input type="text" id="menu_name" name="name" class="form-control"
-                                                placeholder="name menu" readonly>
+                                                placeholder="Menu Name" readonly>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <input type="number" id="menu_price" name="price" class="form-control"
-                                                placeholder="price" readonly>
+                                                placeholder="Price" readonly>
                                         </div>
                                     </div>
                                 </div>
@@ -108,7 +107,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <input type="number" id="menu_final_price" name="final_price"
-                                                class="form-control" placeholder="final price" value="" disabled>
+                                                class="form-control" placeholder="Final Price" value="" readonly>
                                         </div>
                                     </div>
                                 </div>
@@ -123,6 +122,7 @@
                                     </div>
                                     <input type="hidden" name="menu_id" id="menu_id" value="">
                                     <input type="hidden" name="table_id" id="table_id" value="">
+                                    <input type="hidden" name="member_id" id="member_id" value="">
                                 </div>
 
                                 <button type="submit" onclick="addForm()" class="btn btn-primary btn-block"><span
@@ -171,7 +171,8 @@
                                 <input type="number" name="pay" class="form-control" id="pay" placeholder="Bayar">
                             </div>
                             <button type="button" onclick="calculate()" class="btn btn-primary btn-block">Selesai <span
-                                    class="glyphicon glyphicon-ok" aria-hidden="true" id="transaction_complete"></span></button>
+                                    class="glyphicon glyphicon-ok" aria-hidden="true"
+                                    id="transaction_complete"></span></button>
                         </form>
                     </div>
                 </div>
@@ -194,8 +195,33 @@
 @endsection
 
 @push('scripts')
+<!-- Laravel Javascript Validation -->
+<script type="text/javascript" src="{{ asset('vendor/jsvalidation/js/jsvalidation.js')}}"></script>
+{!! JsValidator::formRequest('App\Http\Requests\TransactionRequest') !!}
 <script type="text/javascript">
     $(document).ready(function () {
+            $(".select2-modal").select2({
+                ajax: {
+                    url: "{{ route('transaction-member.index') }}",
+                    dataType: 'json',
+                    delay: 250,
+                    processResults: function (data) {
+                        return {
+                            results: $.map(data, function (item) {
+                                $("#member_id").val(item.id);
+                                return {
+                                    text: item.name,
+                                    id: item.id
+                                }
+                            })
+                        };
+        
+        
+                    },
+                    cache: true
+                }
+            });
+
         var table_table = $('#table-datatable').DataTable();
         // row table on click
         $('#table-datatable').on('click', 'tr', function () {

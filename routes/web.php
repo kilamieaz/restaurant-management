@@ -34,6 +34,7 @@ Route::group(['middleware' => ['auth']], function () {
         // Route::resource('order', 'Admin\OrderController');
         Route::resource('detail-order', 'Admin\DetailOrderController');
         Route::resource('transaction', 'Admin\TransactionController');
+        Route::resource('transaction-member', 'Admin\TransactionMemberController');
     });
 
     Route::prefix('datatable')->group(function () {

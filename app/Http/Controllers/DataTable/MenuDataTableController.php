@@ -23,7 +23,7 @@ class MenuDataTableController extends Controller
             $row[] = $list->price;
             $row[] = $list->description;
             $row[] = isset($list->photo) ? 
-            '<div class="text-center"><img style="height:50px; width:50px" src="' . Storage::url('photo/' . $list->photo). '"></div>': 
+            '<div class="text-center"><img style="height:50px; width:50px" src="' . Storage::url($list->photo). '"></div>': 
             '<div class="text-center"><img style="height:50px; width:50px" src="' . "https://via.placeholder.com/50/50" . '"></div>';
             $row[] = '<div class="text-center"><div class="btn-group">
                <button type="button" onclick="editForm(' . $list->id . ')" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></button>

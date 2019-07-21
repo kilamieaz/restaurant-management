@@ -44,6 +44,9 @@
 @endsection
 
 @push('scripts')
+<!-- Laravel Javascript Validation -->
+<script type="text/javascript" src="{{ asset('vendor/jsvalidation/js/jsvalidation.js')}}"></script>
+{!! JsValidator::formRequest('App\Http\Requests\TableRequest') !!}
 <script type="text/javascript">
     var save_method;
     $(document).ready(function () {
@@ -100,7 +103,7 @@
                 $('.modal-title').text('Edit Tables');
                 $('#id_hidden').val(data.id);
                 $('#name').val(data.name);
-                $('#description').val(data.description);
+                $('#capacity').val(data.capacity);
             },
             error: function () {
                 Swal.fire({

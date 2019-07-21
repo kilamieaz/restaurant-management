@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Table;
 use Illuminate\Http\Request;
+use App\Http\Requests\TableRequest;
 use App\Http\Controllers\Controller;
 
 class TableController extends Controller
@@ -12,7 +13,7 @@ class TableController extends Controller
     {
         return view('admin.table.index');
     }
-    public function store(Request $request)
+    public function store(TableRequest $request)
     {
         $table = Table::create($request->all());    
     }
@@ -24,7 +25,7 @@ class TableController extends Controller
     {
         echo json_encode($table);
     }
-    public function update(Request $request, Table $table)
+    public function update(TableRequest $request, Table $table)
     {
         $table->update($request->all());
     }

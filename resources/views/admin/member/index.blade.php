@@ -38,6 +38,8 @@
 'inputs' => [
 ['name' => 'name', 'type' => 'text' , 'value' => '', 'header' => 'Name', 'label_id' => 'label_name_member'],
 ['name' => 'email', 'type' => 'text' , 'value' => '', 'header' => 'Email', 'label_id' => 'label_email_member'],
+['name' => 'password', 'type' => 'password' , 'value' => '', 'header' => 'Password', 'label_id' =>
+'label_password_member'],
 ['name' => 'handphone', 'type' => 'text' , 'value' => '', 'header' => 'Handphone', 'label_id' =>
 'label_handphone_member'],
 ]
@@ -47,6 +49,9 @@
 @endsection
 
 @push('scripts')
+<!-- Laravel Javascript Validation -->
+<script type="text/javascript" src="{{ asset('vendor/jsvalidation/js/jsvalidation.js')}}"></script>
+{!! JsValidator::formRequest('App\Http\Requests\MemberRequest') !!}
 <script type="text/javascript">
     var save_method;
     $(document).ready(function () {
@@ -88,7 +93,11 @@
                             table.ajax.reload();
                         },
                         error: function () {
-                            alert("Error!");
+                            Swal.fire({
+                                type: 'error',
+                                title: 'Oops...',
+                                text: 'Something went wrong!'
+                            })
                         }
                     });
                     return false;
@@ -117,16 +126,9 @@
                 $('#input-member-modal').modal('show');
                 $('.modal-title').text('Edit Members');
                 $('#id_hidden').val(data.id);
-                $('#nip').val(data.nip);
                 $('#name').val(data.name);
                 $('#email').val(data.email);
-                $('#birth_date').val(data.birth_date);
-                $('#address').val(data.address);
-                $('#phone').val(data.phone);
-                $('#gender').val(data.gender);
-                $('#religion').val(data.religion);
-                $('#position').val(data.position);
-                // $('#image').val(data.image);
+                $('#handphone').val(data.handphone);
             },
             error: function () {
                 Swal.fire({

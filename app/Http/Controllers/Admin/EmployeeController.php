@@ -7,17 +7,18 @@ use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
+use App\Http\Requests\EmployeeRequest;
 use Illuminate\Support\Facades\Storage;
 
 class EmployeeController extends Controller
 {
     public function index()
     {
-        $roles = Role::all();
+        $roles = Role::employees();
         return view('admin.employee.index', compact('roles'));
     }
 
-    public function store(Request $request)
+    public function store(EmployeeRequest $request)
     {
         $data = $request->all();
         $data['password'] = Hash::make($request->password);
@@ -35,7 +36,7 @@ class EmployeeController extends Controller
         echo json_encode($employee);
     }
 
-    public function update(Request $request, User $employee)
+    public function update(EmployeeRequest $request, User $employee)
     {
         $data = $request->all();
         if ($request->hasFile('photo')) {

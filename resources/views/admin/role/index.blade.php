@@ -44,6 +44,9 @@
 @endsection
 
 @push('scripts')
+<!-- Laravel Javascript Validation -->
+<script type="text/javascript" src="{{ asset('vendor/jsvalidation/js/jsvalidation.js')}}"></script>
+{!! JsValidator::formRequest('App\Http\Requests\RoleRequest') !!}
 <script type="text/javascript">
     var save_method;
     $(document).ready(function () {
