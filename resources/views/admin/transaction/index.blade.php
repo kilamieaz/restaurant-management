@@ -113,6 +113,15 @@
                                 </div>
 
                                 <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input type="text" id="menu_message" name="message" class="form-control"
+                                                placeholder="Message">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
                                     <div class="col-md-4 m-auto p-auto">
                                         <div class="form-group">
                                             <label for="quantity">Quantity</label>
@@ -142,6 +151,7 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-8 border p-2">
+                        <h2>List Detail Order</h2>
                         {{-- datatable --}}
                         @component('components.datatable', [
                         'table_id' => 'order-datatable',
@@ -152,6 +162,8 @@
                         ['header' => 'Price', 'class' => 'all'],
                         ['header' => 'Quantity', 'class' => 'all'],
                         ['header' => 'Sub Total', 'class' => 'all'],
+                        ['header' => 'Table', 'class' => 'all'],
+                        ['header' => 'Message', 'class' => 'all'],
                         ['header' => 'Action', 'class' => 'all'],
                         ]
                         ])
@@ -184,7 +196,7 @@
 {{-- Modal --}}
 @component('components.modal', [
 'modal_id' => 'input-order-modal',
-'modal_header' => 'Role',
+'modal_header' => 'Detail Order',
 'inputs' => [
 ['name' => 'quantity', 'type' => 'number' , 'value' => '', 'header' => 'Quantity', 'label_id' =>
 'label_quantity_order'],
@@ -264,7 +276,7 @@
                 if (save_method == "add") url = "{{ route('transaction.store') }}";
                 else url = "transaction/" + id;
                 var data = $('form#order').serialize();
-
+                $('.select2-modal').attr('disabled','disabled');
                 $.ajax({
                     url: url,
                     type: "POST",

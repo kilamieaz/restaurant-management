@@ -28,7 +28,7 @@ class DetailOrderRequest extends FormRequest
             'menu_id' => 'required|integer',
             'table_id' => 'required|integer',
             'quantity' => 'required|integer',
-            'message' => 'string|max:100',
+            'message' => 'nullable|string|max:100',
         ];
     }
 }

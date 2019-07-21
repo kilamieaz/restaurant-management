@@ -25,22 +25,25 @@ class TransactionController extends Controller
 
     public function store(TransactionRequest $request)
     {
+        // dd($request->all());
         $menu = Menu::find($request->menu_id);
         $table = Table::find($request->table_id);
-        $order = Order::firstOrCreate([
-            'member_id' => $request->member_id,
-            'cashier_id' => Auth::user()->id,
-            'order_code' => $request->order_code,
-        ]);
-
+        $order = Order::where('order_code', $request->order_code)->first();
+        if(!$order){
+            $order = Order::firstOrCreate([
+                'member_id' => $request->member_id,
+                'cashier_id' => Auth::user()->id,
+                'order_code' => $request->order_code,
+            ]);
+        }
         $menuList = Order::find($order->id)->detailOrders()->where('menu_id', $request->menu_id);
-
         $countMenu = $menuList->count();
         if ($countMenu == 0) {
             $detailOrder = DetailOrder::create([
                 'order_id' => $order->id,
                 'menu_id' => $menu->id,
                 'table_id' => $request->table_id,
+                'message' => $request->message,
                 'quantity' => $request->quantity,
                 'sub_total' => $menu->price * $request->quantity,
                 'status' => OrderStatus::Ordered,
@@ -52,7 +55,6 @@ class TransactionController extends Controller
                 'sub_total' => $menu->price * $menuList->first()->quantity,
             ]);
         }
-
         $total = $order->detailOrders()->sum('sub_total');
         $data = ['code' => $order->order_code, 'total' => $total, 'table_name' => $table->name, 'table_id' => $table->id];
         $orderWithDetail = Order::find($order->id)->with('detailOrders')->first();
@@ -73,6 +75,8 @@ class TransactionController extends Controller
                 $row[] = $list->menu->price;
                 $row[] = $list->quantity;
                 $row[] = $list->sub_total;
+                $row[] = $list->table->name;
+                $row[] = ($list->message ? $list->message : '-');
                 $row[] = '<div class="text-center"><div class="btn-group">
                 <button type="button" onclick="editForm(' . $list->id . ')" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></button>
                 <button type="button" onclick="deleteData(' . $list->id . ')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button></div></div>';

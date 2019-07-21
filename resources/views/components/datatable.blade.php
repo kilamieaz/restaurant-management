@@ -25,6 +25,7 @@
         $("#{{$table_id}}").DataTable({
             "responsive": true,
             "processing": true,
+            "pageLength": 5,
             "ajax": {
                 'url': url,
                 "type": "GET",
