@@ -11,7 +11,7 @@ class EmployeeDataTableController extends Controller
 {
     public function index()
     {
-        $users = User::all();
+        $users = User::employees();
         $data = [];
         foreach ($users as $index => $list) {
             $row = [];

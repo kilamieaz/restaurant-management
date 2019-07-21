@@ -43,7 +43,8 @@
 ['name' => 'role_id', 'type' => 'select', 'value' => $roles, 'header' => 'Position', 'label_id' =>
 'label_role_employee'],
 ['name' => 'email', 'type' => 'email' , 'value' => '', 'header' => 'Email', 'label_id' => 'label_email_employee'],
-['name' => 'password', 'type' => 'password' , 'value' => '', 'header' => 'Password', 'label_id' => 'label_password_employee'],
+['name' => 'password', 'type' => 'password' , 'value' => '', 'header' => 'Password', 'label_id' =>
+'label_password_employee'],
 ['name' => 'handphone', 'type' => 'text' , 'value' => '', 'header' => 'Handphone', 'label_id' =>
 'label_handphone_employee'],
 ['name' => 'photo', 'type' => 'file' , 'value' => '', 'header' => 'Photo', 'label_id' => 'label_photo_employee'],
@@ -95,7 +96,11 @@
                             table.ajax.reload();
                         },
                         error: function () {
-                            alert("Error!");
+                            Swal.fire({
+                                type: 'error',
+                                title: 'Oops...',
+                                text: 'Something went wrong!'
+                            })
                         }
                     });
                     return false;
@@ -124,16 +129,11 @@
                 $('#input-employee-modal').modal('show');
                 $('.modal-title').text('Edit Employees');
                 $('#id_hidden').val(data.id);
-                $('#nip').val(data.nip);
+                // $('#role_id > option[value="'+ data.role_id +'"]').prop('selected', true).trigger('change');
+                $('#role_id').val(data.role_id).trigger('change');
                 $('#name').val(data.name);
                 $('#email').val(data.email);
-                $('#birth_date').val(data.birth_date);
-                $('#address').val(data.address);
-                $('#phone').val(data.phone);
-                $('#gender').val(data.gender);
-                $('#religion').val(data.religion);
-                $('#position').val(data.position);
-                // $('#image').val(data.image);
+                $('#handphone').val(data.handphone);
             },
             error: function () {
                 Swal.fire({
