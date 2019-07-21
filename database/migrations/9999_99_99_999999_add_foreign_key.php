@@ -13,15 +13,16 @@ class AddForeignKey extends Migration
      */
     public function up()
     {
-        // foreign menu juga akan terhapus jika category di hapus
         Schema::table('menus', function (Blueprint $table) {
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+            // foreign menu juga akan terhapus jika category di hapus
+            // $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->foreign('category_id')->references('id')->on('categories');
         });
 
         // foreign detail order
         Schema::table('detail_orders', function (Blueprint $table) {
             $table->foreign('order_id')->references('id')->on('orders');
-            $table->foreign('menu_id')->references('id')->on('menus');
+            // $table->foreign('menu_id')->references('id')->on('menus');
             $table->foreign('table_id')->references('id')->on('tables');
         });
 

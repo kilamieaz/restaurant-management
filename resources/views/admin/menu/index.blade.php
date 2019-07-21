@@ -125,16 +125,11 @@
                 $('#input-menu-modal').modal('show');
                 $('.modal-title').text('Edit Menus');
                 $('#id_hidden').val(data.id);
-                $('#nip').val(data.nip);
                 $('#name').val(data.name);
-                $('#email').val(data.email);
-                $('#birth_date').val(data.birth_date);
-                $('#address').val(data.address);
-                $('#phone').val(data.phone);
-                $('#gender').val(data.gender);
-                $('#religion').val(data.religion);
-                $('#position').val(data.position);
-                // $('#image').val(data.image);
+                $('#category_id').val(data.category_id).trigger('change');
+                $('#stock').val(data.stock);
+                $('#price').val(data.price);
+                $('#description').val(data.description);
             },
             error: function () {
                 Swal.fire({
