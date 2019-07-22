@@ -37,7 +37,7 @@ class DashboardController extends Controller
         $totalMember = User::member()->count();
         $totalIncome = 'Rp ' . format_money(DetailOrder::total());
         
-        if ($request->user()->authorizeRole('admin')) {
+        if ($request->user()->authorizeRole('admin', 'cashier', 'chef', 'waiter')) {
             return view('admin.dashboard.index', 
             compact(
                 'chartOrder', 
