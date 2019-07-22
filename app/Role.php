@@ -4,9 +4,11 @@ namespace App;
 
 use App\Enums\UserRole;
 use Illuminate\Database\Eloquent\Model;
+use GeneaLabs\LaravelModelCaching\Traits\Cachable;
 
 class Role extends Model
 {
+    use Cachable;
     protected $guarded = [];
 
     public function selectValue()

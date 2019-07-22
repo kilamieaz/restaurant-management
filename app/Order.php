@@ -5,9 +5,11 @@ namespace App;
 use App\Charts\Dashboard;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model;
+use GeneaLabs\LaravelModelCaching\Traits\Cachable;
 
 class Order extends Model
 {
+    use Cachable;
     protected $guarded = [];
     // protected $with = 'detailOrders';
 

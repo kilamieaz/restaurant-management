@@ -3,9 +3,11 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use GeneaLabs\LaravelModelCaching\Traits\Cachable;
 
 class DetailOrder extends Model
 {
+    use Cachable;
     protected $guarded = [];
     protected $table = 'detail_orders';
     protected $with = ['menu', 'table'];

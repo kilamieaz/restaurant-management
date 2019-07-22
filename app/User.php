@@ -7,10 +7,11 @@ use Laravel\Passport\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use GeneaLabs\LaravelModelCaching\Traits\Cachable;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, Notifiable;
+    use HasApiTokens, Notifiable, Cachable;
 
     /**
      * The attributes that are mass assignable.
