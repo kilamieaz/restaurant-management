@@ -10,6 +10,6 @@ $factory->define(DetailOrder::class, function (Faker $faker) {
         'quantity' => 3,
         'sub_total' => $faker->randomNumber(5) * 3,
         'message' => $faker->realText(100),
-        'status' => 0,
+        'status' => 1,
     ];
 });

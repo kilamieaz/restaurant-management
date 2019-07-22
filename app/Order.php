@@ -11,7 +11,7 @@ class Order extends Model
 {
     use Cachable;
     protected $guarded = [];
-    // protected $with = 'detailOrders';
+    protected $with = 'detailOrders';
 
     public function detailOrders()
     {

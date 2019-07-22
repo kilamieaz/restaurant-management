@@ -50,9 +50,12 @@
         },
         methods: {
             getOrders() {
-                let status = [
-                    'Ordered', 'Cooked', 'Delivered'
-                ]
+                // let status = [
+                //     'Ordered', 'Cooked', 'Delivered'
+                // ]
+                let status = {
+                    1:'Ordered', 2:'Cooked', 3:'Delivered'
+                }
                 let orders = [];
                 this.dataTable = $('#order-table').DataTable({
                     "order": [[ 0, "desc" ]]
