@@ -30,6 +30,6 @@ Route::group(['middleware' => 'auth:api'], function(){
 Route::get('order', 'Api\OrderController@index');
 Route::get('chef', 'Api\ChefOrderController@index');
 Route::get('waiter', 'Api\WaiterOrderController@index');
+Route::post('order/{detailOrder}', 'Api\OrderController@update');
 Route::middleware('auth:api')->group(function () {
-    Route::post('order/{order}', 'Api\OrderController@update');
 });

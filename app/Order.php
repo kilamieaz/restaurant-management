@@ -72,4 +72,14 @@ class Order extends Model
         }
         return ;
     }
+
+    public static function createIfDontExist($member_id, $order_code)
+    {
+        $order = Order::firstOrCreate([
+            'member_id' => $member_id,
+            'cashier_id' => Auth::user()->id,
+            'order_code' => $order_code,
+        ]);
+        return $order;
+    }
 }

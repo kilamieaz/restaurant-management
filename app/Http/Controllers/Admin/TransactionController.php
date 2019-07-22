@@ -29,12 +29,9 @@ class TransactionController extends Controller
         $menu = Menu::find($request->menu_id);
         $table = Table::find($request->table_id);
         $order = Order::where('order_code', $request->order_code)->first();
+
         if(!$order){
-            $order = Order::firstOrCreate([
-                'member_id' => $request->member_id,
-                'cashier_id' => Auth::user()->id,
-                'order_code' => $request->order_code,
-            ]);
+            $order = Order::createIfDontExist($request->member_id, $request->order_code);
         }
         $menuList = Order::find($order->id)->detailOrders()->where('menu_id', $request->menu_id);
         $countMenu = $menuList->count();
