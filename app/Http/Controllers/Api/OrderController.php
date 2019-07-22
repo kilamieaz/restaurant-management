@@ -18,6 +18,8 @@ class OrderController extends Controller
     {
         $order->detailOrders->update([
             'status' => $request->status,
+            'chef_id' => $request->chef_id,
+            'waiter_id' => $request->waiter_id,
         ]);
     }
 }
