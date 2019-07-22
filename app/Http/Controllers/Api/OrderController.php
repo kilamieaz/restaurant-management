@@ -16,10 +16,11 @@ class OrderController extends Controller
 
     public function update(Request $request, Order $order)
     {
-        $order->detailOrders->update([
-            'status' => $request->status,
-            'chef_id' => $request->chef_id,
-            'waiter_id' => $request->waiter_id,
-        ]);
+        $order->fill($request->all());
+        $order->save();
+        // $order->status = $request->status ? $request->status : $order->status;
+        // $order->chef_id = $request->chef_id ? $request->chef_id : $order->chef_id;      
+        // $order->waiter_id = $request->waiter_id ? $request->waiter_id : $order->waiter_id;      
+        // $order->save();
     }
 }
