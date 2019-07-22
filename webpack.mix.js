@@ -1,4 +1,5 @@
 const mix = require('laravel-mix');
+require('laravel-mix-purgecss');
 
 /*
  |--------------------------------------------------------------------------
@@ -18,14 +19,14 @@ mix.js('resources/js/app.js', 'public/js')
         'node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js',
         'node_modules/datatables.net-responsive/js/dataTables.responsive.min.js'
     ], 'public/js/datatable.js')
-    .styles(['node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css'], 'public/css/datatable.css')
+    .styles(['node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css'], 'public/css/datatable.css').purgeCss()
     // for chart.js
     .scripts([
         'node_modules\chart.js\dist\Chart.min.js'
     ], 'public/js/chart.js')
     .styles([
         'node_modules\chart.js\dist\Chart.min.css'
-    ], 'public/css/chart.css')
+    ], 'public/css/chart.css').purgeCss()
     // for moment.js
     .scripts([
         'node_modules/moment/moment.js'
@@ -36,5 +37,5 @@ mix.js('resources/js/app.js', 'public/js')
     ], 'public/js/nprogress.js')
     .styles([
         'node_modules/nprogress/nprogress.css'
-    ], 'public/css/nprogress.css')
-    .sass('resources/sass/app.scss', 'public/css');
+    ], 'public/css/nprogress.css').purgeCss()
+    .sass('resources/sass/app.scss', 'public/css').purgeCss();
