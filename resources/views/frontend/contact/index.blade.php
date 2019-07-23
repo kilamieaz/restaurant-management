@@ -6,7 +6,7 @@
         <div class="breadcrumb-content">
             <h2>Other</h2>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="{{route('frontend.home.index')}}">Home</a></li>
                 <li class="active">Contact</li>
             </ul>
         </div>
@@ -48,7 +48,7 @@
                 <div class="contact-form-content">
                     <h3 class="contact-page-title">Tell Us Your Message</h3>
                     <div class="contact-form">
-                        <form id="contact-form" action="http://hasthemes.com/file/mail.php" method="post">
+                        <form id="contact-form" action="#" method="post">
                             <div class="form-group">
                                 <label>Your Name <span class="required">*</span></label>
                                 <input type="text" name="con_name" id="con_name" required>
@@ -87,37 +87,37 @@
                     <div class="munoz-brand_slider slider-navigation_style-1">
                         <div class="slide-item">
                             <a href="javascript:void(0)">
-                                <img src="assets/images/brand/1.jpg" alt="Munoz's Brand Image">
+                                <img class="lazyload" src="{{ asset('frontend/images/brand/1.jpg') }}" alt="Munoz's Brand Image">
                             </a>
                         </div>
                         <div class="slide-item">
                             <a href="javascript:void(0)">
-                                <img src="assets/images/brand/2.jpg" alt="Munoz's Brand Image">
+                                <img class="lazyload" src="{{ asset('frontend/images/brand/2.jpg') }}" alt="Munoz's Brand Image">
                             </a>
                         </div>
                         <div class="slide-item">
                             <a href="javascript:void(0)">
-                                <img src="assets/images/brand/3.jpg" alt="Munoz's Brand Image">
+                                <img class="lazyload" src="{{ asset('frontend/images/brand/3.jpg') }}" alt="Munoz's Brand Image">
                             </a>
                         </div>
                         <div class="slide-item">
                             <a href="javascript:void(0)">
-                                <img src="assets/images/brand/4.jpg" alt="Munoz's Brand Image">
+                                <img class="lazyload" src="{{ asset('frontend/images/brand/4.jpg') }}" alt="Munoz's Brand Image">
                             </a>
                         </div>
                         <div class="slide-item">
                             <a href="javascript:void(0)">
-                                <img src="assets/images/brand/5.jpg" alt="Munoz's Brand Image">
+                                <img class="lazyload" src="{{ asset('frontend/images/brand/5.jpg') }}" alt="Munoz's Brand Image">
                             </a>
                         </div>
                         <div class="slide-item">
                             <a href="javascript:void(0)">
-                                <img src="assets/images/brand/6.jpg" alt="Munoz's Brand Image">
+                                <img class="lazyload" src="{{ asset('frontend/images/brand/6.jpg') }}" alt="Munoz's Brand Image">
                             </a>
                         </div>
                         <div class="slide-item">
                             <a href="javascript:void(0)">
-                                <img src="assets/images/brand/1.jpg" alt="Munoz's Brand Image">
+                                <img class="lazyload" src="{{ asset('frontend/images/brand/1.jpg')}}" alt="Munoz's Brand Image">
                             </a>
                         </div>
                     </div>

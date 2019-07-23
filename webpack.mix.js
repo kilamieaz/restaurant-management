@@ -35,11 +35,13 @@ mix.js('resources/js/app.js', 'public/js')
     .scripts([
         'node_modules/nprogress/nprogress.js'
     ], 'public/js/nprogress.js')
+    //for lazyload
+    .scripts([
+        'node_modules/lazyload/lazyload.min.js'
+    ], 'public/js/lazyload.js')
     .styles([
         'node_modules/nprogress/nprogress.css'
-    ], 'public/css/nprogress.css').options({
-        purifyCss: true,
-    });
+    ], 'public/css/nprogress.css');
     // mix.options({
     //     purifyCss: true,
     // });

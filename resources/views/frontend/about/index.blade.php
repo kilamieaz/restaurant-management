@@ -6,7 +6,7 @@
         <div class="breadcrumb-content">
             <h2>Other</h2>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="{{ route('frontend.about.index') }}">Home</a></li>
                 <li class="active">About Us</li>
             </ul>
         </div>
@@ -21,7 +21,7 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="about-us_img">
-                        <img src="assets/images/about-us/1.jpg" alt="Munoz's About Us Image">
+                        <img class="lazyload" src="{{ asset('frontend/images/about-us/1.jpg')}}" alt="Munoz's About Us Image">
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -32,9 +32,6 @@
                             and demoralized by the charms of pleasure of the moment, so blinded by desire, that they
                             cannot foresee the pain and trouble.
                         </p>
-                        <div class="munoz-btn-ps_left slide-btn">
-                            <a class="munoz-btn-2" href="shop-left-sidebar.html">Shop Now</a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -51,7 +48,7 @@
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="shipping-item">
                             <div class="shipping-icon">
-                                <img src="assets/images/about-us/shipping-icon/1.png" alt="Munoz's Shipping Icon">
+                                <img class="lazyload" src="{{ asset('frontend/images/about-us/shipping-icon/1.png') }}" alt="Munoz's Shipping Icon">
                             </div>
                             <div class="shipping-content">
                                 <h6>100% fresh food</h6>
@@ -61,7 +58,7 @@
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="shipping-item">
                             <div class="shipping-icon">
-                                <img src="assets/images/about-us/shipping-icon/2.png" alt="Munoz's Shipping Icon">
+                                <img class="lazyload" src="{{ asset('frontend/images/about-us/shipping-icon/2.png') }}" alt="Munoz's Shipping Icon">
                             </div>
                             <div class="shipping-content">
                                 <h6>Free Delivery</h6>
@@ -71,7 +68,7 @@
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="shipping-item">
                             <div class="shipping-icon">
-                                <img src="assets/images/about-us/shipping-icon/3.png" alt="Munoz's Shipping Icon">
+                                <img class="lazyload" src="{{ asset('frontend/images/about-us/shipping-icon/3.png') }}" alt="Munoz's Shipping Icon">
                             </div>
                             <div class="shipping-content">
                                 <h6>Award Winner</h6>
@@ -81,7 +78,7 @@
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="shipping-item">
                             <div class="shipping-icon">
-                                <img src="assets/images/about-us/shipping-icon/4.png" alt="Munoz's Shipping Icon">
+                                <img class="lazyload" src="{{ asset('frontend/images/about-us/shipping-icon/4.png')}}" alt="Munoz's Shipping Icon">
                             </div>
                             <div class="shipping-content">
                                 <h6>Fresh Farm Food</h6>
@@ -120,7 +117,7 @@
                     <div class="testimonial-slider slider-navigation_style-4">
                         <div class="testimonial-item">
                             <div class="testimonial-img">
-                                <img src="assets/images/about-us/testimonial/1.png" alt="Munoz's Testimonial Image">
+                                <img class="lazyload" src="{{ asset('frontend/images/about-us/testimonial/1.png') }}" alt="Munoz's Testimonial Image">
                             </div>
                             <div class="testimonial-content">
                                 <div class="quote-icon">
@@ -138,7 +135,7 @@
                         </div>
                         <div class="testimonial-item">
                             <div class="testimonial-img">
-                                <img src="assets/images/about-us/testimonial/2.png" alt="Munoz's Testimonial Image">
+                                <img class="lazyload" src="{{ asset('frontend/images/about-us/testimonial/2.png') }}" alt="Munoz's Testimonial Image">
                             </div>
                             <div class="testimonial-content">
                                 <div class="quote-icon">
@@ -172,37 +169,37 @@
                     <div class="munoz-brand_slider slider-navigation_style-1">
                         <div class="slide-item">
                             <a href="javascript:void(0)">
-                                <img src="assets/images/brand/1.jpg" alt="Munoz's Brand Image">
+                                <img class="lazyload" src="{{ asset('frontend/images/brand/1.jpg')}}" alt="Munoz's Brand Image">
                             </a>
                         </div>
                         <div class="slide-item">
                             <a href="javascript:void(0)">
-                                <img src="assets/images/brand/2.jpg" alt="Munoz's Brand Image">
+                                <img class="lazyload" src="{{ asset('frontend/images/brand/2.jpg')}}" alt="Munoz's Brand Image">
                             </a>
                         </div>
                         <div class="slide-item">
                             <a href="javascript:void(0)">
-                                <img src="assets/images/brand/3.jpg" alt="Munoz's Brand Image">
+                                <img class="lazyload" src="{{ asset('frontend/images/brand/3.jpg') }}" alt="Munoz's Brand Image">
                             </a>
                         </div>
                         <div class="slide-item">
                             <a href="javascript:void(0)">
-                                <img src="assets/images/brand/4.jpg" alt="Munoz's Brand Image">
+                                <img class="lazyload" src="{{ asset('frontend/images/brand/4.jpg') }}" alt="Munoz's Brand Image">
                             </a>
                         </div>
                         <div class="slide-item">
                             <a href="javascript:void(0)">
-                                <img src="assets/images/brand/5.jpg" alt="Munoz's Brand Image">
+                                <img class="lazyload" src="{{ asset('frontend/images/brand/5.jpg') }}" alt="Munoz's Brand Image">
                             </a>
                         </div>
                         <div class="slide-item">
                             <a href="javascript:void(0)">
-                                <img src="assets/images/brand/6.jpg" alt="Munoz's Brand Image">
+                                <img class="lazyload" src="{{ asset('frontend/images/brand/6.jpg') }}" alt="Munoz's Brand Image">
                             </a>
                         </div>
                         <div class="slide-item">
                             <a href="javascript:void(0)">
-                                <img src="assets/images/brand/1.jpg" alt="Munoz's Brand Image">
+                                <img class="lazyload" src="{{ asset('frontend/images/brand/1.jpg') }}" alt="Munoz's Brand Image">
                             </a>
                         </div>
                     </div>

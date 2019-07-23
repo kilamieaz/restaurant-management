@@ -50,12 +50,9 @@
         },
         methods: {
             getOrders() {
-                // let status = [
-                //     'Ordered', 'Cooked', 'Delivered'
-                // ]
                 let status = {
                     1:'Ordered', 2:'Cooked', 3:'Delivered'
-                }
+                };
                 let orders = [];
                 this.dataTable = $('#order-table').DataTable({
                     "order": [[ 0, "desc" ]]
@@ -66,7 +63,7 @@
                     var url = '/api/chef'
                 } else {
                     var url = '/api/waiter'
-                }
+                };
                 axios.get('/api/order')
                     .then((response) => {
                         this.orders = response.data
@@ -78,7 +75,6 @@
                                     detail.id,
                                     detail.table.name,
                                     detail.menu.name,
-                                    // '<a href="#">' + order.quantity + '</a>',
                                     detail.menu.price,
                                     detail.quantity,
                                     detail.sub_total,
@@ -95,7 +91,6 @@
             listen() {
                 window.Echo.channel('transaction')
                     .listen('.new.transaction', (order) => {
-                        // this.orders.unshift(order);
                         this.getOrders();
                     });
             }

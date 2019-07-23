@@ -54,6 +54,7 @@ return [
         '*.iso',
         '*.flv',
         '*.m4v',
+        '_debugbar/*',
         '*.torrent'
     ],
 
