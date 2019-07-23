@@ -72,6 +72,12 @@
 
     <!-- jQuery JS -->
     <script src="{{ asset('frontend/js/vendor/jquery-1.12.4.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/lazyload.js') }}"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("img.lazyload").lazyload();
+        });
+    </script>
     <!-- Modernizer JS -->
     <script src="{{ asset('frontend/js/vendor/modernizr-2.8.3.min.js') }}"></script>
     <!-- Popper JS -->
@@ -120,6 +126,7 @@
 
     <!-- Main JS -->
     <script src="{{ asset('frontend/js/main.js') }}"></script>
+
     @stack('scripts')
 </body>
 </html>

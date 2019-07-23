@@ -21,11 +21,10 @@
         if (id) url = "{!! route('transaction.show',"$code") !!}";
 
         else url = "{!! route($route_name) !!}";
-        // console.log(url)
         $("#{{$table_id}}").DataTable({
             "responsive": true,
             "processing": true,
-            "pageLength": 5,
+            "pageLength": 20,
             "ajax": {
                 'url': url,
                 "type": "GET",

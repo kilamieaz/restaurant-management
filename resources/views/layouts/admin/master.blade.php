@@ -9,7 +9,6 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'Laravel') }}</title>
     <!-- Scripts -->
-    {{-- <script src="{{ asset('js/app.js') }}" defer></script> --}}
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -21,6 +20,7 @@
 
     @stack('styles')
     <script type="text/javascript" src="{{ asset('js/nprogress.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/lazyload.js') }}"></script>
 </head>
 
 <body class="header-fixed sidebar-static sidebar-dark header-light" id="body">
@@ -77,6 +77,7 @@
     <script type="text/javascript" src="{{ asset('js/moment.js') }}"></script>
     <script type="text/javascript">
         $(document).ready(function () {
+            $("img.lazyload").lazyload();
             $(".select2-dashboard").select2({
                 ajax: {
                     url: '/searchable',

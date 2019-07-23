@@ -15,10 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::prefix('frontend')->group( function () {
-    Route::get('home', 'Frontend\HomeController@index')->name('frontend.home.index');
-    Route::get('contact', 'Frontend\ContactController@index')->name('frontend.contact.index');
-    Route::get('about', 'Frontend\AboutController@index')->name('frontend.about.index');
+Route::group(['middleware' => ['pagespeed']], function () {
+    Route::prefix('frontend')->group( function () {
+        Route::get('home', 'Frontend\HomeController@index')->name('frontend.home.index');
+        Route::get('contact', 'Frontend\ContactController@index')->name('frontend.contact.index');
+        Route::get('about', 'Frontend\AboutController@index')->name('frontend.about.index');
+    });
 });
 
 Route::group(['middleware' => ['auth']], function () {
