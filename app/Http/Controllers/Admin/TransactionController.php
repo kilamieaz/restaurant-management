@@ -30,35 +30,16 @@ class TransactionController extends Controller
         $findOrder = Order::where('order_code', $request->order_code)->first();
         $order = $findOrder ?? Order::createIfDontExist($request->member_id, $request->order_code);
         $menuList = Order::find($order->id)->detailOrders()->where('menu_id', $request->menu_id);
-        $countMenu = $menuList->count();
-        if ($countMenu == 0) {
-            $detailOrder = DetailOrder::create([
-                'order_id' => $order->id,
-                'menu_id' => $menu->id,
-                'table_id' => $request->table_id,
-                'message' => $request->message,
-                'quantity' => $request->quantity,
-                'sub_total' => $menu->price * $request->quantity,
-                'status' => OrderStatus::Ordered,
-            ]);
-        }
-        else {
-            $menuList->increment('quantity', $request->quantity);
-            $menuList->update([
-                'sub_total' => $menu->price * $menuList->first()->quantity,
-            ]);
-        }
+        ($menuList->count() == 0 ? DetailOrder::createIfDontExist($order->id, $menu->id, $request, $menu->price) : DetailOrder::incrementQuantityIfExist($request, $menu->price, $menuList));
         $total = $order->detailOrders()->sum('sub_total');
-        $data = ['code' => $order->order_code, 'total' => $total, 'table_name' => $table->name, 'table_id' => $table->id];
         $orderWithDetail = Order::find($order->id);
         event(new NewTransaction($orderWithDetail));
-        return $data;
+        return $data = ['code' => $order->order_code, 'total' => $total, 'table_name' => $table->name, 'table_id' => $table->id];
     }
 
     public function show($code)
     {
         $orders = Order::where('order_code', $code)->get();
-        // dd($orders);
         $data = [];
         foreach ($orders as $index => $order) {
             foreach ($order->detailOrders as $index => $list) {
