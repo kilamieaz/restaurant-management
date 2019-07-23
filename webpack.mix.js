@@ -11,9 +11,8 @@ require('laravel-mix-purgecss');
  | file for the application as well as bundling up all the JS files.
  |
  */
-
 mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css').purgeCss()
+    .sass('resources/sass/app.scss', 'public/css')
     // for datatables
     .scripts([
         'node_modules/datatables.net/js/jquery.dataTables.min.js',
@@ -23,10 +22,10 @@ mix.js('resources/js/app.js', 'public/js')
     .styles(['node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css'], 'public/css/datatable.css')
     // for chart.js
     .scripts([
-        'node_modules\chart.js\dist\Chart.min.js'
+        'node_modules/chart.js/dist/Chart.min.js'
     ], 'public/js/chart.js')
     .styles([
-        'node_modules\chart.js\dist\Chart.min.css'
+        'node_modules/chart.js/dist/Chart.min.css'
     ], 'public/css/chart.css')
     // for moment.js
     .scripts([
@@ -38,4 +37,9 @@ mix.js('resources/js/app.js', 'public/js')
     ], 'public/js/nprogress.js')
     .styles([
         'node_modules/nprogress/nprogress.css'
-    ], 'public/css/nprogress.css');
+    ], 'public/css/nprogress.css').options({
+        purifyCss: true,
+    });
+    // mix.options({
+    //     purifyCss: true,
+    // });
