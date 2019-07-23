@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Auth;
 use App\Charts\Dashboard;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model;
@@ -75,7 +76,7 @@ class Order extends Model
 
     public static function createIfDontExist($member_id, $order_code)
     {
-        $order = Order::firstOrCreate([
+        $order = Order::create([
             'member_id' => $member_id,
             'cashier_id' => Auth::user()->id,
             'order_code' => $order_code,

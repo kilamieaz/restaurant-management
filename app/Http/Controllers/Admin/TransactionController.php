@@ -25,14 +25,10 @@ class TransactionController extends Controller
 
     public function store(TransactionRequest $request)
     {
-        // dd($request->all());
         $menu = Menu::find($request->menu_id);
         $table = Table::find($request->table_id);
-        $order = Order::where('order_code', $request->order_code)->first();
-
-        if(!$order){
-            $order = Order::createIfDontExist($request->member_id, $request->order_code);
-        }
+        $findOrder = Order::where('order_code', $request->order_code)->first();
+        $order = $findOrder ?? Order::createIfDontExist($request->member_id, $request->order_code);
         $menuList = Order::find($order->id)->detailOrders()->where('menu_id', $request->menu_id);
         $countMenu = $menuList->count();
         if ($countMenu == 0) {
@@ -54,8 +50,8 @@ class TransactionController extends Controller
         }
         $total = $order->detailOrders()->sum('sub_total');
         $data = ['code' => $order->order_code, 'total' => $total, 'table_name' => $table->name, 'table_id' => $table->id];
-        $orderWithDetail = Order::find($order->id)->with('detailOrders')->first();
-        // event(new NewTransaction($orderWithDetail));
+        $orderWithDetail = Order::find($order->id);
+        event(new NewTransaction($orderWithDetail));
         return $data;
     }
 
