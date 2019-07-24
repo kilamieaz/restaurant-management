@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Role;
-use Illuminate\Http\Request;
-use App\Http\Requests\RoleRequest;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\RoleRequest;
+use App\Role;
 
 class RoleController extends Controller
 {

@@ -23,7 +23,8 @@ class EmployeeRequest extends FormRequest
      */
     public function rules()
     {
-        $id = $this->request->get('id') ? ',' . $this->request->get('id') : '';
+        $id = $this->request->get('id') ? ','.$this->request->get('id') : '';
+
         return [
             'role_id' => 'required',
             'name' => 'required|string|max:50',

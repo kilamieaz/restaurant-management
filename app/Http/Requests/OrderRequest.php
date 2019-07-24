@@ -23,7 +23,8 @@ class OrderRequest extends FormRequest
      */
     public function rules()
     {
-        $order_code = $this->request->get('order_code') ? ',' . $this->request->get('order_code') : '';
+        $order_code = $this->request->get('order_code') ? ','.$this->request->get('order_code') : '';
+
         return [
             // 'order_code' => 'required',
             'cashier_id' => 'integer',

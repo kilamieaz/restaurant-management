@@ -3,8 +3,8 @@
 namespace App;
 
 use App\Enums\UserRole;
-use Illuminate\Database\Eloquent\Model;
 use GeneaLabs\LaravelModelCaching\Traits\Cachable;
+use Illuminate\Database\Eloquent\Model;
 
 class Role extends Model
 {
@@ -15,6 +15,7 @@ class Role extends Model
     {
         return $this->id;
     }
+
     public function selectText()
     {
         return $this->name;

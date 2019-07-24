@@ -2,16 +2,17 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Order;
 use App\DetailOrder;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Order;
+use Illuminate\Http\Request;
 
 class OrderController extends Controller
 {
     public function index()
     {
         $order = Order::with('detailOrders')->latest()->get();
+
         return response()->json($order);
     }
 
@@ -19,6 +20,7 @@ class OrderController extends Controller
     {
         $detailOrder->fill($request->all());
         $detailOrder->save();
+
         return response()->json($detailOrder);
     }
 }
