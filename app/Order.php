@@ -2,11 +2,11 @@
 
 namespace App;
 
-use Auth;
 use App\Charts\Dashboard;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Database\Eloquent\Model;
+use Auth;
 use GeneaLabs\LaravelModelCaching\Traits\Cachable;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Order extends Model
 {
@@ -23,43 +23,47 @@ class Order extends Model
     public static function chartOrder()
     {
         $order = Order::all()->count();
-        $orderChart = new Dashboard;
+        $orderChart = new Dashboard();
         $orderChart
             ->title('All Order')
             ->minimalist(true)
             ->labels(['order'])
-            ->dataset('All Order' , 'bar', [$order])
-            ->backgroundColor("#4C84FF");
+            ->dataset('All Order', 'bar', [$order])
+            ->backgroundColor('#4C84FF')
+        ;
+
         return $orderChart;
     }
 
     public static function chartMonthOrder()
     {
-        $months = Order::select(DB::raw("COUNT(*) as count, MONTHNAME(created_at) as month, YEAR(created_at) year"))
-        ->orderBy("created_at")
+        $months = Order::select(DB::raw('COUNT(*) as count, MONTHNAME(created_at) as month, YEAR(created_at) year'))
+            ->orderBy('created_at')
         // ->whereYear('created_at', date("Y"))     // if you want data only in this year
-        ->groupBy(DB::raw("month(created_at), year(created_at)"))
-        ->get();
+            ->groupBy(DB::raw('month(created_at), year(created_at)'))
+            ->get()
+        ;
         $arrayMonthYear = [];
         $arrayCount = [];
         $arrayColour = [];
-    
+
         if (isset($months)) {
             foreach ($months as $month) {
-                $arrayMonthYear [] = $month->month .' '. $month->year; 
-                $arrayCount [] = $month->count;
-                // $arrayColour [] = '#'.str_pad(dechex(mt_rand(0, 0xFFFFFF)), 6, '0', STR_PAD_LEFT); 
+                $arrayMonthYear[] = $month->month.' '.$month->year;
+                $arrayCount[] = $month->count;
+                // $arrayColour [] = '#'.str_pad(dechex(mt_rand(0, 0xFFFFFF)), 6, '0', STR_PAD_LEFT);
             }
-            
-            $orderMonthChart = new Dashboard;
+
+            $orderMonthChart = new Dashboard();
             $orderMonthChart->title('Order Per Month')
             // ->minimalist(true)
-            ->labels($arrayMonthYear)
-            ->dataset('Order Per Month', 'line', $arrayCount)
-            ->backgroundColor("#4C84FF");
+                ->labels($arrayMonthYear)
+                ->dataset('Order Per Month', 'line', $arrayCount)
+                ->backgroundColor('#4C84FF')
+            ;
+
             return $orderMonthChart;
         }
-        return ;
     }
 
     public static function getPeriod()
@@ -68,19 +72,16 @@ class Order extends Model
         $latestOrder = Order::latest()->first();
         $period = [];
         if ($oldestOrder && $latestOrder) {
-            $period = collect($oldestOrder->created_at->isoFormat('MMM Do YY'))->merge($latestOrder->created_at->isoFormat('MMM Do YY'));
-            return $period;
+            return collect($oldestOrder->created_at->isoFormat('MMM Do YY'))->merge($latestOrder->created_at->isoFormat('MMM Do YY'));
         }
-        return ;
     }
 
     public static function createIfDontExist($member_id, $order_code)
     {
-        $order = Order::create([
+        return Order::create([
             'member_id' => $member_id,
             'cashier_id' => Auth::user()->id,
             'order_code' => $order_code,
         ]);
-        return $order;
     }
 }

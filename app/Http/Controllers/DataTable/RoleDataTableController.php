@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers\DataTable;
 
-use App\Role;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Role;
 
 class RoleDataTableController extends Controller
 {
@@ -18,12 +17,13 @@ class RoleDataTableController extends Controller
             $row[] = $list->name;
             $row[] = $list->description;
             $row[] = '<div class="text-center"><div class="btn-group">
-               <button type="button" onclick="editForm(' . $list->id . ')" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></button>
-               <button type="button" onclick="deleteData(' . $list->id . ')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button></div></div>';
+               <button type="button" onclick="editForm('.$list->id.')" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></button>
+               <button type="button" onclick="deleteData('.$list->id.')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button></div></div>';
             $data[] = $row;
         }
 
         $output = ['data' => $data];
+
         return response()->json($output);
     }
 }

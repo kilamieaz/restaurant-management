@@ -23,7 +23,8 @@ class MemberRequest extends FormRequest
      */
     public function rules()
     {
-        $id = $this->request->get('id') ? ',' . $this->request->get('id') : '';
+        $id = $this->request->get('id') ? ','.$this->request->get('id') : '';
+
         return [
             'name' => 'required|string|max:50',
             'email' => 'required|unique:users,email'.$id,

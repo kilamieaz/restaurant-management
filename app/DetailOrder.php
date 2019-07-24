@@ -3,8 +3,8 @@
 namespace App;
 
 use App\Enums\OrderStatus;
-use Illuminate\Database\Eloquent\Model;
 use GeneaLabs\LaravelModelCaching\Traits\Cachable;
+use Illuminate\Database\Eloquent\Model;
 
 class DetailOrder extends Model
 {

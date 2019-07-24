@@ -2,8 +2,8 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
 use GeneaLabs\LaravelModelCaching\Traits\Cachable;
+use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
@@ -14,6 +14,7 @@ class Category extends Model
     {
         return $this->id;
     }
+
     public function selectText()
     {
         return $this->name;

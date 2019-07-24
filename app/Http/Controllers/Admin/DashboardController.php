@@ -2,19 +2,17 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\User;
+use App\DetailOrder;
+use App\Http\Controllers\Controller;
 use App\Menu;
 use App\Order;
-use App\DetailOrder;
+use App\User;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
 class DashboardController extends Controller
 {
     /**
      * Create a new controller instance.
-     *
-     * @return void
      */
     public function __construct()
     {
@@ -35,20 +33,23 @@ class DashboardController extends Controller
         $totalMenu = Menu::all()->count();
         $totalEmployee = User::employees()->count();
         $totalMember = User::member()->count();
-        $totalIncome = 'Rp ' . format_money(DetailOrder::total());
-        
+        $totalIncome = 'Rp '.format_money(DetailOrder::total());
+
         if ($request->user()->authorizeRole('admin', 'cashier', 'chef', 'waiter')) {
-            return view('admin.dashboard.index', 
-            compact(
-                'chartOrder', 
-                'chartMonthOrder', 
-                'periodOrder', 
-                'totalMenu',
-                'totalEmployee',
-                'totalMember',
-                'totalIncome'
-            ));
+            return view(
+                'admin.dashboard.index',
+                compact(
+                    'chartOrder',
+                    'chartMonthOrder',
+                    'periodOrder',
+                    'totalMenu',
+                    'totalEmployee',
+                    'totalMember',
+                    'totalIncome'
+            )
+            );
         }
+
         return redirect()->route('404');
     }
 }

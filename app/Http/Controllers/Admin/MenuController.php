@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Menu;
 use App\Category;
-use Illuminate\Http\Request;
-use App\Http\Requests\MenuRequest;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\MenuRequest;
+use App\Menu;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
 class MenuController extends Controller
@@ -19,13 +19,15 @@ class MenuController extends Controller
     public function index()
     {
         $categories = Category::all();
+
         return view('admin.menu.index', compact('categories'));
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
+     *
      * @return \Illuminate\Http\Response
      */
     public function store(MenuRequest $request)
@@ -41,14 +43,14 @@ class MenuController extends Controller
 
     public function show($id)
     {
-        $menu = Menu::find($id);
-        return $menu;
+        return Menu::find($id);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Menu  $menu
+     * @param \App\Menu $menu
+     *
      * @return \Illuminate\Http\Response
      */
     public function edit(Menu $menu)
@@ -59,8 +61,9 @@ class MenuController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Menu  $menu
+     * @param \Illuminate\Http\Request $request
+     * @param \App\Menu                $menu
+     *
      * @return \Illuminate\Http\Response
      */
     public function update(MenuRequest $request, Menu $menu)
@@ -68,18 +71,21 @@ class MenuController extends Controller
         $data = $request->all();
         if ($request->hasFile('photo')) {
             Storage::disk('public')->delete($menu->photo);
-            $data['photo'] = $request->file('photo')->store('public/photo');;
+            $data['photo'] = $request->file('photo')->store('public/photo');
             $menu->update($data);
+
             return json_encode(['menu' => $menu]);
         }
         $menu->update($request->except('photo'));
+
         return json_encode(['menu' => $menu]);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Menu  $menu
+     * @param \App\Menu $menu
+     *
      * @return \Illuminate\Http\Response
      */
     public function destroy(Menu $menu)

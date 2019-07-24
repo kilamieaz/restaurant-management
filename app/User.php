@@ -3,15 +3,16 @@
 namespace App;
 
 use App\Enums\UserRole;
-use Laravel\Passport\HasApiTokens;
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Foundation\Auth\User as Authenticatable;
 use GeneaLabs\LaravelModelCaching\Traits\Cachable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+use Laravel\Passport\HasApiTokens;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, Notifiable, Cachable;
+    use HasApiTokens;
+    use Notifiable;
+    use Cachable;
 
     /**
      * The attributes that are mass assignable.
@@ -54,22 +55,25 @@ class User extends Authenticatable
         if (is_array($role)) {
             return $this->hasAnyRole($role) || null;
         }
+
         return $this->hasRole($role) || null;
     }
 
     /**
-    * Check multiple role
-    * @param array $role
-    */
+     * Check multiple role.
+     *
+     * @param array $role
+     */
     public function hasAnyRole($role)
     {
         return null !== $this->role()->whereIn('name', $role)->first();
     }
 
     /**
-    * Check one role
-    * @param string $role
-    */
+     * Check one role.
+     *
+     * @param string $role
+     */
     public function hasRole($role)
     {
         return null !== $this->role()->where('name', $role)->first();
@@ -87,6 +91,6 @@ class User extends Authenticatable
 
     public function scopeSearchMember($query, $search)
     {
-        return $query->select('id', 'name', 'email','role_id')->where([['role_id', UserRole::Member], ['email', 'LIKE', "%$search%"]])->get();
+        return $query->select('id', 'name', 'email', 'role_id')->where([['role_id', UserRole::Member], ['email', 'LIKE', "%{$search}%"]])->get();
     }
 }

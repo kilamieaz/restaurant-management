@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
+use App\Http\Requests\EmployeeRequest;
 use App\Role;
 use App\User;
-use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
-use App\Http\Requests\EmployeeRequest;
 use Illuminate\Support\Facades\Storage;
 
 class EmployeeController extends Controller
@@ -15,6 +14,7 @@ class EmployeeController extends Controller
     public function index()
     {
         $roles = Role::employees();
+
         return view('admin.employee.index', compact('roles'));
     }
 
@@ -41,11 +41,13 @@ class EmployeeController extends Controller
         $data = $request->all();
         if ($request->hasFile('photo')) {
             Storage::disk('public')->delete($employee->photo);
-            $data['photo'] = $request->file('photo')->store('public/photo');;
+            $data['photo'] = $request->file('photo')->store('public/photo');
             $employee->update($data);
+
             return json_encode(['employee' => $employee]);
         }
         $employee->update($request->except('photo'));
+
         return json_encode(['employee' => $employee]);
     }
 
