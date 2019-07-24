@@ -9,7 +9,7 @@
         <div class="card card-default">
             <div class="card-header card-header-border-bottom">
                 <button type="button" onclick="addForm()" class="btn btn-success float-right"><i
-                        class="fa fa-plus-circle"></i> Add</button>
+                        class="mdi mdi-plus-outline"></i> Add</button>
             </div>
             <div class="card-body">
                 {{-- datatable --}}
