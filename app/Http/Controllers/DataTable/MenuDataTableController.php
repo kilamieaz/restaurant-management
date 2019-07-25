@@ -10,7 +10,7 @@ class MenuDataTableController extends Controller
 {
     public function index()
     {
-        $menus = Menu::all();
+        $menus = Menu::latest()->get();
         $data = [];
         foreach ($menus as $index => $list) {
             $row = [];

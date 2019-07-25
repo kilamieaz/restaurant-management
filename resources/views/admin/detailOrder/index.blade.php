@@ -2,6 +2,9 @@
 
 @push('styles')
 <link rel="stylesheet" href="{{ asset('css/datatable.css') }}">
+<style>
+    th, td { text-align: center; }
+</style>
 @endpush
 @section('content')
 <div class="container">

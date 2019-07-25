@@ -9,7 +9,7 @@ class CategoryDataTableController extends Controller
 {
     public function index()
     {
-        $category = Category::all();
+        $category = Category::latest()->get();
         $data = [];
         foreach ($category as $index => $list) {
             $row = [];

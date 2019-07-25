@@ -9,7 +9,7 @@ class RoleDataTableController extends Controller
 {
     public function index()
     {
-        $roles = Role::all();
+        $roles = Role::latest()->get();
         $data = [];
         foreach ($roles as $index => $list) {
             $row = [];

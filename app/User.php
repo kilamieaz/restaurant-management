@@ -81,12 +81,12 @@ class User extends Authenticatable
 
     public function scopeEmployees($query)
     {
-        return $query->where('role_id', 'not like', UserRole::Member)->get();
+        return $query->where('role_id', 'not like', UserRole::Member)->latest()->get();
     }
 
     public function scopeMember($query)
     {
-        return $query->where('role_id', UserRole::Member)->get();
+        return $query->where('role_id', UserRole::Member)->latest()->get();
     }
 
     public function scopeSearchMember($query, $search)

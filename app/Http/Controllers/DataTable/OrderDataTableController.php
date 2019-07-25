@@ -10,7 +10,7 @@ class OrderDataTableController extends Controller
 {
     public function index(Request $request)
     {
-        $orders = Order::all();
+        $orders = Order::latest()->get();
         $data = [];
         foreach ($orders as $index => $list) {
             foreach ($list->detailOrders as $index => $list) {

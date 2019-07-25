@@ -1,5 +1,8 @@
 @push('styles')
 <link rel="stylesheet" href="{{ asset('css/datatable.css') }}">
+<style>
+    th, td { text-align: center; }
+</style>
 @endpush
 
 @component('components.table', ['table_id' => $table_id])

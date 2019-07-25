@@ -9,7 +9,7 @@ class TableDataTableController extends Controller
 {
     public function index()
     {
-        $tables = Table::all();
+        $tables = Table::latest()->get();
         $data = [];
         foreach ($tables as $index => $list) {
             $row = [];
