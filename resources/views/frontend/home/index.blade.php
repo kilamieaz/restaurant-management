@@ -1,4 +1,11 @@
 @extends('layouts.frontend.master')
+@push('styles')
+{{-- <style>
+    #particles-js {
+        background: grey;
+        }
+    </style> --}}
+@endpush
 @section('content')
 <div class="munoz-slider_area munoz-slider_area-2">
     <div class="main-slider slider-navigation_style-1">
@@ -10,9 +17,6 @@
                     <h4>with fresh food.</h4>
                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have
                         suffered</p>
-                    <div class="munoz-btn-ps_left slide-btn">
-                        <a class="munoz-btn-2" href="shop-left-sidebar.html">Shop Now</a>
-                    </div>
                 </div>
                 <div class="slider-progress"></div>
             </div>
@@ -26,9 +30,6 @@
                     <h4>with fresh food.</h4>
                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have
                         suffered</p>
-                    <div class="munoz-btn-ps_left slide-btn">
-                        <a class="munoz-btn-2" href="shop-left-sidebar.html">Shop Now</a>
-                    </div>
                 </div>
                 <div class="slider-progress"></div>
             </div>
@@ -52,7 +53,7 @@
                     <div class="slide-item">
                         <div class="single-product">
                             <div class="product-img">
-                                <a href="javascript:void(0)">
+                                <a href="{{ route('product.show', $menu->id) }}">
                                     <img class="lazyload primary-img" src="{{ Storage::url($menu->photo) }}"
                                         alt="Munoz's Product Image">
                                     <img class="lazyload secondary-img" src="{{ Storage::url($menu->photo) }}"
@@ -69,7 +70,7 @@
                                     </h3>
                                     <div class="price-box">
                                         {{-- <span class="old-price">$60.00</span> --}}
-                                        <span class="new-price">{{$menu->price}}</span>
+                                        <span class="new-price">Rp {{$menu->price}}</span>
                                     </div>
                                 </div>
                             </div>
@@ -90,21 +91,24 @@
             <div class="col-lg-4 col-md-4 col-sm-4">
                 <div class="banner-item img-hover_effect">
                     <a href="javascript:void(0)">
-                        <img class="lazyload img-full" src="{{ asset('frontend/images/banner/1.jpg') }}" alt="Munoz's Banner">
+                        <img class="lazyload img-full" src="{{ asset('frontend/images/banner/1.jpg') }}"
+                            alt="Munoz's Banner">
                     </a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4">
                 <div class="banner-item img-hover_effect">
                     <a href="javascript:void(0)">
-                        <img class="lazyload img-full" src="{{ asset('frontend/images/banner/2.jpg') }}" alt="Munoz's Banner">
+                        <img class="lazyload img-full" src="{{ asset('frontend/images/banner/2.jpg') }}"
+                            alt="Munoz's Banner">
                     </a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4">
                 <div class="banner-item img-hover_effect">
                     <a href="javascript:void(0)">
-                        <img class="lazyload img-full" src="{{ asset('frontend/images/banner/3.jpg') }}" alt="Munoz's Banner">
+                        <img class="lazyload img-full" src="{{ asset('frontend/images/banner/3.jpg') }}"
+                            alt="Munoz's Banner">
                     </a>
                 </div>
             </div>
@@ -124,7 +128,8 @@
                             <div class="product-content">
                                 <div class="product-desc_info">
                                     <h2 class="product-name">
-                                        <a href="shop-left-sidebar.html">{{$menuRandom->name}}.</a>
+                                        <a
+                                            href="{{ route('product.show', $menuRandom->id) }}">{{$menuRandom->name}}.</a>
                                     </h2>
                                     <p class="product-desc">
                                         {{$menuRandom->description}}
@@ -142,7 +147,7 @@
         </div>
     </div>
 </div>
-<!-- Munoz's Product Area Three End Here -->;ma
+<!-- Munoz's Product Area Three End Here -->
 
 <!-- Begin Munoz's Banner Area Two -->
 <div class="munoz-banner_area munoz-banner_area-2">
@@ -151,21 +156,24 @@
             <div class="col-lg-4 col-md-4 col-sm-4">
                 <div class="banner-item img-hover_effect">
                     <a href="javascript:void(0)">
-                        <img class="lazyload img-full" src="{{ asset('frontend/images/banner/4.jpg') }}" alt="Munoz's Banner">
+                        <img class="lazyload img-full" src="{{ asset('frontend/images/banner/4.jpg') }}"
+                            alt="Munoz's Banner">
                     </a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4">
                 <div class="banner-item img-hover_effect">
                     <a href="javascript:void(0)">
-                        <img class="lazyload img-full" src="{{ asset('frontend/images/banner/5.jpg') }}" alt="Munoz's Banner">
+                        <img class="lazyload img-full" src="{{ asset('frontend/images/banner/5.jpg') }}"
+                            alt="Munoz's Banner">
                     </a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4">
                 <div class="banner-item img-hover_effect">
                     <a href="javascript:void(0)">
-                        <img class="lazyload img-full" src="{{ asset('frontend/images/banner/6.jpg')}}" alt="Munoz's Banner">
+                        <img class="lazyload img-full" src="{{ asset('frontend/images/banner/6.jpg')}}"
+                            alt="Munoz's Banner">
                     </a>
                 </div>
             </div>
@@ -173,57 +181,6 @@
     </div>
 </div>
 <!-- Munoz's Banner Area Two End Here -->
-
-<!-- Begin Munoz's Brand Area -->
-<div class="munoz-brand_area">
-    <div class="container">
-        <div class="munoz-brand_nav">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="munoz-brand_slider slider-navigation_style-1">
-                        <div class="slide-item">
-                            <a href="javascript:void(0)">
-                                <img class="lazyload" src="{{ asset('frontend/images/brand/1.jpg') }}" alt="Munoz's Brand Image">
-                            </a>
-                        </div>
-                        <div class="slide-item">
-                            <a href="javascript:void(0)">
-                                <img class="lazyload" src="{{ asset('frontend/images/brand/2.jpg') }}" alt="Munoz's Brand Image">
-                            </a>
-                        </div>
-                        <div class="slide-item">
-                            <a href="javascript:void(0)">
-                                <img class="lazyload" src="{{ asset('frontend/images/brand/3.jpg') }}" alt="Munoz's Brand Image">
-                            </a>
-                        </div>
-                        <div class="slide-item">
-                            <a href="javascript:void(0)">
-                                <img class="lazyload" src="{{ asset('frontend/images/brand/4.jpg')}}" alt="Munoz's Brand Image">
-                            </a>
-                        </div>
-                        <div class="slide-item">
-                            <a href="javascript:void(0)">
-                                <img class="lazyload" src="{{ asset('frontend/images/brand/5.jpg')}}" alt="Munoz's Brand Image">
-                            </a>
-                        </div>
-                        <div class="slide-item">
-                            <a href="javascript:void(0)">
-                                <img class="lazyload" src="{{ asset('frontend/images/brand/6.jpg')}}" alt="Munoz's Brand Image">
-                            </a>
-                        </div>
-                        <div class="slide-item">
-                            <a href="javascript:void(0)">
-                                <img class="lazyload" src="{{ asset('frontend/images/brand/1.jpg')}}" alt="Munoz's Brand Image">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Munoz's Brand Area End Here -->
 @endsection
 @push('scripts')
-
 @endpush

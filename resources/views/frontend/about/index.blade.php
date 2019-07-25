@@ -159,56 +159,6 @@
     <!-- Testimonial Area End Here -->
 </div>
 <!-- Munoz's Main Content Area End Here -->
-
-<!-- Begin Munoz's Brand Area -->
-<div class="munoz-brand_area">
-    <div class="container">
-        <div class="munoz-brand_nav">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="munoz-brand_slider slider-navigation_style-1">
-                        <div class="slide-item">
-                            <a href="javascript:void(0)">
-                                <img class="lazyload" src="{{ asset('frontend/images/brand/1.jpg')}}" alt="Munoz's Brand Image">
-                            </a>
-                        </div>
-                        <div class="slide-item">
-                            <a href="javascript:void(0)">
-                                <img class="lazyload" src="{{ asset('frontend/images/brand/2.jpg')}}" alt="Munoz's Brand Image">
-                            </a>
-                        </div>
-                        <div class="slide-item">
-                            <a href="javascript:void(0)">
-                                <img class="lazyload" src="{{ asset('frontend/images/brand/3.jpg') }}" alt="Munoz's Brand Image">
-                            </a>
-                        </div>
-                        <div class="slide-item">
-                            <a href="javascript:void(0)">
-                                <img class="lazyload" src="{{ asset('frontend/images/brand/4.jpg') }}" alt="Munoz's Brand Image">
-                            </a>
-                        </div>
-                        <div class="slide-item">
-                            <a href="javascript:void(0)">
-                                <img class="lazyload" src="{{ asset('frontend/images/brand/5.jpg') }}" alt="Munoz's Brand Image">
-                            </a>
-                        </div>
-                        <div class="slide-item">
-                            <a href="javascript:void(0)">
-                                <img class="lazyload" src="{{ asset('frontend/images/brand/6.jpg') }}" alt="Munoz's Brand Image">
-                            </a>
-                        </div>
-                        <div class="slide-item">
-                            <a href="javascript:void(0)">
-                                <img class="lazyload" src="{{ asset('frontend/images/brand/1.jpg') }}" alt="Munoz's Brand Image">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Munoz's Brand Area End Here -->
 @endsection
 @push('scripts')
 @endpush

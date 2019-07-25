@@ -1,3 +1,52 @@
+<!-- Begin Munoz's Brand Area -->
+<div class="munoz-brand_area">
+    <div class="container">
+        <div class="munoz-brand_nav">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="munoz-brand_slider slider-navigation_style-1">
+                        <div class="slide-item">
+                            <a href="javascript:void(0)">
+                                <img src="{{ asset('frontend/images/brand/1.jpg') }}" alt="Munoz's Brand Image">
+                            </a>
+                        </div>
+                        <div class="slide-item">
+                            <a href="javascript:void(0)">
+                                <img src="{{ asset('frontend/images/brand/2.jpg') }}" alt="Munoz's Brand Image">
+                            </a>
+                        </div>
+                        <div class="slide-item">
+                            <a href="javascript:void(0)">
+                                <img src="{{ asset('frontend/images/brand/3.jpg')}}" alt="Munoz's Brand Image">
+                            </a>
+                        </div>
+                        <div class="slide-item">
+                            <a href="javascript:void(0)">
+                                <img src="{{ asset('frontend/images/brand/4.jpg')}}" alt="Munoz's Brand Image">
+                            </a>
+                        </div>
+                        <div class="slide-item">
+                            <a href="javascript:void(0)">
+                                <img src="{{ asset('frontend/images/brand/5.jpg')}}" alt="Munoz's Brand Image">
+                            </a>
+                        </div>
+                        <div class="slide-item">
+                            <a href="javascript:void(0)">
+                                <img src="{{ asset('frontend/images/brand/6.jpg')}}" alt="Munoz's Brand Image">
+                            </a>
+                        </div>
+                        <div class="slide-item">
+                            <a href="javascript:void(0)">
+                                <img src="{{ asset('frontend/images/brand/1.jpg')}}" alt="Munoz's Brand Image">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Munoz's Brand Area End Here -->
 <div class="munoz-footer_area">
     <div class="footer-top_area">
         <div class="container">
@@ -13,10 +62,9 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="newsletter-form_wrap">
-                        <form
-                            action="http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef"
-                            method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
-                            class="newsletters-form validate" target="_blank" novalidate>
+                        <form action="javascript:void(0)" method="post" id="mc-embedded-subscribe-form"
+                            name="mc-embedded-subscribe-form" class="newsletters-form validate" target="_blank"
+                            novalidate>
                             <div id="mc_embed_signup_scroll">
                                 <div id="mc-form" class="mc-form subscribe-form">
                                     <input id="mc-email" class="newsletter-input" type="email" autocomplete="off"
@@ -132,7 +180,7 @@
                 <!-- Begin Copyright Area -->
                 <div class="col-lg-12">
                     <div class="copyright">
-                        <span>Copyright &copy; 2019 <a href="javascript:void(0)">Munoz.</a> All rights
+                        <span>Copyright &copy; 2019 <a href="https://github.com/kilamieaz">kilamieaz.</a> All rights
                             reserved.</span>
                     </div>
                 </div>
@@ -142,3 +190,12 @@
     </div>
     <!-- Footer Bottom Area End Here -->
 </div>
+@push('scripts')
+<script>
+$(document).ready(function () {
+    $('#mc-embedded-subscribe-form').on('submit', function () {
+        $('#mc-embedded-subscribe-form')[0].reset()
+    });
+});
+</script>
+@endpush

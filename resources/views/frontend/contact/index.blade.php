@@ -48,7 +48,7 @@
                 <div class="contact-form-content">
                     <h3 class="contact-page-title">Tell Us Your Message</h3>
                     <div class="contact-form">
-                        <form id="contact-form" action="#" method="post">
+                        <form id="contact-form">
                             <div class="form-group">
                                 <label>Your Name <span class="required">*</span></label>
                                 <input type="text" name="con_name" id="con_name" required>
@@ -71,62 +71,13 @@
                             </div>
                         </form>
                     </div>
-                    <p class="form-messege"></p>
+                    {{-- <p class="form-messege"></p> --}}
                 </div>
             </div>
         </div>
     </div>
 </div>
 <!-- Contact Main Page Area End Here -->
-<!-- Begin Munoz's Brand Area -->
-<div class="munoz-brand_area">
-    <div class="container">
-        <div class="munoz-brand_nav">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="munoz-brand_slider slider-navigation_style-1">
-                        <div class="slide-item">
-                            <a href="javascript:void(0)">
-                                <img class="lazyload" src="{{ asset('frontend/images/brand/1.jpg') }}" alt="Munoz's Brand Image">
-                            </a>
-                        </div>
-                        <div class="slide-item">
-                            <a href="javascript:void(0)">
-                                <img class="lazyload" src="{{ asset('frontend/images/brand/2.jpg') }}" alt="Munoz's Brand Image">
-                            </a>
-                        </div>
-                        <div class="slide-item">
-                            <a href="javascript:void(0)">
-                                <img class="lazyload" src="{{ asset('frontend/images/brand/3.jpg') }}" alt="Munoz's Brand Image">
-                            </a>
-                        </div>
-                        <div class="slide-item">
-                            <a href="javascript:void(0)">
-                                <img class="lazyload" src="{{ asset('frontend/images/brand/4.jpg') }}" alt="Munoz's Brand Image">
-                            </a>
-                        </div>
-                        <div class="slide-item">
-                            <a href="javascript:void(0)">
-                                <img class="lazyload" src="{{ asset('frontend/images/brand/5.jpg') }}" alt="Munoz's Brand Image">
-                            </a>
-                        </div>
-                        <div class="slide-item">
-                            <a href="javascript:void(0)">
-                                <img class="lazyload" src="{{ asset('frontend/images/brand/6.jpg') }}" alt="Munoz's Brand Image">
-                            </a>
-                        </div>
-                        <div class="slide-item">
-                            <a href="javascript:void(0)">
-                                <img class="lazyload" src="{{ asset('frontend/images/brand/1.jpg')}}" alt="Munoz's Brand Image">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Munoz's Brand Area End Here -->
 @endsection
 @push('scripts')
 <!-- Begin Munoz's Google Map Area -->
@@ -135,6 +86,11 @@
 </script>
 
 <script>
+    $(document).ready(function () {
+        $('#contact-form').on('submit', function () {
+            $('#contact-form')[0].reset()
+        });
+    });
     // When the window has finished loading create our google map below
     google.maps.event.addDomListener(window, 'load', init);
 

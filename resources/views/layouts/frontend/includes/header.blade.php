@@ -5,7 +5,7 @@
                 <div class="col-lg-2 col-5">
                     <div class="header-logo">
                         <a href="{{ route('frontend.home.index') }}">
-                            <img src="{{ asset('frontend/images/menu/logo/1.png')}}" alt="Munoz's Header Logo">
+                            <img src="{{ asset('frontend/images/menu/logo/1.png')}}" alt="Kilamieaz's Header Logo">
                         </a>
                     </div>
                 </div>
@@ -16,8 +16,25 @@
                                 <li><a href="{{ route('frontend.home.index') }}">Home</a></li>
                                 <li><a href="{{ route('frontend.about.index') }}">About Us</a></li>
                                 <li><a href="{{ route('frontend.contact.index') }}">Contact</a></li>
+                                <li><a href="{{ route('product.index') }}">All Product</a></li>
                             </ul>
                         </nav>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-2 col-7">
+                    <div class="header-right_area">
+                        <ul>
+                            <li>
+                                <a href="#offcanvasMenu" class="menu-btn toolbar-btn color--white d-none d-lg-block">
+                                    <i class="ion-navicon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#mobileMenu" class="mobile-menu_btn toolbar-btn color--white d-lg-none d-block">
+                                    <i class="ion-navicon"></i>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -29,7 +46,7 @@
                 <div class="col-lg-2 col-5">
                     <div class="header-logo">
                         <a href="{{ route('frontend.home.index') }}">
-                            <img src="{{ asset('frontend/images/menu/logo/1.png') }}" alt="Munoz's Header Logo">
+                            <img src="{{ asset('frontend/images/menu/logo/1.png') }}" alt="Kilamieaz's Header Logo">
                         </a>
                     </div>
                 </div>
@@ -38,8 +55,9 @@
                         <nav class="main_nav">
                             <ul>
                                 <li><a href="{{ route('frontend.home.index') }}">Home</a></li>
-                                <li><a href="about-us.html">About Us</a></li>
+                                <li><a href="{{ route('frontend.about.index') }}">About Us</a></li>
                                 <li><a href="{{ route('frontend.contact.index') }}">Contact</a></li>
+                                <li><a href="{{ route('product.index') }}">All Product</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -47,16 +65,6 @@
                 <div class="col-xl-3 col-lg-2 col-7">
                     <div class="header-right_area">
                         <ul>
-                            <li>
-                                <a href="#searchBar" class="search-btn toolbar-btn">
-                                    <i class="ion-ios-search-strong"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#miniCart" class="minicart-btn toolbar-btn">
-                                    <i class="ion-bag"></i>
-                                </a>
-                            </li>
                             <li>
                                 <a href="#offcanvasMenu"
                                     class="menu-btn toolbar-btn color--white d-none d-lg-block">

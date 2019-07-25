@@ -11,16 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::group(['middleware' => ['pagespeed']], function () {
-    Route::prefix('frontend')->group( function () {
-        Route::get('home', 'Frontend\HomeController@index')->name('frontend.home.index');
+    // Route::prefix('frontend')->group( function () {
+        Route::get('/', 'Frontend\HomeController@index')->name('frontend.home.index');
+        Route::resource('product', 'Frontend\ProductController');
         Route::get('contact', 'Frontend\ContactController@index')->name('frontend.contact.index');
         Route::get('about', 'Frontend\AboutController@index')->name('frontend.about.index');
-    });
+    // });
 });
 
 Route::group(['middleware' => ['auth']], function () {
@@ -52,4 +53,4 @@ Route::group(['middleware' => ['auth']], function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
