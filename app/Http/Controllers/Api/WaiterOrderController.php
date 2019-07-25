@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Enums\OrderStatus;
 use App\Http\Controllers\Controller;
 use DB;
+use App\DetailOrder;
 
 class WaiterOrderController extends Controller
 {
@@ -23,6 +24,9 @@ class WaiterOrderController extends Controller
             foreach ($detail as $data2) {
                 array_push($order[$index]->detail_orders, $data2);
             }
+            
+            $member = User::find($data->member_id);
+            $order[$index]->member = $member;
         }
 
         return response()->json($order);
