@@ -1,4 +1,4 @@
-<div class="loading">
+<div id="particles-js" class="loading">
     <div class="text-center middle">
         <div class="main-loader">
             <span class="loader1"></span>
