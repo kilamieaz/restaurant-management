@@ -35,7 +35,7 @@ class DashboardController extends Controller
         $totalMember = User::member()->count();
         $totalIncome = 'Rp '.format_money(DetailOrder::total());
 
-        if ($request->user()->authorizeRole('admin', 'cashier', 'chef', 'waiter')) {
+        if ($request->user()->authorizeRole('admin')) {
             return view(
                 'admin.dashboard.index',
                 compact(
@@ -50,6 +50,6 @@ class DashboardController extends Controller
             );
         }
 
-        return redirect()->route('404');
+        return redirect('404');;
     }
 }
