@@ -71,11 +71,6 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="sidenav-item-link" href="#">
-                                    <span class="nav-text">Order</span>
-                                </a>
-                            </li>
-                            <li>
                                 <a class="sidenav-item-link" href="{{ route('detail-order.index') }}">
                                     <span class="nav-text">Detail Order</span>
 
@@ -127,12 +122,6 @@
                             <li>
                                 <a class="sidenav-item-link" href="{{ route('transaction.index') }}">
                                     <span class="nav-text">Transaction</span>
-
-                                </a>
-                            </li>
-                            <li>
-                                <a class="sidenav-item-link" href="#">
-                                    <span class="nav-text">Order</span>
                                 </a>
                             </li>
                             <li>
@@ -153,11 +142,6 @@
                     <ul class="collapse" id="transaction" data-parent="#sidebar-menu">
                         <div class="sub-menu">
                             <li>
-                                <a class="sidenav-item-link" href="#">
-                                    <span class="nav-text">Order</span>
-                                </a>
-                            </li>
-                            <li>
                                 <a class="sidenav-item-link" href="{{ route('detail-order.index') }}">
                                     <span class="nav-text">Detail Order</span>
                                 </a>
@@ -173,11 +157,6 @@
                         <span class="nav-text">Transaction</span> <b class="caret"></b>
                     </a>
                     <ul class="collapse" id="transaction" data-parent="#sidebar-menu">
-                        <li>
-                            <a class="sidenav-item-link" href="#">
-                                <span class="nav-text">Order</span>
-                            </a>
-                        </li>
                         <li>
                             <a class="sidenav-item-link" href="{{ route('detail-order.index') }}">
                                 <span class="nav-text">Detail Order</span>
