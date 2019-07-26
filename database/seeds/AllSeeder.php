@@ -47,8 +47,8 @@ class AllSeeder extends Seeder
         //data user admin
         $userAdmin = new User();
         $userAdmin->role_id = $roleAdmin->id;
-        $userAdmin->name = 'Sultan Imam Muttaqin';
-        $userAdmin->email = 'im.kilamieaz@gmail.com';
+        $userAdmin->name = 'Admin restaurant';
+        $userAdmin->email = 'im.admin@gmail.com';
         $userAdmin->email_verified_at = now();
         $userAdmin->remember_token = Str::random(10);
         $userAdmin->password = bcrypt('password');
