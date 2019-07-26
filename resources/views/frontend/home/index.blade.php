@@ -1,11 +1,4 @@
 @extends('layouts.frontend.master')
-@push('styles')
-{{-- <style>
-    #particles-js {
-        background: grey;
-        }
-    </style> --}}
-@endpush
 @section('content')
 <div class="munoz-slider_area munoz-slider_area-2">
     <div class="main-slider slider-navigation_style-1">

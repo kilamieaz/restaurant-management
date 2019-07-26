@@ -104,6 +104,16 @@
         var year = d.getFullYear();
         document.getElementById("copy-year").innerHTML = year;
 
+        //snabbt.js
+        $('.btn').on('click', function (e) {
+            var button = $(e.target);
+            button.snabbt('attention', {
+            rotation: [0, 0, Math.PI/2],
+            springConstant: 1.9,
+            springDeceleration: 0.9,
+            });
+        });
+
     </script>
     @stack('scripts')
 </body>

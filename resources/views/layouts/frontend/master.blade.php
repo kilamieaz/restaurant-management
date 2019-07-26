@@ -40,7 +40,9 @@
     -->
 
     <!-- Main Style CSS (Please use minify version for better website load performance) -->
+    <link rel="stylesheet" href="{{ asset('frontend/css/plugins/magic.min.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}">
+
     <!--<link rel="stylesheet" href="frontend/css/style.min.css">-->
     @stack('styles')
 
@@ -191,6 +193,9 @@
     <script type="text/javascript">
         $(document).ready(function () {
             $("img.lazyload").lazyload();
+            $('.product-img').hover(function () {
+                $(this).addClass('magictime boingInUp');
+            });
         });
     </script>
     <!-- Modernizer JS -->
