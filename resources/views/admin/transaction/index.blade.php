@@ -12,6 +12,7 @@
                 <div class="row">
                     <div class="col-md-8 border p-2">
                         <h2>List Table</h2>
+                        <small>klik list table</small>
                         {{-- datatable --}}
                         @component('components.datatable', [
                         'table_id' => 'table-datatable',
@@ -29,6 +30,8 @@
                     </div>
                     <div class="col-md-4 border p-2">
                         <h2>Member</h2>
+                        <small>klik dan ketik nama member</small>
+                        <small>setelah itu scroll ke bawah</small>
                         <select data-placeholder="Member" class="form-control select2-modal"
                             id="transaction_member_id" name="member_id">
                             
@@ -45,6 +48,7 @@
                 <div class="row">
                     <div class="col-md-7 border p-2">
                         <h2>List Menu</h2>
+                        <small>klik list menu</small>
                         {{-- datatable --}}
                         @component('components.datatable', [
                         'table_id' => 'menu-datatable',
@@ -133,7 +137,7 @@
                                     <input type="hidden" name="table_id" id="table_id" value="">
                                     <input type="hidden" name="member_id" id="member_id" value="">
                                 </div>
-
+                                <small>klik submit dan pilih menu lain jika ada, setelah itu scroll ke bawah</small>
                                 <button type="submit" onclick="addForm()" class="btn btn-primary btn-block"><span
                                         class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
                                     Submit</button>
@@ -152,6 +156,7 @@
                 <div class="row">
                     <div class="col-md-8 border p-2">
                         <h2>List Detail Order</h2>
+                        <small>menu yang sudah di pesan bisa di hapus dan edit</small>
                         {{-- datatable --}}
                         @component('components.datatable', [
                         'table_id' => 'order-datatable',
@@ -178,6 +183,7 @@
                                 <input type="text" name="total" class="form-control" id="total"
                                     placeholder="Total Harga" value="" disabled="">
                             </div>
+                            <small>masukan uang yang di bayar member/guest untuk menghitung kembalian</small>
                             <div class="form-group">
                                 <label for="pay">Bayar (Rp)</label>
                                 <input type="number" name="pay" class="form-control" id="pay" placeholder="Bayar">
