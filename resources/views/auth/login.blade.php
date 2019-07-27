@@ -54,6 +54,7 @@
                             @csrf
                             <div class="row">
                                 <div class="form-group col-md-12 mb-4">
+                                    <p>login: im.admin@gmail.com / im.chef@gmail.com / im.waiter@gmail.com/ im.cashier@gmail.com</p>
                                     <input type="email" id="email"
                                         class="form-control input-lg @error('email') is-invalid @enderror" name="email"
                                         value="{{ old('email') }}" required autofocus placeholder="Email">
@@ -64,6 +65,7 @@
                                     @enderror
                                 </div>
                                 <div class="form-group col-md-12 ">
+                                    <p>password : password</p>
                                     <input type="password" id="password"
                                         class="form-control input-lg @error('password') is-invalid @enderror"
                                         name="password" required placeholder="Password">
