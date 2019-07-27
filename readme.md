@@ -16,3 +16,8 @@
 - php artisan config:cache
 - php artisan route:cache
 - php artisan optimaze --force
+
+## To do list
+- authorization
+- status table
+- add feature reservasi
