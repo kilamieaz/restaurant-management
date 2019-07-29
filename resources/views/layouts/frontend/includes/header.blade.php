@@ -17,7 +17,8 @@
                                 <li><a href="{{ route('frontend.about.index') }}">About Us</a></li>
                                 <li><a href="{{ route('frontend.contact.index') }}">Contact</a></li>
                                 <li><a href="{{ route('product.index') }}">All Product</a></li>
-                                <li><a href="{{ route('login') }}">Login Admin</a></li>
+                                <li><a href="{{ asset('app-release.apk') }}">apk</a></li>
+                                <li><a href="{{ route('login') }}">Admin</a></li>
                             </ul>
                         </nav>
                     </div>
