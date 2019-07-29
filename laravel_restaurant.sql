@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 29 Jul 2019 pada 16.40
+-- Waktu pembuatan: 29 Jul 2019 pada 18.53
 -- Versi server: 10.1.37-MariaDB
 -- Versi PHP: 7.3.0
 
@@ -41,11 +41,11 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `name`, `description`, `created_at`, `updated_at`) VALUES
-(1, 'categoryiha', 'Description Category swn', '2019-07-29 04:54:54', '2019-07-29 04:54:54'),
-(2, 'categoryvez', 'Description Category eso', '2019-07-29 04:54:57', '2019-07-29 04:54:57'),
-(3, 'categorylup', 'Description Category lxy', '2019-07-29 04:55:02', '2019-07-29 04:55:02'),
-(4, 'categoryrhf', 'Description Category vep', '2019-07-29 04:55:10', '2019-07-29 04:55:10'),
-(5, 'categoryrro', 'Description Category cis', '2019-07-29 04:55:20', '2019-07-29 04:55:20');
+(1, 'categoryrwt', 'Description Category wqa', '2019-07-29 09:50:51', '2019-07-29 09:50:51'),
+(2, 'categorycnm', 'Description Category ufg', '2019-07-29 09:50:55', '2019-07-29 09:50:55'),
+(3, 'categoryhnb', 'Description Category jjm', '2019-07-29 09:51:00', '2019-07-29 09:51:00'),
+(4, 'categoryrac', 'Description Category nqq', '2019-07-29 09:51:08', '2019-07-29 09:51:08'),
+(5, 'categoryyyi', 'Description Category mqr', '2019-07-29 09:51:21', '2019-07-29 09:51:21');
 
 -- --------------------------------------------------------
 
@@ -73,126 +73,126 @@ CREATE TABLE `detail_orders` (
 --
 
 INSERT INTO `detail_orders` (`id`, `order_id`, `menu_id`, `table_id`, `chef_id`, `waiter_id`, `quantity`, `sub_total`, `message`, `status`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, 1, 1, 1, 3, 237144, 'ARE you doing out here? Run home this moment, and fetch me a pair of gloves and a fan! Quick.', 1, '2019-07-29 04:54:57', '2019-07-29 04:54:57'),
-(2, 1, 2, 2, 1, 1, 3, 239160, 'So they got their tails fast in their mouths; and the whole window!\' \'Sure, it does, yer honour.', 1, '2019-07-29 04:54:59', '2019-07-29 04:54:59'),
-(3, 2, 2, 2, 1, 1, 3, 142395, 'Alice went on in a louder tone. \'ARE you to leave off this minute!\' She generally gave herself.', 1, '2019-07-29 04:54:59', '2019-07-29 04:54:59'),
-(4, 1, 3, 3, 1, 1, 3, 109542, 'Then they both cried. \'Wake up, Dormouse!\' And they pinched it on both sides at once. \'Give your.', 1, '2019-07-29 04:55:02', '2019-07-29 04:55:02'),
-(5, 2, 3, 3, 1, 1, 3, 140346, 'Alice could hardly hear the very middle of her own child-life, and the others looked round also.', 1, '2019-07-29 04:55:02', '2019-07-29 04:55:02'),
-(6, 3, 3, 3, 1, 1, 3, 127542, 'I think.\' And she began nursing her child again, singing a sort of life! I do it again and again.\'.', 1, '2019-07-29 04:55:02', '2019-07-29 04:55:02'),
-(7, 1, 4, 4, 1, 1, 3, 165870, 'Duchess said to the door, she found she had got burnt, and eaten up by two guinea-pigs, who were.', 1, '2019-07-29 04:55:04', '2019-07-29 04:55:04'),
-(8, 2, 4, 4, 1, 1, 3, 91608, 'And he got up very sulkily and crossed over to the croquet-ground. The other guests had taken his.', 1, '2019-07-29 04:55:04', '2019-07-29 04:55:04'),
-(9, 3, 4, 4, 1, 1, 3, 147570, 'I could shut up like a steam-engine when she next peeped out the words: \'Where\'s the other side.', 1, '2019-07-29 04:55:04', '2019-07-29 04:55:04'),
-(10, 4, 4, 4, 1, 1, 3, 29589, 'M?\' said Alice. \'What sort of idea that they could not make out which were the cook, to see you.', 1, '2019-07-29 04:55:04', '2019-07-29 04:55:04'),
-(11, 1, 5, 5, 1, 1, 3, 35625, 'Queen left off, quite out of it, and yet it was only sobbing,\' she thought, and rightly too, that.', 1, '2019-07-29 04:55:07', '2019-07-29 04:55:07'),
-(12, 2, 5, 5, 1, 1, 3, 104484, 'The Cat seemed to think that there was no \'One, two, three, and away,\' but they were nice grand.', 1, '2019-07-29 04:55:07', '2019-07-29 04:55:07'),
-(13, 3, 5, 5, 1, 1, 3, 237447, 'ME\' beautifully printed on it in her hands, and she told her sister, as well as pigs, and was just.', 1, '2019-07-29 04:55:07', '2019-07-29 04:55:07'),
-(14, 4, 5, 5, 1, 1, 3, 46863, 'At last the Dodo solemnly presented the thimble, saying \'We beg your pardon!\' said the Queen.', 1, '2019-07-29 04:55:07', '2019-07-29 04:55:07'),
-(15, 5, 5, 5, 1, 1, 3, 85401, 'I think it was,\' the March Hare said to herself \'It\'s the Cheshire Cat, she was walking by the.', 1, '2019-07-29 04:55:07', '2019-07-29 04:55:07'),
-(16, 1, 6, 6, 1, 1, 3, 161349, 'Hatter. \'Stolen!\' the King said, for about the reason so many out-of-the-way things had happened.', 1, '2019-07-29 04:55:10', '2019-07-29 04:55:10'),
-(17, 2, 6, 6, 1, 1, 3, 87708, 'Duchess by this time, and was going to do so. \'Shall we try another figure of the house down!\'.', 1, '2019-07-29 04:55:10', '2019-07-29 04:55:10'),
-(18, 3, 6, 6, 1, 1, 3, 33525, 'Caterpillar seemed to be said. At last the Gryphon in an undertone.', 1, '2019-07-29 04:55:10', '2019-07-29 04:55:10'),
-(19, 4, 6, 6, 1, 1, 3, 162792, 'Alice guessed in a trembling voice:-- \'I passed by his face only, she would manage it. \'They were.', 1, '2019-07-29 04:55:10', '2019-07-29 04:55:10'),
-(20, 5, 6, 6, 1, 1, 3, 238914, 'Dormouse: \'not in that case I can do without lobsters, you know. Come on!\' \'Everybody says \"come.', 1, '2019-07-29 04:55:10', '2019-07-29 04:55:10'),
-(21, 6, 6, 6, 1, 1, 3, 134010, 'Poor Alice! It was as much right,\' said the King: \'leave out that she tipped over the wig, (look.', 1, '2019-07-29 04:55:10', '2019-07-29 04:55:10'),
-(22, 1, 7, 7, 1, 1, 3, 183840, 'Soup of the country is, you ARE a simpleton.\' Alice did not venture to go through next walking.', 1, '2019-07-29 04:55:12', '2019-07-29 04:55:12'),
-(23, 2, 7, 7, 1, 1, 3, 35181, 'When she got up, and there she saw in my own tears! That WILL be a queer thing, to be said. At.', 1, '2019-07-29 04:55:12', '2019-07-29 04:55:12'),
-(24, 3, 7, 7, 1, 1, 3, 148242, 'They had a head unless there was hardly room for this, and Alice was not much larger than a pig.', 1, '2019-07-29 04:55:12', '2019-07-29 04:55:12'),
-(25, 4, 7, 7, 1, 1, 3, 94248, 'The Mouse did not seem to put everything upon Bill! I wouldn\'t be so easily offended!\' \'You\'ll get.', 1, '2019-07-29 04:55:12', '2019-07-29 04:55:12'),
-(26, 5, 7, 7, 1, 1, 3, 233250, 'Cheshire Cat, she was quite surprised to see that she had felt quite relieved to see what was on.', 1, '2019-07-29 04:55:12', '2019-07-29 04:55:12'),
-(27, 6, 7, 7, 1, 1, 3, 85026, 'There was a little irritated at the stick, running a very truthful child; \'but little girls in my.', 1, '2019-07-29 04:55:12', '2019-07-29 04:55:12'),
-(28, 7, 7, 7, 1, 1, 3, 87471, 'Alice. It looked good-natured, she thought: still it was her turn or not. \'Oh, PLEASE mind what.', 1, '2019-07-29 04:55:12', '2019-07-29 04:55:12'),
-(29, 1, 8, 8, 1, 1, 3, 57456, 'Alice as he spoke. \'A cat may look at a reasonable pace,\' said the Lory. Alice replied very.', 1, '2019-07-29 04:55:15', '2019-07-29 04:55:15'),
-(30, 2, 8, 8, 1, 1, 3, 145035, 'I will tell you his history,\' As they walked off together, Alice heard the Rabbit noticed Alice.', 1, '2019-07-29 04:55:15', '2019-07-29 04:55:15'),
-(31, 3, 8, 8, 1, 1, 3, 258234, 'I goes like a candle. I wonder what Latitude or Longitude either, but thought they were filled.', 1, '2019-07-29 04:55:15', '2019-07-29 04:55:15'),
-(32, 4, 8, 8, 1, 1, 3, 31092, 'I\'m Mabel, I\'ll stay down here with me! There are no mice in the air. \'--as far out to her chin.', 1, '2019-07-29 04:55:15', '2019-07-29 04:55:15'),
-(33, 5, 8, 8, 1, 1, 3, 25092, 'Duchess\'s knee, while plates and dishes crashed around it--once more the pig-baby was sneezing on.', 1, '2019-07-29 04:55:15', '2019-07-29 04:55:15'),
-(34, 6, 8, 8, 1, 1, 3, 143430, 'I\'ll tell you how the Dodo had paused as if he doesn\'t begin.\' But she went on, very much pleased.', 1, '2019-07-29 04:55:15', '2019-07-29 04:55:15'),
-(35, 7, 8, 8, 1, 1, 3, 249423, 'CAN all that stuff,\' the Mock Turtle recovered his voice, and, with tears again as she had not.', 1, '2019-07-29 04:55:15', '2019-07-29 04:55:15'),
-(36, 8, 8, 8, 1, 1, 3, 50859, 'Alice thought), and it put the Dormouse into the Dormouse\'s place, and Alice was just beginning to.', 1, '2019-07-29 04:55:15', '2019-07-29 04:55:15'),
-(37, 1, 9, 9, 1, 1, 3, 121887, 'I was going off into a small passage, not much like keeping so close to her: its face in some.', 1, '2019-07-29 04:55:17', '2019-07-29 04:55:17'),
-(38, 2, 9, 9, 1, 1, 3, 81066, 'Hatter. This piece of rudeness was more than Alice could speak again. The rabbit-hole went.', 1, '2019-07-29 04:55:17', '2019-07-29 04:55:17'),
-(39, 3, 9, 9, 1, 1, 3, 227913, 'Alice looked round, eager to see what was on the shingle--will you come to an end! \'I wonder what.', 1, '2019-07-29 04:55:17', '2019-07-29 04:55:17'),
-(40, 4, 9, 9, 1, 1, 3, 200070, 'Footman went on just as if it makes rather a hard word, I will just explain to you never had to be.', 1, '2019-07-29 04:55:17', '2019-07-29 04:55:17'),
-(41, 5, 9, 9, 1, 1, 3, 106467, 'Canary called out as loud as she could not possibly reach it: she could have told you butter.', 1, '2019-07-29 04:55:17', '2019-07-29 04:55:17'),
-(42, 6, 9, 9, 1, 1, 3, 142230, 'I know I do!\' said Alice to herself, as she could not taste theirs, and the procession came.', 1, '2019-07-29 04:55:17', '2019-07-29 04:55:17'),
-(43, 7, 9, 9, 1, 1, 3, 191472, 'Alice ventured to ask. \'Suppose we change the subject,\' the March Hare: she thought of herself, \'I.', 1, '2019-07-29 04:55:17', '2019-07-29 04:55:17'),
-(44, 8, 9, 9, 1, 1, 3, 207588, 'Gryphon, \'that they WOULD not remember the simple and loving heart of her head down to nine inches.', 1, '2019-07-29 04:55:17', '2019-07-29 04:55:17'),
-(45, 9, 9, 9, 1, 1, 3, 297153, 'Gryphon, with a shiver. \'I beg your pardon!\' she exclaimed in a dreamy sort of way to change the.', 1, '2019-07-29 04:55:17', '2019-07-29 04:55:17'),
-(46, 1, 10, 10, 1, 1, 3, 162747, 'The players all played at once set to work shaking him and punching him in the distance, and she.', 1, '2019-07-29 04:55:20', '2019-07-29 04:55:20'),
-(47, 2, 10, 10, 1, 1, 3, 26511, 'March Hare,) \'--it was at in all my limbs very supple By the use of this elegant thimble\'; and.', 1, '2019-07-29 04:55:20', '2019-07-29 04:55:20'),
-(48, 3, 10, 10, 1, 1, 3, 19890, 'But the snail replied \"Too far, too far!\" and gave a little snappishly. \'You\'re enough to try the.', 1, '2019-07-29 04:55:20', '2019-07-29 04:55:20'),
-(49, 4, 10, 10, 1, 1, 3, 81645, 'ALICE\'S RIGHT FOOT, ESQ. HEARTHRUG, NEAR THE FENDER, (WITH ALICE\'S LOVE). Oh dear, what nonsense.', 1, '2019-07-29 04:55:20', '2019-07-29 04:55:20'),
-(50, 5, 10, 10, 1, 1, 3, 263685, 'I beat him when he sneezes; For he can thoroughly enjoy The pepper when he sneezes; For he can.', 1, '2019-07-29 04:55:20', '2019-07-29 04:55:20'),
-(51, 6, 10, 10, 1, 1, 3, 24114, 'Adventures of hers would, in the middle, being held up by a row of lodging houses, and behind it.', 1, '2019-07-29 04:55:20', '2019-07-29 04:55:20'),
-(52, 7, 10, 10, 1, 1, 3, 41949, 'While she was considering in her life before, and he says it\'s so useful, it\'s worth a hundred.', 1, '2019-07-29 04:55:20', '2019-07-29 04:55:20'),
-(53, 8, 10, 10, 1, 1, 3, 223602, 'The jury all looked puzzled.) \'He must have a trial: For really this morning I\'ve nothing to do.\".', 1, '2019-07-29 04:55:20', '2019-07-29 04:55:20'),
-(54, 9, 10, 10, 1, 1, 3, 283011, 'Gryphon. \'--you advance twice--\' \'Each with a trumpet in one hand and a Canary called out in a.', 1, '2019-07-29 04:55:20', '2019-07-29 04:55:20'),
-(55, 10, 10, 10, 1, 1, 3, 188394, 'IT. It\'s HIM.\' \'I don\'t believe you do either!\' And the moral of that is--\"Be what you like,\' said.', 1, '2019-07-29 04:55:20', '2019-07-29 04:55:20'),
-(56, 1, 11, 11, 1, 1, 3, 23520, 'How I wonder what I like\"!\' \'You might just as usual. \'Come, there\'s half my plan done now! How.', 1, '2019-07-29 04:55:23', '2019-07-29 04:55:23'),
-(57, 2, 11, 11, 1, 1, 3, 92664, 'THIS size: why, I should have liked teaching it tricks very much, if--if I\'d only been the.', 1, '2019-07-29 04:55:23', '2019-07-29 04:55:23'),
-(58, 3, 11, 11, 1, 1, 3, 260241, 'MORE than nothing.\' \'Nobody asked YOUR opinion,\' said Alice. \'You must be,\' said the Cat, \'if you.', 1, '2019-07-29 04:55:23', '2019-07-29 04:55:23'),
-(59, 4, 11, 11, 1, 1, 3, 111738, 'Alice did not appear, and after a few yards off. The Cat only grinned when it grunted again, and.', 1, '2019-07-29 04:55:23', '2019-07-29 04:55:23'),
-(60, 5, 11, 11, 1, 1, 3, 283257, 'I must have got in as well,\' the Hatter instead!\' CHAPTER VII. A Mad Tea-Party There was not even.', 1, '2019-07-29 04:55:23', '2019-07-29 04:55:23'),
-(61, 6, 11, 11, 1, 1, 3, 213483, 'I\'ll try if I shall have somebody to talk nonsense. The Queen\'s Croquet-Ground A large rose-tree.', 1, '2019-07-29 04:55:23', '2019-07-29 04:55:23'),
-(62, 7, 11, 11, 1, 1, 3, 276861, 'Queen. \'It proves nothing of the lefthand bit. * * * * * * * * * * * * * * * * * * * * * * \'Come.', 1, '2019-07-29 04:55:23', '2019-07-29 04:55:23'),
-(63, 8, 11, 11, 1, 1, 3, 165078, 'Turtle\'s heavy sobs. Lastly, she pictured to herself how she would catch a bad cold if she did not.', 1, '2019-07-29 04:55:23', '2019-07-29 04:55:23'),
-(64, 9, 11, 11, 1, 1, 3, 92286, 'Laughing and Grief, they used to read fairy-tales, I fancied that kind of authority among them.', 1, '2019-07-29 04:55:23', '2019-07-29 04:55:23'),
-(65, 10, 11, 11, 1, 1, 3, 117915, 'Mouse. \'--I proceed. \"Edwin and Morcar, the earls of Mercia and Northumbria--\"\' \'Ugh!\' said the.', 1, '2019-07-29 04:55:23', '2019-07-29 04:55:23'),
-(66, 11, 11, 11, 1, 1, 3, 212709, 'Tortoise because he was going a journey, I should think!\' (Dinah was the BEST butter, you know.\'.', 1, '2019-07-29 04:55:23', '2019-07-29 04:55:23'),
-(67, 1, 12, 12, 1, 1, 3, 295611, 'Duchess. \'I make you grow shorter.\' \'One side will make you dry enough!\' They all returned from.', 1, '2019-07-29 04:55:25', '2019-07-29 04:55:25'),
-(68, 2, 12, 12, 1, 1, 3, 115164, 'Dormouse go on crying in this way! Stop this moment, and fetch me a good deal until she made some.', 1, '2019-07-29 04:55:25', '2019-07-29 04:55:25'),
-(69, 3, 12, 12, 1, 1, 3, 210843, 'Hatter. \'You might just as the Lory positively refused to tell them something more. \'You promised.', 1, '2019-07-29 04:55:25', '2019-07-29 04:55:25'),
-(70, 4, 12, 12, 1, 1, 3, 189324, 'Hatter: \'as the things between whiles.\' \'Then you keep moving round, I suppose?\' \'Yes,\' said Alice.', 1, '2019-07-29 04:55:25', '2019-07-29 04:55:25'),
-(71, 5, 12, 12, 1, 1, 3, 51201, 'They were indeed a queer-looking party that assembled on the twelfth?\' Alice went on planning to.', 1, '2019-07-29 04:55:25', '2019-07-29 04:55:25'),
-(72, 6, 12, 12, 1, 1, 3, 94098, 'I used--and I don\'t want to be?\' it asked. \'Oh, I\'m not used to say.\' \'So he did, so he with his.', 1, '2019-07-29 04:55:25', '2019-07-29 04:55:25'),
-(73, 7, 12, 12, 1, 1, 3, 107214, 'IT. It\'s HIM.\' \'I don\'t like them!\' When the sands are all pardoned.\' \'Come, THAT\'S a good.', 1, '2019-07-29 04:55:25', '2019-07-29 04:55:25'),
-(74, 8, 12, 12, 1, 1, 3, 101145, 'I think?\' he said to herself \'This is Bill,\' she gave one sharp kick, and waited to see what was.', 1, '2019-07-29 04:55:25', '2019-07-29 04:55:25'),
-(75, 9, 12, 12, 1, 1, 3, 282570, 'Father William,\' the young Crab, a little glass box that was sitting next to her. \'I can see.', 1, '2019-07-29 04:55:25', '2019-07-29 04:55:25'),
-(76, 10, 12, 12, 1, 1, 3, 255399, 'I\'m not used to say.\' \'So he did, so he with his whiskers!\' For some minutes the whole thing, and.', 1, '2019-07-29 04:55:25', '2019-07-29 04:55:25'),
-(77, 11, 12, 12, 1, 1, 3, 99192, 'I\'ll never go THERE again!\' said Alice doubtfully: \'it means--to--make--anything--prettier.\'.', 1, '2019-07-29 04:55:25', '2019-07-29 04:55:25'),
-(78, 12, 12, 12, 1, 1, 3, 202116, 'NOT be an advantage,\' said Alice, \'we learned French and music.\' \'And washing?\' said the Queen.', 1, '2019-07-29 04:55:25', '2019-07-29 04:55:25'),
-(79, 1, 13, 13, 1, 1, 3, 219558, 'Mouse was swimming away from her as hard as she could not taste theirs, and the arm that was.', 1, '2019-07-29 04:55:28', '2019-07-29 04:55:28'),
-(80, 2, 13, 13, 1, 1, 3, 57849, 'CAN I have dropped them, I wonder?\' Alice guessed in a Little Bill It was so small as this is May.', 1, '2019-07-29 04:55:28', '2019-07-29 04:55:28'),
-(81, 3, 13, 13, 1, 1, 3, 77373, 'Alice whispered, \'that it\'s done by everybody minding their own business,\' the Duchess asked, with.', 1, '2019-07-29 04:55:28', '2019-07-29 04:55:28'),
-(82, 4, 13, 13, 1, 1, 3, 197556, 'It was opened by another footman in livery came running out of its mouth and yawned once or twice.', 1, '2019-07-29 04:55:28', '2019-07-29 04:55:28'),
-(83, 5, 13, 13, 1, 1, 3, 108279, 'GAVE HER ONE, THEY GAVE HIM TWO--\" why, that must be shutting up like a telescope! I think it.', 1, '2019-07-29 04:55:28', '2019-07-29 04:55:28'),
-(84, 6, 13, 13, 1, 1, 3, 271932, 'And she began nibbling at the March Hare: she thought it must be a book of rules for shutting.', 1, '2019-07-29 04:55:28', '2019-07-29 04:55:28'),
-(85, 7, 13, 13, 1, 1, 3, 254976, 'And she thought of herself, \'I don\'t know of any use, now,\' thought poor Alice, \'it would be four.', 1, '2019-07-29 04:55:28', '2019-07-29 04:55:28'),
-(86, 8, 13, 13, 1, 1, 3, 299580, 'Queen,\' and she crossed her hands on her face brightened up at the Mouse\'s tail; \'but why do you.', 1, '2019-07-29 04:55:28', '2019-07-29 04:55:28'),
-(87, 9, 13, 13, 1, 1, 3, 66912, 'THIS size: why, I should frighten them out again. That\'s all.\' \'Thank you,\' said Alice, in a voice.', 1, '2019-07-29 04:55:28', '2019-07-29 04:55:28'),
-(88, 10, 13, 13, 1, 1, 3, 203496, 'HER about it.\' (The jury all looked puzzled.) \'He must have been changed for Mabel! I\'ll try if I.', 1, '2019-07-29 04:55:28', '2019-07-29 04:55:28'),
-(89, 11, 13, 13, 1, 1, 3, 21330, 'King said to the other, trying every door, she ran off at once in her head, she tried her best to.', 1, '2019-07-29 04:55:28', '2019-07-29 04:55:28'),
-(90, 12, 13, 13, 1, 1, 3, 181350, 'Then she went on for some time in silence: at last in the flurry of the Lobster Quadrille, that.', 1, '2019-07-29 04:55:28', '2019-07-29 04:55:28'),
-(91, 13, 13, 13, 1, 1, 3, 142695, 'Rabbit in a solemn tone, only changing the order of the players to be a letter, after all: it\'s a.', 1, '2019-07-29 04:55:28', '2019-07-29 04:55:28'),
-(92, 1, 14, 14, 1, 1, 3, 44130, 'Alice desperately: \'he\'s perfectly idiotic!\' And she tried another question. \'What sort of knot.', 1, '2019-07-29 04:55:30', '2019-07-29 04:55:30'),
-(93, 2, 14, 14, 1, 1, 3, 19302, 'Alice. \'Why, SHE,\' said the cook. The King and Queen of Hearts were seated on their backs was the.', 1, '2019-07-29 04:55:30', '2019-07-29 04:55:30'),
-(94, 3, 14, 14, 1, 1, 3, 112959, 'Bill\'s got to see if she did not sneeze, were the verses to himself: \'\"WE KNOW IT TO BE TRUE--\".', 1, '2019-07-29 04:55:30', '2019-07-29 04:55:30'),
-(95, 4, 14, 14, 1, 1, 3, 171267, 'I should like it put more simply--\"Never imagine yourself not to be found: all she could not swim.', 1, '2019-07-29 04:55:30', '2019-07-29 04:55:30'),
-(96, 5, 14, 14, 1, 1, 3, 75678, 'THAT!\' \'Oh, you foolish Alice!\' she answered herself. \'How can you learn lessons in here? Why.', 1, '2019-07-29 04:55:30', '2019-07-29 04:55:30'),
-(97, 6, 14, 14, 1, 1, 3, 121572, 'Queen. \'I haven\'t the slightest idea,\' said the Duck: \'it\'s generally a frog or a serpent?\' \'It.', 1, '2019-07-29 04:55:30', '2019-07-29 04:55:30'),
-(98, 7, 14, 14, 1, 1, 3, 118470, 'Beautiful, beauti--FUL SOUP!\' \'Chorus again!\' cried the Gryphon, and the constant heavy sobbing of.', 1, '2019-07-29 04:55:30', '2019-07-29 04:55:30'),
-(99, 8, 14, 14, 1, 1, 3, 266964, 'Alice severely. \'What are you thinking of?\' \'I beg your pardon!\' cried Alice again, for really I\'m.', 1, '2019-07-29 04:55:30', '2019-07-29 04:55:30'),
-(100, 9, 14, 14, 1, 1, 3, 243381, 'ME.\' \'You!\' said the Lory. Alice replied very politely, \'if I had our Dinah here, I know all sorts.', 1, '2019-07-29 04:55:30', '2019-07-29 04:55:30'),
-(101, 10, 14, 14, 1, 1, 3, 243912, 'King. \'I can\'t help it,\' she said to herself as she swam about, trying to make it stop. \'Well, I\'d.', 1, '2019-07-29 04:55:30', '2019-07-29 04:55:30'),
-(102, 11, 14, 14, 1, 1, 3, 157077, 'Queen to-day?\' \'I should have croqueted the Queen\'s absence, and were quite silent, and looked at.', 1, '2019-07-29 04:55:30', '2019-07-29 04:55:30'),
-(103, 12, 14, 14, 1, 1, 3, 7584, 'Five. \'I heard every word you fellows were saying.\' \'Tell us a story.\' \'I\'m afraid I can\'t tell.', 1, '2019-07-29 04:55:30', '2019-07-29 04:55:30'),
-(104, 13, 14, 14, 1, 1, 3, 100539, 'So they began solemnly dancing round and get in at the end.\' \'If you can\'t think! And oh, my poor.', 1, '2019-07-29 04:55:30', '2019-07-29 04:55:30'),
-(105, 14, 14, 14, 1, 1, 3, 127179, 'NO mistake about it: it was good manners for her to begin.\' For, you see, Miss, this here ought to.', 1, '2019-07-29 04:55:30', '2019-07-29 04:55:30'),
-(106, 1, 15, 15, 1, 1, 3, 185856, 'The three soldiers wandered about for it, she found to be talking in his throat,\' said the Mock.', 1, '2019-07-29 04:55:32', '2019-07-29 04:55:32'),
-(107, 2, 15, 15, 1, 1, 3, 57312, 'Alice timidly. \'Would you tell me, Pat, what\'s that in some book, but I shall be late!\' (when she.', 1, '2019-07-29 04:55:32', '2019-07-29 04:55:32'),
-(108, 3, 15, 15, 1, 1, 3, 174939, 'Gryphon hastily. \'Go on with the Lory, who at last she spread out her hand, watching the setting.', 1, '2019-07-29 04:55:32', '2019-07-29 04:55:32'),
-(109, 4, 15, 15, 1, 1, 3, 244137, 'There was a bright brass plate with the tarts, you know--\' \'But, it goes on \"THEY ALL RETURNED.', 1, '2019-07-29 04:55:32', '2019-07-29 04:55:32'),
-(110, 5, 15, 15, 1, 1, 3, 88536, 'Hatter. This piece of bread-and-butter in the air. Even the Duchess to play croquet.\' The.', 1, '2019-07-29 04:55:32', '2019-07-29 04:55:32'),
-(111, 6, 15, 15, 1, 1, 3, 201063, 'Alice rather unwillingly took the watch and looked at Alice. \'It goes on, you know,\' the Mock.', 1, '2019-07-29 04:55:32', '2019-07-29 04:55:32'),
-(112, 7, 15, 15, 1, 1, 3, 41319, 'I should think very likely it can talk: at any rate a book of rules for shutting people up like a.', 1, '2019-07-29 04:55:32', '2019-07-29 04:55:32'),
-(113, 8, 15, 15, 1, 1, 3, 240570, 'Alice for protection. \'You shan\'t be able! I shall have somebody to talk about her repeating \'YOU.', 1, '2019-07-29 04:55:32', '2019-07-29 04:55:32'),
-(114, 9, 15, 15, 1, 1, 3, 273393, 'She said the Hatter began, in a shrill, passionate voice. \'Would YOU like cats if you hold it too.', 1, '2019-07-29 04:55:32', '2019-07-29 04:55:32'),
-(115, 10, 15, 15, 1, 1, 3, 34875, 'I shall never get to twenty at that rate! However, the Multiplication Table doesn\'t signify: let\'s.', 1, '2019-07-29 04:55:32', '2019-07-29 04:55:32'),
-(116, 11, 15, 15, 1, 1, 3, 45654, 'White Rabbit hurried by--the frightened Mouse splashed his way through the neighbouring pool--she.', 1, '2019-07-29 04:55:32', '2019-07-29 04:55:32'),
-(117, 12, 15, 15, 1, 1, 3, 292305, 'There\'s no pleasing them!\' Alice was very likely to eat the comfits: this caused some noise and.', 1, '2019-07-29 04:55:32', '2019-07-29 04:55:32'),
-(118, 13, 15, 15, 1, 1, 3, 144312, 'I mentioned before, And have grown most uncommonly fat; Yet you finished the first minute or two.', 1, '2019-07-29 04:55:32', '2019-07-29 04:55:32'),
-(119, 14, 15, 15, 1, 1, 3, 72174, 'Alice began to feel a little house in it a bit, if you like,\' said the Caterpillar. \'Is that all?\'.', 1, '2019-07-29 04:55:32', '2019-07-29 04:55:32'),
-(120, 15, 15, 15, 1, 1, 3, 42354, 'Dinah, if I can listen all day about it!\' and he poured a little pattering of feet on the door of.', 1, '2019-07-29 04:55:32', '2019-07-29 04:55:32');
+(1, 1, 1, 1, 1, 1, 3, 264168, 'Alice. \'I mean what I should like to be an advantage,\' said Alice, who felt ready to ask them what.', 1, '2019-07-29 09:50:55', '2019-07-29 09:50:55'),
+(2, 1, 2, 2, 1, 1, 3, 36552, 'Caterpillar sternly. \'Explain yourself!\' \'I can\'t help it,\' said Alice, \'how am I to do anything.', 1, '2019-07-29 09:50:57', '2019-07-29 09:50:57'),
+(3, 2, 2, 2, 1, 1, 3, 163455, 'I got up this morning, but I shall be a Caucus-race.\' \'What IS the fun?\' said Alice. The poor.', 1, '2019-07-29 09:50:57', '2019-07-29 09:50:57'),
+(4, 1, 3, 3, 1, 1, 3, 203886, 'Hatter. He came in with the bones and the whole cause, and condemn you to learn?\' \'Well, there was.', 1, '2019-07-29 09:51:00', '2019-07-29 09:51:00'),
+(5, 2, 3, 3, 1, 1, 3, 122382, 'I beg your pardon!\' said the Mock Turtle said: \'no wise fish would go anywhere without a.', 1, '2019-07-29 09:51:00', '2019-07-29 09:51:00'),
+(6, 3, 3, 3, 1, 1, 3, 296382, 'VERY tired of being upset, and their curls got entangled together. Alice was silent. The King.', 1, '2019-07-29 09:51:00', '2019-07-29 09:51:00'),
+(7, 1, 4, 4, 1, 1, 3, 147360, 'King, who had been anything near the right way to hear his history. I must be the right way to.', 1, '2019-07-29 09:51:02', '2019-07-29 09:51:02'),
+(8, 2, 4, 4, 1, 1, 3, 202833, 'And they pinched it on both sides of the trees upon her knee, and looking anxiously about as.', 1, '2019-07-29 09:51:02', '2019-07-29 09:51:02'),
+(9, 3, 4, 4, 1, 1, 3, 93765, 'Lobster Quadrille The Mock Turtle would be only rustling in the lap of her little sister\'s dream.', 1, '2019-07-29 09:51:02', '2019-07-29 09:51:02'),
+(10, 4, 4, 4, 1, 1, 3, 163044, 'However, when they liked, and left off sneezing by this time.) \'You\'re nothing but out-of-the-way.', 1, '2019-07-29 09:51:02', '2019-07-29 09:51:02'),
+(11, 1, 5, 5, 1, 1, 3, 39093, 'Majesty,\' said Two, in a whisper.) \'That would be like, but it was the same side of WHAT? The.', 1, '2019-07-29 09:51:04', '2019-07-29 09:51:04'),
+(12, 2, 5, 5, 1, 1, 3, 118854, 'O Mouse!\' (Alice thought this a good deal until she had peeped into the air, and came back again.', 1, '2019-07-29 09:51:04', '2019-07-29 09:51:04'),
+(13, 3, 5, 5, 1, 1, 3, 294297, 'So they began solemnly dancing round and swam slowly back again, and put it more clearly,\' Alice.', 1, '2019-07-29 09:51:04', '2019-07-29 09:51:04'),
+(14, 4, 5, 5, 1, 1, 3, 273201, 'I\'ve seen that done,\' thought Alice. \'I\'ve so often read in the way YOU manage?\' Alice asked. The.', 1, '2019-07-29 09:51:04', '2019-07-29 09:51:04'),
+(15, 5, 5, 5, 1, 1, 3, 128010, 'White Rabbit was still in existence; \'and now for the rest were quite dry again, the cook.', 1, '2019-07-29 09:51:04', '2019-07-29 09:51:04'),
+(16, 1, 6, 6, 1, 1, 3, 205833, 'And she went round the court and got behind him, and said anxiously to herself, and began to cry.', 1, '2019-07-29 09:51:07', '2019-07-29 09:51:07'),
+(17, 2, 6, 6, 1, 1, 3, 104856, 'WHAT? The other guests had taken his watch out of sight, they were trying which word sounded best.', 1, '2019-07-29 09:51:08', '2019-07-29 09:51:08'),
+(18, 3, 6, 6, 1, 1, 3, 125988, 'Gryphon. Alice did not seem to be\"--or if you\'d rather not.\' \'We indeed!\' cried the Mock Turtle in.', 1, '2019-07-29 09:51:08', '2019-07-29 09:51:08'),
+(19, 4, 6, 6, 1, 1, 3, 111204, 'I never heard before, \'Sure then I\'m here! Digging for apples, yer honour!\' \'Digging for apples.', 1, '2019-07-29 09:51:08', '2019-07-29 09:51:08'),
+(20, 5, 6, 6, 1, 1, 3, 72696, 'Alice had got its neck nicely straightened out, and was a queer-shaped little creature, and held.', 1, '2019-07-29 09:51:08', '2019-07-29 09:51:08'),
+(21, 6, 6, 6, 1, 1, 3, 14877, 'You see the earth takes twenty-four hours to turn into a large crowd collected round it: there.', 1, '2019-07-29 09:51:08', '2019-07-29 09:51:08'),
+(22, 1, 7, 7, 1, 1, 3, 111792, 'Mouse\'s tail; \'but why do you know I\'m mad?\' said Alice. \'Why?\' \'IT DOES THE BOOTS AND SHOES.\' the.', 1, '2019-07-29 09:51:12', '2019-07-29 09:51:12'),
+(23, 2, 7, 7, 1, 1, 3, 148152, 'I shall have some fun now!\' thought Alice. \'Now we shall get on better.\' \'I\'d rather not,\' the Cat.', 1, '2019-07-29 09:51:12', '2019-07-29 09:51:12'),
+(24, 3, 7, 7, 1, 1, 3, 31683, 'Alice. \'Of course you know the meaning of half those long words, and, what\'s more, I don\'t know,\'.', 1, '2019-07-29 09:51:12', '2019-07-29 09:51:12'),
+(25, 4, 7, 7, 1, 1, 3, 27735, 'First, she dreamed of little animals and birds waiting outside. The poor little juror (it was.', 1, '2019-07-29 09:51:12', '2019-07-29 09:51:12'),
+(26, 5, 7, 7, 1, 1, 3, 16320, 'Alice. \'I\'ve read that in some book, but I shall see it trot away quietly into the court, without.', 1, '2019-07-29 09:51:12', '2019-07-29 09:51:12'),
+(27, 6, 7, 7, 1, 1, 3, 266352, 'I hadn\'t gone down that rabbit-hole--and yet--and yet--it\'s rather curious, you know, with oh.', 1, '2019-07-29 09:51:12', '2019-07-29 09:51:12'),
+(28, 7, 7, 7, 1, 1, 3, 140004, 'SLUGGARD,\"\' said the King. On this the White Rabbit: it was a large canvas bag, which tied up at.', 1, '2019-07-29 09:51:12', '2019-07-29 09:51:12'),
+(29, 1, 8, 8, 1, 1, 3, 280926, 'Dinah my dear! Let this be a great hurry, muttering to himself in an angry tone, \'Why, Mary Ann.', 1, '2019-07-29 09:51:15', '2019-07-29 09:51:15'),
+(30, 2, 8, 8, 1, 1, 3, 113988, 'Has lasted the rest of the sort,\' said the King. \'When did you ever eat a bat?\' when suddenly.', 1, '2019-07-29 09:51:15', '2019-07-29 09:51:15'),
+(31, 3, 8, 8, 1, 1, 3, 91950, 'Alice. \'It goes on, you know,\' said the Caterpillar; and it put more simply--\"Never imagine.', 1, '2019-07-29 09:51:15', '2019-07-29 09:51:15'),
+(32, 4, 8, 8, 1, 1, 3, 169692, 'Alice. \'Nothing,\' said Alice. \'I\'m glad they\'ve begun asking riddles.--I believe I can say.\' This.', 1, '2019-07-29 09:51:16', '2019-07-29 09:51:16'),
+(33, 5, 8, 8, 1, 1, 3, 36414, 'Mouse was swimming away from her as she came upon a little way off, and she very soon finished it.', 1, '2019-07-29 09:51:16', '2019-07-29 09:51:16'),
+(34, 6, 8, 8, 1, 1, 3, 55071, 'Bill\'s got the other--Bill! fetch it here, lad!--Here, put \'em up at this corner--No, tie \'em.', 1, '2019-07-29 09:51:16', '2019-07-29 09:51:16'),
+(35, 7, 8, 8, 1, 1, 3, 279975, 'She was a table set out under a tree a few minutes she heard a little nervous about it just at.', 1, '2019-07-29 09:51:16', '2019-07-29 09:51:16'),
+(36, 8, 8, 8, 1, 1, 3, 54240, 'Pigeon, but in a tone of great curiosity. \'It\'s a mineral, I THINK,\' said Alice. \'Of course.', 1, '2019-07-29 09:51:16', '2019-07-29 09:51:16'),
+(37, 1, 9, 9, 1, 1, 3, 28482, 'He was an uncomfortably sharp chin. However, she soon found an opportunity of taking it away. She.', 1, '2019-07-29 09:51:18', '2019-07-29 09:51:18'),
+(38, 2, 9, 9, 1, 1, 3, 10647, 'Alice sharply, for she had not the same, shedding gallons of tears, \'I do wish they WOULD not.', 1, '2019-07-29 09:51:18', '2019-07-29 09:51:18'),
+(39, 3, 9, 9, 1, 1, 3, 114249, 'And then a great many teeth, so she set to work, and very angrily. \'A knot!\' said Alice, in a.', 1, '2019-07-29 09:51:18', '2019-07-29 09:51:18'),
+(40, 4, 9, 9, 1, 1, 3, 171879, 'Paris, and Paris is the same thing,\' said the White Rabbit returning, splendidly dressed, with a.', 1, '2019-07-29 09:51:18', '2019-07-29 09:51:18'),
+(41, 5, 9, 9, 1, 1, 3, 268167, 'WHAT?\' thought Alice to herself. At this moment the door opened inwards, and Alice\'s first thought.', 1, '2019-07-29 09:51:18', '2019-07-29 09:51:18'),
+(42, 6, 9, 9, 1, 1, 3, 26067, 'Never heard of uglifying!\' it exclaimed. \'You know what to do, and in another moment, splash! she.', 1, '2019-07-29 09:51:18', '2019-07-29 09:51:18'),
+(43, 7, 9, 9, 1, 1, 3, 137133, 'Mock Turtle. \'Very much indeed,\' said Alice. The poor little thing was snorting like a frog; and.', 1, '2019-07-29 09:51:18', '2019-07-29 09:51:18'),
+(44, 8, 9, 9, 1, 1, 3, 101526, 'Will you, won\'t you, will you, won\'t you, will you join the dance? Will you, won\'t you, will you.', 1, '2019-07-29 09:51:19', '2019-07-29 09:51:19'),
+(45, 9, 9, 9, 1, 1, 3, 248853, 'Queen, and in another minute the whole window!\' \'Sure, it does, yer honour: but it\'s an arm, yer.', 1, '2019-07-29 09:51:19', '2019-07-29 09:51:19'),
+(46, 1, 10, 10, 1, 1, 3, 200040, 'MARMALADE\', but to her usual height. It was as much right,\' said the Mock Turtle. \'Seals, turtles.', 1, '2019-07-29 09:51:21', '2019-07-29 09:51:21'),
+(47, 2, 10, 10, 1, 1, 3, 103059, 'Alice did not like the wind, and the Dormouse followed him: the March Hare, \'that \"I like what I.', 1, '2019-07-29 09:51:21', '2019-07-29 09:51:21'),
+(48, 3, 10, 10, 1, 1, 3, 89646, 'I get\" is the same tone, exactly as if she meant to take out of his shrill little voice, the name.', 1, '2019-07-29 09:51:21', '2019-07-29 09:51:21'),
+(49, 4, 10, 10, 1, 1, 3, 31764, 'How puzzling all these changes are! I\'m never sure what I\'m going to begin with; and being so many.', 1, '2019-07-29 09:51:21', '2019-07-29 09:51:21'),
+(50, 5, 10, 10, 1, 1, 3, 94029, 'So Alice began to get in?\' asked Alice again, for this curious child was very glad to do so.', 1, '2019-07-29 09:51:21', '2019-07-29 09:51:21'),
+(51, 6, 10, 10, 1, 1, 3, 225270, 'Alice; \'I might as well go back, and see what was coming. It was so long since she had never.', 1, '2019-07-29 09:51:21', '2019-07-29 09:51:21'),
+(52, 7, 10, 10, 1, 1, 3, 245616, 'So they got their tails in their mouths. So they got settled down again, the cook and the Mock.', 1, '2019-07-29 09:51:21', '2019-07-29 09:51:21'),
+(53, 8, 10, 10, 1, 1, 3, 85833, 'THIS size: why, I should like to show you! A little bright-eyed terrier, you know, with oh, such.', 1, '2019-07-29 09:51:21', '2019-07-29 09:51:21'),
+(54, 9, 10, 10, 1, 1, 3, 113844, 'Between yourself and me.\' \'That\'s the first sentence in her face, with such a thing before, and he.', 1, '2019-07-29 09:51:21', '2019-07-29 09:51:21'),
+(55, 10, 10, 10, 1, 1, 3, 275529, 'Alice, quite forgetting her promise. \'Treacle,\' said a whiting to a mouse, That he met in the.', 1, '2019-07-29 09:51:21', '2019-07-29 09:51:21'),
+(56, 1, 11, 11, 1, 1, 3, 181461, 'I shall see it again, but it was done. They had not as yet had any dispute with the Duchess, the.', 1, '2019-07-29 09:51:23', '2019-07-29 09:51:23'),
+(57, 2, 11, 11, 1, 1, 3, 62121, 'I shall never get to the croquet-ground. The other guests had taken his watch out of sight: then.', 1, '2019-07-29 09:51:23', '2019-07-29 09:51:23'),
+(58, 3, 11, 11, 1, 1, 3, 259188, 'CHAPTER V. Advice from a Caterpillar The Caterpillar was the Hatter. Alice felt dreadfully.', 1, '2019-07-29 09:51:23', '2019-07-29 09:51:23'),
+(59, 4, 11, 11, 1, 1, 3, 34062, 'Alice, as she could even make out who I am! But I\'d better take him his fan and a sad tale!\' said.', 1, '2019-07-29 09:51:23', '2019-07-29 09:51:23'),
+(60, 5, 11, 11, 1, 1, 3, 68436, 'I was sent for.\' \'You ought to eat her up in spite of all her coaxing. Hardly knowing what she was.', 1, '2019-07-29 09:51:23', '2019-07-29 09:51:23'),
+(61, 6, 11, 11, 1, 1, 3, 42687, 'I\'m on the song, she kept tossing the baby violently up and to hear her try and repeat something.', 1, '2019-07-29 09:51:23', '2019-07-29 09:51:23'),
+(62, 7, 11, 11, 1, 1, 3, 80286, 'Alice. \'Then it ought to speak, and no more of it appeared. \'I don\'t even know what to do, and.', 1, '2019-07-29 09:51:23', '2019-07-29 09:51:23'),
+(63, 8, 11, 11, 1, 1, 3, 245919, 'Alice noticed, had powdered hair that WOULD always get into the garden door. Poor Alice! It was.', 1, '2019-07-29 09:51:23', '2019-07-29 09:51:23'),
+(64, 9, 11, 11, 1, 1, 3, 123561, 'I ought to be done, I wonder?\' And here poor Alice began in a day or two: wouldn\'t it be murder to.', 1, '2019-07-29 09:51:23', '2019-07-29 09:51:23'),
+(65, 10, 11, 11, 1, 1, 3, 64614, 'Alice\'s elbow was pressed so closely against her foot, that there was nothing on it except a.', 1, '2019-07-29 09:51:23', '2019-07-29 09:51:23'),
+(66, 11, 11, 11, 1, 1, 3, 244023, 'Mock Turtle with a yelp of delight, which changed into alarm in another moment it was all very.', 1, '2019-07-29 09:51:23', '2019-07-29 09:51:23'),
+(67, 1, 12, 12, 1, 1, 3, 275748, 'You\'re a serpent; and there\'s no use in saying anything more till the Pigeon the opportunity of.', 1, '2019-07-29 09:51:25', '2019-07-29 09:51:25'),
+(68, 2, 12, 12, 1, 1, 3, 42153, 'Alice watched the White Rabbit as he spoke, \'we were trying--\' \'I see!\' said the Gryphon. \'They.', 1, '2019-07-29 09:51:25', '2019-07-29 09:51:25'),
+(69, 3, 12, 12, 1, 1, 3, 186267, 'Hatter. \'It isn\'t a bird,\' Alice remarked. \'Right, as usual,\' said the Mock Turtle recovered his.', 1, '2019-07-29 09:51:25', '2019-07-29 09:51:25'),
+(70, 4, 12, 12, 1, 1, 3, 291285, 'After a while, finding that nothing more happened, she decided to remain where she was, and.', 1, '2019-07-29 09:51:25', '2019-07-29 09:51:25'),
+(71, 5, 12, 12, 1, 1, 3, 187809, 'Mock Turtle said: \'no wise fish would go anywhere without a porpoise.\' \'Wouldn\'t it really?\' said.', 1, '2019-07-29 09:51:26', '2019-07-29 09:51:26'),
+(72, 6, 12, 12, 1, 1, 3, 266598, 'Good-bye, feet!\' (for when she had found the fan and the other paw, \'lives a March Hare. \'He.', 1, '2019-07-29 09:51:26', '2019-07-29 09:51:26'),
+(73, 7, 12, 12, 1, 1, 3, 150975, 'Gryphon in an undertone, \'important--unimportant--unimportant--important--\' as if his heart would.', 1, '2019-07-29 09:51:26', '2019-07-29 09:51:26'),
+(74, 8, 12, 12, 1, 1, 3, 146394, 'Dormouse followed him: the March Hare. \'I didn\'t know that cats COULD grin.\' \'They all can,\' said.', 1, '2019-07-29 09:51:26', '2019-07-29 09:51:26'),
+(75, 9, 12, 12, 1, 1, 3, 281031, 'Alice dear!\' said her sister; \'Why, what a Gryphon is, look at them--\'I wish they\'d get the trial.', 1, '2019-07-29 09:51:26', '2019-07-29 09:51:26'),
+(76, 10, 12, 12, 1, 1, 3, 129855, 'But I\'ve got to the Classics master, though. He was an old Turtle--we used to say.\' \'So he did, so.', 1, '2019-07-29 09:51:26', '2019-07-29 09:51:26'),
+(77, 11, 12, 12, 1, 1, 3, 48879, 'Alice began to say to itself \'The Duchess! The Duchess! Oh my fur and whiskers! She\'ll get me.', 1, '2019-07-29 09:51:26', '2019-07-29 09:51:26'),
+(78, 12, 12, 12, 1, 1, 3, 274989, 'I can\'t put it more clearly,\' Alice replied very politely, feeling quite pleased to find it out.', 1, '2019-07-29 09:51:26', '2019-07-29 09:51:26'),
+(79, 1, 13, 13, 1, 1, 3, 37146, 'Kings and Queens, and among them Alice recognised the White Rabbit put on his spectacles and.', 1, '2019-07-29 09:51:28', '2019-07-29 09:51:28'),
+(80, 2, 13, 13, 1, 1, 3, 131562, 'Mock Turtle replied; \'and then the other, looking uneasily at the end of the officers: but the.', 1, '2019-07-29 09:51:28', '2019-07-29 09:51:28'),
+(81, 3, 13, 13, 1, 1, 3, 184134, 'Alice. \'I\'m glad they\'ve begun asking riddles.--I believe I can remember feeling a little.', 1, '2019-07-29 09:51:28', '2019-07-29 09:51:28'),
+(82, 4, 13, 13, 1, 1, 3, 239034, 'Alice joined the procession, wondering very much what would happen next. \'It\'s--it\'s a very poor.', 1, '2019-07-29 09:51:28', '2019-07-29 09:51:28'),
+(83, 5, 13, 13, 1, 1, 3, 77013, 'PRECIOUS nose\'; as an explanation; \'I\'ve none of them at last, with a sigh. \'I only took the.', 1, '2019-07-29 09:51:28', '2019-07-29 09:51:28'),
+(84, 6, 13, 13, 1, 1, 3, 2607, 'Majesty,\' said the Caterpillar. \'Is that the Gryphon repeated impatiently: \'it begins \"I passed by.', 1, '2019-07-29 09:51:28', '2019-07-29 09:51:28'),
+(85, 7, 13, 13, 1, 1, 3, 148698, 'There ought to go on. \'And so these three weeks!\' \'I\'m very sorry you\'ve been annoyed,\' said.', 1, '2019-07-29 09:51:28', '2019-07-29 09:51:28'),
+(86, 8, 13, 13, 1, 1, 3, 172911, 'Alice: \'allow me to introduce it.\' \'I don\'t see,\' said the last few minutes to see if there were.', 1, '2019-07-29 09:51:28', '2019-07-29 09:51:28'),
+(87, 9, 13, 13, 1, 1, 3, 288021, 'Next came an angry voice--the Rabbit\'s--\'Pat! Pat! Where are you?\' said the King. The White Rabbit.', 1, '2019-07-29 09:51:28', '2019-07-29 09:51:28'),
+(88, 10, 13, 13, 1, 1, 3, 23127, 'Ada,\' she said, as politely as she wandered about for a little feeble, squeaking voice, (\'That\'s.', 1, '2019-07-29 09:51:28', '2019-07-29 09:51:28'),
+(89, 11, 13, 13, 1, 1, 3, 286770, 'I should understand that better,\' Alice said very politely, \'if I had to double themselves up and.', 1, '2019-07-29 09:51:28', '2019-07-29 09:51:28'),
+(90, 12, 13, 13, 1, 1, 3, 37089, 'March Hare. \'Then it doesn\'t matter much,\' thought Alice, \'as all the rest were quite dry again.', 1, '2019-07-29 09:51:28', '2019-07-29 09:51:28'),
+(91, 13, 13, 13, 1, 1, 3, 182004, 'Hatter were having tea at it: a Dormouse was sitting on the same tone, exactly as if she was about.', 1, '2019-07-29 09:51:28', '2019-07-29 09:51:28'),
+(92, 1, 14, 14, 1, 1, 3, 159753, 'It quite makes my forehead ache!\' Alice watched the Queen of Hearts, she made out what she was.', 1, '2019-07-29 09:51:30', '2019-07-29 09:51:30'),
+(93, 2, 14, 14, 1, 1, 3, 169623, 'Queen. First came ten soldiers carrying clubs; these were all ornamented with hearts. Next came an.', 1, '2019-07-29 09:51:30', '2019-07-29 09:51:30'),
+(94, 3, 14, 14, 1, 1, 3, 107064, 'Footman remarked, \'till tomorrow--\' At this the whole court was in confusion, getting the Dormouse.', 1, '2019-07-29 09:51:30', '2019-07-29 09:51:30'),
+(95, 4, 14, 14, 1, 1, 3, 267951, 'Caterpillar. \'Well, perhaps your feelings may be different,\' said Alice; \'I might as well as the.', 1, '2019-07-29 09:51:30', '2019-07-29 09:51:30'),
+(96, 5, 14, 14, 1, 1, 3, 41832, 'Alice. \'Anything you like,\' said the Rabbit\'s voice along--\'Catch him, you by the soldiers, who of.', 1, '2019-07-29 09:51:30', '2019-07-29 09:51:30'),
+(97, 6, 14, 14, 1, 1, 3, 242277, 'For some minutes the whole pack rose up into a small passage, not much larger than a rat-hole: she.', 1, '2019-07-29 09:51:30', '2019-07-29 09:51:30'),
+(98, 7, 14, 14, 1, 1, 3, 263640, 'The Duchess took her choice, and was a good many voices all talking together: she made out that.', 1, '2019-07-29 09:51:30', '2019-07-29 09:51:30'),
+(99, 8, 14, 14, 1, 1, 3, 22941, 'Why, there\'s hardly enough of me left to make the arches. The chief difficulty Alice found at.', 1, '2019-07-29 09:51:30', '2019-07-29 09:51:30'),
+(100, 9, 14, 14, 1, 1, 3, 9237, 'Hatter trembled so, that he shook his head sadly. \'Do I look like it?\' he said, \'on and off, for.', 1, '2019-07-29 09:51:30', '2019-07-29 09:51:30'),
+(101, 10, 14, 14, 1, 1, 3, 121413, 'Alice, and she jumped up and leave the court; but on second thoughts she decided to remain where.', 1, '2019-07-29 09:51:30', '2019-07-29 09:51:30'),
+(102, 11, 14, 14, 1, 1, 3, 278646, 'The Antipathies, I think--\' (for, you see, as well say,\' added the Gryphon, \'that they WOULD go.', 1, '2019-07-29 09:51:30', '2019-07-29 09:51:30'),
+(103, 12, 14, 14, 1, 1, 3, 191007, 'Alice began to cry again, for this curious child was very hot, she kept fanning herself all the.', 1, '2019-07-29 09:51:30', '2019-07-29 09:51:30'),
+(104, 13, 14, 14, 1, 1, 3, 88683, 'I\'m here! Digging for apples, indeed!\' said the Mouse with an important air, \'are you all ready?.', 1, '2019-07-29 09:51:30', '2019-07-29 09:51:30'),
+(105, 14, 14, 14, 1, 1, 3, 119637, 'Queen furiously, throwing an inkstand at the jury-box, and saw that, in her pocket) till she had.', 1, '2019-07-29 09:51:30', '2019-07-29 09:51:30'),
+(106, 1, 15, 15, 1, 1, 3, 180438, 'The rabbit-hole went straight on like a stalk out of breath, and said \'That\'s very curious.\' \'It\'s.', 1, '2019-07-29 09:51:34', '2019-07-29 09:51:34'),
+(107, 2, 15, 15, 1, 1, 3, 38307, 'I\'ll get into her face, with such a rule at processions; \'and besides, what would happen next.', 1, '2019-07-29 09:51:34', '2019-07-29 09:51:34'),
+(108, 3, 15, 15, 1, 1, 3, 205590, 'Rabbit began. Alice thought decidedly uncivil. \'But perhaps he can\'t help it,\' she said to.', 1, '2019-07-29 09:51:34', '2019-07-29 09:51:34'),
+(109, 4, 15, 15, 1, 1, 3, 11616, 'I could shut up like a mouse, That he met in the chimney close above her: then, saying to her ear.', 1, '2019-07-29 09:51:34', '2019-07-29 09:51:34'),
+(110, 5, 15, 15, 1, 1, 3, 195378, 'I did: there\'s no use in waiting by the hedge!\' then silence, and then I\'ll tell him--it was for.', 1, '2019-07-29 09:51:34', '2019-07-29 09:51:34'),
+(111, 6, 15, 15, 1, 1, 3, 45957, 'While the Panther were sharing a pie--\' [later editions continued as follows The Panther took.', 1, '2019-07-29 09:51:34', '2019-07-29 09:51:34'),
+(112, 7, 15, 15, 1, 1, 3, 276636, 'Pray how did you begin?\' The Hatter looked at each other for some time without hearing anything.', 1, '2019-07-29 09:51:34', '2019-07-29 09:51:34'),
+(113, 8, 15, 15, 1, 1, 3, 140367, 'Hatter: \'but you could see it again, but it makes me grow smaller, I can guess that,\' she added in.', 1, '2019-07-29 09:51:34', '2019-07-29 09:51:34'),
+(114, 9, 15, 15, 1, 1, 3, 160896, 'So she began again: \'Ou est ma chatte?\' which was immediately suppressed by the officers of the.', 1, '2019-07-29 09:51:34', '2019-07-29 09:51:34'),
+(115, 10, 15, 15, 1, 1, 3, 28047, 'Alice hastily, afraid that it was certainly too much of it in a helpless sort of life! I do it.', 1, '2019-07-29 09:51:34', '2019-07-29 09:51:34'),
+(116, 11, 15, 15, 1, 1, 3, 244695, 'Forty-two. ALL PERSONS MORE THAN A MILE HIGH TO LEAVE THE COURT.\' Everybody looked at them with.', 1, '2019-07-29 09:51:34', '2019-07-29 09:51:34'),
+(117, 12, 15, 15, 1, 1, 3, 65097, 'I sleep\" is the driest thing I ever was at in all directions, \'just like a telescope! I think I.', 1, '2019-07-29 09:51:34', '2019-07-29 09:51:34'),
+(118, 13, 15, 15, 1, 1, 3, 246159, 'NO mistake about it: it was the same when I learn music.\' \'Ah! that accounts for it,\' said Alice.', 1, '2019-07-29 09:51:34', '2019-07-29 09:51:34'),
+(119, 14, 15, 15, 1, 1, 3, 280827, 'In another minute the whole thing very absurd, but they were filled with tears running down his.', 1, '2019-07-29 09:51:34', '2019-07-29 09:51:34'),
+(120, 15, 15, 15, 1, 1, 3, 19647, 'I wish you wouldn\'t mind,\' said Alice: \'besides, that\'s not a bit of stick, and tumbled head over.', 1, '2019-07-29 09:51:34', '2019-07-29 09:51:34');
 
 -- --------------------------------------------------------
 
@@ -217,21 +217,21 @@ CREATE TABLE `menus` (
 --
 
 INSERT INTO `menus` (`id`, `category_id`, `name`, `description`, `price`, `stock`, `photo`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Menu psr', 'Description Menu kbl', 139, 16, 'photo/fe7253fb3305892ca78cce4c7dbeb248.jpg', '2019-07-29 04:54:56', '2019-07-29 04:54:56'),
-(2, 1, 'Menu ues', 'Description Menu flx', 303, 10, 'photo/7ceb79b5f2c34d40285a10d0f474eb7c.jpg', '2019-07-29 04:54:59', '2019-07-29 04:54:59'),
-(3, 2, 'Menu mpi', 'Description Menu eyz', 171, 16, 'photo/c54c8cae32e935bab0cdb87dfa15eeac.jpg', '2019-07-29 04:55:02', '2019-07-29 04:55:02'),
-(4, 1, 'Menu bki', 'Description Menu rrk', 249, 11, 'photo/3031e9bc2fba27b4efc1a2f1a623bae1.jpg', '2019-07-29 04:55:04', '2019-07-29 04:55:04'),
-(5, 2, 'Menu tyk', 'Description Menu bob', 794, 19, 'photo/cd860182b4a59a43f0060210f42e5110.jpg', '2019-07-29 04:55:07', '2019-07-29 04:55:07'),
-(6, 3, 'Menu amw', 'Description Menu ygv', 810, 19, 'photo/4823a6dc082abf05083cbc3bc75161b0.jpg', '2019-07-29 04:55:09', '2019-07-29 04:55:09'),
-(7, 1, 'Menu ivb', 'Description Menu tpq', 52, 18, 'photo/a43cf430b6d0e9928a7e9d6f0e24e10b.jpg', '2019-07-29 04:55:12', '2019-07-29 04:55:12'),
-(8, 2, 'Menu swz', 'Description Menu tmu', 530, 11, 'photo/ee989ff49219ee40862f3a16a2bc9a5d.jpg', '2019-07-29 04:55:15', '2019-07-29 04:55:15'),
-(9, 3, 'Menu zxt', 'Description Menu iie', 842, 20, 'photo/2eb341684e579608b7d11c05a69fa031.jpg', '2019-07-29 04:55:17', '2019-07-29 04:55:17'),
-(10, 4, 'Menu urb', 'Description Menu kqk', 685, 20, 'photo/9a5c60715b64954722b0c46a603b5ba8.jpg', '2019-07-29 04:55:20', '2019-07-29 04:55:20'),
-(11, 1, 'Menu lyn', 'Description Menu xtd', 846, 16, 'photo/63827d28dcfb7f64344e753df388a884.jpg', '2019-07-29 04:55:22', '2019-07-29 04:55:22'),
-(12, 2, 'Menu grv', 'Description Menu ekg', 312, 11, 'photo/ad8b821e88438ab1604703eeb7f6c264.jpg', '2019-07-29 04:55:25', '2019-07-29 04:55:25'),
-(13, 3, 'Menu oee', 'Description Menu sdt', 316, 14, 'photo/c32d9175017017defe7c5c5f529a29a4.jpg', '2019-07-29 04:55:28', '2019-07-29 04:55:28'),
-(14, 4, 'Menu bqp', 'Description Menu czu', 967, 20, 'photo/e75be2cb5b1650f230c125c5dca7f7f4.jpg', '2019-07-29 04:55:30', '2019-07-29 04:55:30'),
-(15, 5, 'Menu dqx', 'Description Menu oib', 250, 19, 'photo/83ecf10a883e5649904a1559b59a0f9d.jpg', '2019-07-29 04:55:32', '2019-07-29 04:55:32');
+(1, 1, 'Menu wpy', 'Description Menu hco', 475, 10, 'photo/0895283b25e8f213bb2aa166fdcddaaf.jpg', '2019-07-29 09:50:54', '2019-07-29 09:50:54'),
+(2, 1, 'Menu tnx', 'Description Menu fii', 446, 12, 'photo/918766e5fe18f06b7cbd1112b16560a0.jpg', '2019-07-29 09:50:57', '2019-07-29 09:50:57'),
+(3, 2, 'Menu bqb', 'Description Menu jup', 927, 12, 'photo/a0408292108c8df376f6a3fa95118f9e.jpg', '2019-07-29 09:51:00', '2019-07-29 09:51:00'),
+(4, 1, 'Menu tiw', 'Description Menu ryf', 261, 20, 'photo/72a2301964631da6fc9e57b0e3be0eae.jpg', '2019-07-29 09:51:02', '2019-07-29 09:51:02'),
+(5, 2, 'Menu jsh', 'Description Menu gpj', 947, 10, 'photo/3173fa0242bf1910208d2aa66cf28acd.jpg', '2019-07-29 09:51:04', '2019-07-29 09:51:04'),
+(6, 3, 'Menu mqa', 'Description Menu fvl', 16, 13, 'photo/14f37bd3571445b41b40090a14a16a9d.jpg', '2019-07-29 09:51:07', '2019-07-29 09:51:07'),
+(7, 1, 'Menu tqr', 'Description Menu cwx', 184, 11, 'photo/862654e942520ec155ea3e9916264be9.jpg', '2019-07-29 09:51:12', '2019-07-29 09:51:12'),
+(8, 2, 'Menu krz', 'Description Menu orc', 983, 14, 'photo/8c4396409f43b6f6c0b91ce424ca39e9.jpg', '2019-07-29 09:51:15', '2019-07-29 09:51:15'),
+(9, 3, 'Menu ukz', 'Description Menu rjm', 3, 12, 'photo/05acfef1015d4afe6f53f96e3e1d2b71.jpg', '2019-07-29 09:51:18', '2019-07-29 09:51:18'),
+(10, 4, 'Menu yfv', 'Description Menu izo', 343, 11, 'photo/ae92615c52eee57ea34bf0199f4adfd2.jpg', '2019-07-29 09:51:21', '2019-07-29 09:51:21'),
+(11, 1, 'Menu moa', 'Description Menu lkx', 168, 12, 'photo/7a0ed2fb601c327bc145befe822893aa.jpg', '2019-07-29 09:51:23', '2019-07-29 09:51:23'),
+(12, 2, 'Menu nmo', 'Description Menu vxn', 525, 17, 'photo/71076799aa759a700ff6c06efbe06fc4.jpg', '2019-07-29 09:51:25', '2019-07-29 09:51:25'),
+(13, 3, 'Menu ghz', 'Description Menu xuq', 250, 17, 'photo/bdc7705e72f27c5d27fd8ffc1c7bf6b8.jpg', '2019-07-29 09:51:28', '2019-07-29 09:51:28'),
+(14, 4, 'Menu jqb', 'Description Menu qln', 796, 20, 'photo/d1ae5790c33d2a923122248e1bcbcafb.jpg', '2019-07-29 09:51:30', '2019-07-29 09:51:30'),
+(15, 5, 'Menu evc', 'Description Menu ibm', 540, 13, 'photo/9717fda7eec28b074539dc5173e8fa75.jpg', '2019-07-29 09:51:34', '2019-07-29 09:51:34');
 
 -- --------------------------------------------------------
 
@@ -317,6 +317,14 @@ CREATE TABLE `oauth_clients` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data untuk tabel `oauth_clients`
+--
+
+INSERT INTO `oauth_clients` (`id`, `user_id`, `name`, `secret`, `redirect`, `personal_access_client`, `password_client`, `revoked`, `created_at`, `updated_at`) VALUES
+(1, NULL, 'Sarkom Personal Access Client', 'fPg6c4L1kowyUpXyjF4iNEdzy9PgcWzhST6vKW2m', 'http://localhost', 1, 0, 0, '2019-07-29 09:52:33', '2019-07-29 09:52:33'),
+(2, NULL, 'Sarkom Password Grant Client', 'vRG9THGiYr5hQouwKM8DMpNyxUfIr0u01lapGqbc', 'http://localhost', 0, 1, 0, '2019-07-29 09:52:33', '2019-07-29 09:52:33');
+
 -- --------------------------------------------------------
 
 --
@@ -329,6 +337,13 @@ CREATE TABLE `oauth_personal_access_clients` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data untuk tabel `oauth_personal_access_clients`
+--
+
+INSERT INTO `oauth_personal_access_clients` (`id`, `client_id`, `created_at`, `updated_at`) VALUES
+(1, 1, '2019-07-29 09:52:33', '2019-07-29 09:52:33');
 
 -- --------------------------------------------------------
 
@@ -363,21 +378,21 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `cashier_id`, `member_id`, `order_code`, `created_at`, `updated_at`) VALUES
-(1, 1, 5, '5d3ede90e0086', '2019-06-27 19:52:33', '2019-07-29 04:54:56'),
-(2, 1, 6, '5d3ede93af5a4', '2019-02-27 06:08:57', '2019-07-29 04:54:59'),
-(3, 1, 6, '5d3ede961135d', '2018-08-24 22:30:17', '2019-07-29 04:55:02'),
-(4, 1, 7, '5d3ede9868051', '2018-12-11 03:56:05', '2019-07-29 04:55:04'),
-(5, 1, 7, '5d3ede9b7947f', '2019-07-29 04:07:36', '2019-07-29 04:55:07'),
-(6, 1, 7, '5d3ede9e026fe', '2018-10-18 14:21:58', '2019-07-29 04:55:10'),
-(7, 1, 8, '5d3edea06d516', '2018-08-05 09:55:52', '2019-07-29 04:55:12'),
-(8, 1, 8, '5d3edea35f2c5', '2018-09-27 15:46:55', '2019-07-29 04:55:15'),
-(9, 1, 8, '5d3edea5bcc12', '2019-03-24 23:56:54', '2019-07-29 04:55:17'),
-(10, 1, 8, '5d3edea811748', '2019-07-17 20:34:46', '2019-07-29 04:55:20'),
-(11, 1, 9, '5d3edeaae9e89', '2019-07-11 02:33:34', '2019-07-29 04:55:22'),
-(12, 1, 9, '5d3edeada3d21', '2019-01-22 17:23:30', '2019-07-29 04:55:25'),
-(13, 1, 9, '5d3edeb03849b', '2018-11-04 22:36:19', '2019-07-29 04:55:28'),
-(14, 1, 9, '5d3edeb27dfe0', '2019-01-30 18:36:21', '2019-07-29 04:55:30'),
-(15, 1, 9, '5d3edeb486040', '2018-11-22 07:08:42', '2019-07-29 04:55:32');
+(1, 1, 5, '5d3f23ef095ac', '2019-01-07 15:17:57', '2019-07-29 09:50:55'),
+(2, 1, 6, '5d3f23f197393', '2019-06-13 21:04:12', '2019-07-29 09:50:57'),
+(3, 1, 6, '5d3f23f421475', '2019-06-26 03:37:27', '2019-07-29 09:51:00'),
+(4, 1, 7, '5d3f23f672d66', '2019-03-23 08:17:03', '2019-07-29 09:51:02'),
+(5, 1, 7, '5d3f23f875237', '2019-05-10 04:30:32', '2019-07-29 09:51:04'),
+(6, 1, 7, '5d3f23fbe113f', '2018-12-19 22:19:00', '2019-07-29 09:51:07'),
+(7, 1, 8, '5d3f24003617b', '2019-05-08 05:18:34', '2019-07-29 09:51:12'),
+(8, 1, 8, '5d3f2403dd1c9', '2018-11-26 03:13:01', '2019-07-29 09:51:15'),
+(9, 1, 8, '5d3f24068b971', '2019-01-23 06:25:29', '2019-07-29 09:51:18'),
+(10, 1, 8, '5d3f2409181a7', '2019-02-28 20:14:00', '2019-07-29 09:51:21'),
+(11, 1, 9, '5d3f240bc75f2', '2018-09-01 08:43:04', '2019-07-29 09:51:23'),
+(12, 1, 9, '5d3f240de6f39', '2019-01-22 03:47:48', '2019-07-29 09:51:25'),
+(13, 1, 9, '5d3f24103b83f', '2018-08-28 05:01:43', '2019-07-29 09:51:28'),
+(14, 1, 9, '5d3f2412d65d6', '2018-08-28 05:30:13', '2019-07-29 09:51:30'),
+(15, 1, 9, '5d3f24164ed16', '2018-10-12 05:35:22', '2019-07-29 09:51:34');
 
 -- --------------------------------------------------------
 
@@ -410,11 +425,11 @@ CREATE TABLE `roles` (
 --
 
 INSERT INTO `roles` (`id`, `name`, `description`, `created_at`, `updated_at`) VALUES
-(1, 'Admin', 'Akses Admin', '2019-07-29 04:54:38', '2019-07-29 04:54:38'),
-(2, 'Cashier', 'Akses Cashier', '2019-07-29 04:54:39', '2019-07-29 04:54:39'),
-(3, 'Chef', 'Akses Chef', '2019-07-29 04:54:39', '2019-07-29 04:54:39'),
-(4, 'Waiter', 'Akses Waiter', '2019-07-29 04:54:39', '2019-07-29 04:54:39'),
-(5, 'Member', 'Akses Member', '2019-07-29 04:54:39', '2019-07-29 04:54:39');
+(1, 'Admin', 'Akses Admin', '2019-07-29 09:49:34', '2019-07-29 09:49:34'),
+(2, 'Cashier', 'Akses Cashier', '2019-07-29 09:49:35', '2019-07-29 09:49:35'),
+(3, 'Chef', 'Akses Chef', '2019-07-29 09:49:35', '2019-07-29 09:49:35'),
+(4, 'Waiter', 'Akses Waiter', '2019-07-29 09:49:35', '2019-07-29 09:49:35'),
+(5, 'Member', 'Akses Member', '2019-07-29 09:49:35', '2019-07-29 09:49:35');
 
 -- --------------------------------------------------------
 
@@ -436,21 +451,21 @@ CREATE TABLE `tables` (
 --
 
 INSERT INTO `tables` (`id`, `name`, `capacity`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'Table yyr', 8, 1, '2019-07-29 04:54:56', '2019-07-29 04:54:56'),
-(2, 'Table zdz', 4, 1, '2019-07-29 04:54:59', '2019-07-29 04:54:59'),
-(3, 'Table gqu', 3, 1, '2019-07-29 04:55:02', '2019-07-29 04:55:02'),
-(4, 'Table mev', 6, 1, '2019-07-29 04:55:04', '2019-07-29 04:55:04'),
-(5, 'Table qbw', 6, 1, '2019-07-29 04:55:07', '2019-07-29 04:55:07'),
-(6, 'Table vbz', 4, 1, '2019-07-29 04:55:10', '2019-07-29 04:55:10'),
-(7, 'Table rrq', 6, 1, '2019-07-29 04:55:12', '2019-07-29 04:55:12'),
-(8, 'Table iar', 10, 1, '2019-07-29 04:55:15', '2019-07-29 04:55:15'),
-(9, 'Table pva', 5, 1, '2019-07-29 04:55:17', '2019-07-29 04:55:17'),
-(10, 'Table agd', 8, 1, '2019-07-29 04:55:20', '2019-07-29 04:55:20'),
-(11, 'Table pbx', 10, 1, '2019-07-29 04:55:22', '2019-07-29 04:55:22'),
-(12, 'Table ynq', 9, 1, '2019-07-29 04:55:25', '2019-07-29 04:55:25'),
-(13, 'Table jfr', 4, 1, '2019-07-29 04:55:28', '2019-07-29 04:55:28'),
-(14, 'Table ndu', 5, 1, '2019-07-29 04:55:30', '2019-07-29 04:55:30'),
-(15, 'Table sdy', 10, 1, '2019-07-29 04:55:32', '2019-07-29 04:55:32');
+(1, 'Table yyw', 5, 1, '2019-07-29 09:50:54', '2019-07-29 09:50:54'),
+(2, 'Table fyu', 10, 1, '2019-07-29 09:50:57', '2019-07-29 09:50:57'),
+(3, 'Table kqq', 7, 1, '2019-07-29 09:51:00', '2019-07-29 09:51:00'),
+(4, 'Table rin', 8, 1, '2019-07-29 09:51:02', '2019-07-29 09:51:02'),
+(5, 'Table chi', 3, 1, '2019-07-29 09:51:04', '2019-07-29 09:51:04'),
+(6, 'Table zxk', 6, 1, '2019-07-29 09:51:07', '2019-07-29 09:51:07'),
+(7, 'Table ude', 4, 1, '2019-07-29 09:51:12', '2019-07-29 09:51:12'),
+(8, 'Table yfg', 3, 1, '2019-07-29 09:51:15', '2019-07-29 09:51:15'),
+(9, 'Table euj', 5, 1, '2019-07-29 09:51:18', '2019-07-29 09:51:18'),
+(10, 'Table opu', 4, 1, '2019-07-29 09:51:21', '2019-07-29 09:51:21'),
+(11, 'Table wic', 9, 1, '2019-07-29 09:51:23', '2019-07-29 09:51:23'),
+(12, 'Table jhu', 9, 1, '2019-07-29 09:51:25', '2019-07-29 09:51:25'),
+(13, 'Table bpd', 10, 1, '2019-07-29 09:51:28', '2019-07-29 09:51:28'),
+(14, 'Table xwu', 3, 1, '2019-07-29 09:51:30', '2019-07-29 09:51:30'),
+(15, 'Table bza', 8, 1, '2019-07-29 09:51:34', '2019-07-29 09:51:34');
 
 -- --------------------------------------------------------
 
@@ -477,15 +492,15 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `role_id`, `name`, `email`, `email_verified_at`, `password`, `handphone`, `photo`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Admin restaurant', 'im.admin@gmail.com', '2019-07-29 04:54:39', '$2y$10$fUDSveqfasKx1uda.RppFOS77Q.rrbcm24NHIYy1KaUgDPqjgbthi', '082281000518', NULL, 'yrC03rC9fF', '2019-07-29 04:54:40', '2019-07-29 04:54:40'),
-(2, 3, 'Chef', 'im.chef@gmail.com', '2019-07-29 04:54:40', '$2y$10$2H.aqaHesWIxjaOv8rpXY.wn5vm6M8bKK.z50LvSsOFl8lqYtLaKK', '082281000518', NULL, 'WdhfWHZjLh', '2019-07-29 04:54:40', '2019-07-29 04:54:40'),
-(3, 2, 'Cashier', 'im.cashier@gmail.com', '2019-07-29 04:54:40', '$2y$10$am19PxQs8VPUh5.n3IkA9.s2HvUPN3p5Qd/Uk4PktKXYxFAFPGvDW', '082281000518', NULL, 'ws7EWcGtmo', '2019-07-29 04:54:40', '2019-07-29 04:54:40'),
-(4, 4, 'Waiter', 'im.waiter@gmail.com', '2019-07-29 04:54:40', '$2y$10$4aI2XDOBV/3HBxHPtWmbcuG1Qr5PvsIzXjxc0y8LpiX0/A2ofgEQa', '082281000518', NULL, 'eBIO4A85kQ', '2019-07-29 04:54:40', '2019-07-29 04:54:40'),
-(5, 5, 'Dr. Kellie Lehner', 'grimes.eileen@example.com', '2019-07-29 04:54:41', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '086856534857', 'photo/93e2628b86f70e0d69ad8728aa7224cb.jpg', 'YqG8htp0ai', '2019-07-29 04:54:53', '2019-07-29 04:54:53'),
-(6, 5, 'Miss Katarina Kub DDS', 'leuschke.adrain@example.net', '2019-07-29 04:54:43', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '084350691026', 'photo/70cecbbc0234a37e6a5868de0783739d.jpg', 'dOV3E7CyRk', '2019-07-29 04:54:53', '2019-07-29 04:54:53'),
-(7, 5, 'Florida Reilly', 'baylee52@example.com', '2019-07-29 04:54:45', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '086360788147', 'photo/ee23b1650cef829acd71ff4054507ef4.jpg', 'xIMQm3lkDk', '2019-07-29 04:54:54', '2019-07-29 04:54:54'),
-(8, 5, 'Martin Larkin', 'celine99@example.com', '2019-07-29 04:54:49', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '085412232147', 'photo/b5c87f5cda6443c24944164d6f49c4a5.jpg', 'umEIDWUiXq', '2019-07-29 04:54:54', '2019-07-29 04:54:54'),
-(9, 5, 'Nikolas Hintz', 'huel.lance@example.net', '2019-07-29 04:54:51', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '082068934840', 'photo/17753b4201c5795fd9b09722f8e50618.jpg', 'ddcRsZwKI4', '2019-07-29 04:54:54', '2019-07-29 04:54:54');
+(1, 1, 'Admin restaurant', 'im.admin@gmail.com', '2019-07-29 09:49:35', '$2y$10$ozRC2UQ1lhpLEgFbFErPCu38XvJjXftPp4pwtv1z2oUsxTTidFVK6', '082281000518', NULL, 'SxmfMkQeDM', '2019-07-29 09:49:35', '2019-07-29 09:49:35'),
+(2, 3, 'Chef', 'im.chef@gmail.com', '2019-07-29 09:49:35', '$2y$10$XvmeIDfjjsgeI8TpnM/CqedFJMi1RAylmoF99Ldn7MZh8PzOxWzre', '082281000518', NULL, 'zLjd4pCcc1', '2019-07-29 09:49:35', '2019-07-29 09:49:35'),
+(3, 2, 'Cashier', 'im.cashier@gmail.com', '2019-07-29 09:49:35', '$2y$10$hyn3/spWM0N7ectCiO8YNesfXPFsY6dH92kZXJL03fibWPn3NK//O', '082281000518', NULL, 'fnGpmOgbIK', '2019-07-29 09:49:36', '2019-07-29 09:49:36'),
+(4, 4, 'Waiter', 'im.waiter@gmail.com', '2019-07-29 09:49:36', '$2y$10$VpKPtKT0f96uc3FS8FTFtuo0SatGx17R7MKBu6tQdPy3Ur8QTX8Lu', '082281000518', NULL, 'fWory4nrF1', '2019-07-29 09:49:36', '2019-07-29 09:49:36'),
+(5, 5, 'Clay Runolfsson', 'berta.denesik@example.com', '2019-07-29 09:49:37', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '083793998211', 'photo/', 'lfHmCZsYfL', '2019-07-29 09:50:50', '2019-07-29 09:50:50'),
+(6, 5, 'Mr. Jett Schneider', 'cgreenholt@example.net', '2019-07-29 09:49:58', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '084304295232', 'photo/', 'QvyPIy7AD4', '2019-07-29 09:50:50', '2019-07-29 09:50:50'),
+(7, 5, 'Magdalena Klein', 'johnson77@example.com', '2019-07-29 09:50:19', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '087735378815', 'photo/', 'fgRI0xTzkf', '2019-07-29 09:50:50', '2019-07-29 09:50:50'),
+(8, 5, 'Josephine Satterfield', 'jennings.carroll@example.net', '2019-07-29 09:50:40', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '088906192586', 'photo/', 'y5foPimEUm', '2019-07-29 09:50:51', '2019-07-29 09:50:51'),
+(9, 5, 'Dena Hoppe IV', 'enola.vonrueden@example.net', '2019-07-29 09:50:47', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '088401121601', 'photo/8eee41e71fee7b415354462da751b493.jpg', 'YYNJfsXk8G', '2019-07-29 09:50:51', '2019-07-29 09:50:51');
 
 --
 -- Indexes for dumped tables
@@ -621,13 +636,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT untuk tabel `oauth_clients`
 --
 ALTER TABLE `oauth_clients`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `oauth_personal_access_clients`
 --
 ALTER TABLE `oauth_personal_access_clients`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `orders`
