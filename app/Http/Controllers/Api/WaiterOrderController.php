@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\DetailOrder;
 use App\Enums\OrderStatus;
 use App\Http\Controllers\Controller;
 use DB;
