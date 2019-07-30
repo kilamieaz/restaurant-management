@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use App\User;
 
 class EmployeeRequest extends FormRequest
 {
@@ -23,15 +24,38 @@ class EmployeeRequest extends FormRequest
      */
     public function rules()
     {
-        $id = $this->request->get('id') ? ','.$this->request->get('id') : '';
+        $user = User::find($this->id);
 
-        return [
-            'role_id' => 'required',
-            'name' => 'required|string|max:50',
-            'email' => 'required|unique:users,email'.$id,
-            'password' => 'required',
-            'handphone' => 'required',
-            'photo' => 'image',
-        ];
+        switch ($this->method()) {
+            case 'GET':
+            case 'DELETE':
+            {
+                return [];
+            }
+            case 'POST':
+            {
+                return [
+                    'role_id' => 'required',
+                    'name' => 'required|string|max:50',
+                    'email'=>'required|email|unique:users,email',
+                    'password' => 'required',
+                    'handphone' => 'required',
+                    'photo' => 'image',
+                ];
+            }
+            case 'PUT':
+            case 'PATCH':
+            {
+                return [
+                    'role_id' => 'required',
+                    'name' => 'required|string|max:50',
+                    'email' => 'required|unique:users,email,'.$user->id,
+                    'password' => 'required',
+                    'handphone' => 'required',
+                    'photo' => 'image',
+                ];
+            }
+            default:break;
+        }
     }
 }

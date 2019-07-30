@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use App\User;
 
 class MemberRequest extends FormRequest
 {
@@ -23,13 +24,34 @@ class MemberRequest extends FormRequest
      */
     public function rules()
     {
-        $id = $this->request->get('id') ? ','.$this->request->get('id') : '';
+        $user = User::find($this->id);
 
-        return [
-            'name' => 'required|string|max:50',
-            'email' => 'required|unique:users,email'.$id,
-            'password' => 'required',
-            'handphone' => 'required',
-        ];
+        switch ($this->method()) {
+            case 'GET':
+            case 'DELETE':
+            {
+                return [];
+            }
+            case 'POST':
+            {
+                return [
+                    'name' => 'required|string|max:50',
+                    'email'=>'required|email|unique:users,email',
+                    'password' => 'required',
+                    'handphone' => 'required',
+                ];
+            }
+            case 'PUT':
+            case 'PATCH':
+            {
+                return [
+                    'name' => 'required|string|max:50',
+                    'email' => 'required|unique:users,email,'.$user->id,
+                    'password' => 'required',
+                    'handphone' => 'required',
+                ];
+            }
+            default:break;
+        }
     }
 }
