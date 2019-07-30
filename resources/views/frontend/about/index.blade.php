@@ -21,16 +21,17 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="about-us_img">
-                        <img class="lazyload" src="{{ asset('frontend/images/about-us/1.jpg')}}" alt="Munoz's About Us Image">
+                        <img class="lazyload" src="{{ asset('frontend/images/about-us/1.jpg')}}"
+                            alt="Munoz's About Us Image">
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="about-us_content">
-                        <h3 class="heading">About Munoz</h3>
+                        <h3 class="heading">About Restaurant Sarkom</h3>
                         <p class="short-desc">
-                            On the other hand, we denounce with righteous indignation and dislike men are so beguiled
-                            and demoralized by the charms of pleasure of the moment, so blinded by desire, that they
-                            cannot foresee the pain and trouble.
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit facilis voluptas atque
+                            dolores enim officia obcaecati dolorum quas labore! Quae nostrum inventore veniam. Sunt
+                            velit harum iste, nihil amet cum.
                         </p>
                     </div>
                 </div>
@@ -48,7 +49,8 @@
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="shipping-item">
                             <div class="shipping-icon">
-                                <img class="lazyload" src="{{ asset('frontend/images/about-us/shipping-icon/1.png') }}" alt="Munoz's Shipping Icon">
+                                <img class="lazyload" src="{{ asset('frontend/images/about-us/shipping-icon/1.png') }}"
+                                    alt="Munoz's Shipping Icon">
                             </div>
                             <div class="shipping-content">
                                 <h6>100% fresh food</h6>
@@ -58,7 +60,8 @@
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="shipping-item">
                             <div class="shipping-icon">
-                                <img class="lazyload" src="{{ asset('frontend/images/about-us/shipping-icon/2.png') }}" alt="Munoz's Shipping Icon">
+                                <img class="lazyload" src="{{ asset('frontend/images/about-us/shipping-icon/2.png') }}"
+                                    alt="Munoz's Shipping Icon">
                             </div>
                             <div class="shipping-content">
                                 <h6>Free Delivery</h6>
@@ -68,7 +71,8 @@
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="shipping-item">
                             <div class="shipping-icon">
-                                <img class="lazyload" src="{{ asset('frontend/images/about-us/shipping-icon/3.png') }}" alt="Munoz's Shipping Icon">
+                                <img class="lazyload" src="{{ asset('frontend/images/about-us/shipping-icon/3.png') }}"
+                                    alt="Munoz's Shipping Icon">
                             </div>
                             <div class="shipping-content">
                                 <h6>Award Winner</h6>
@@ -78,7 +82,8 @@
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="shipping-item">
                             <div class="shipping-icon">
-                                <img class="lazyload" src="{{ asset('frontend/images/about-us/shipping-icon/4.png')}}" alt="Munoz's Shipping Icon">
+                                <img class="lazyload" src="{{ asset('frontend/images/about-us/shipping-icon/4.png')}}"
+                                    alt="Munoz's Shipping Icon">
                             </div>
                             <div class="shipping-content">
                                 <h6>Fresh Farm Food</h6>
@@ -117,7 +122,8 @@
                     <div class="testimonial-slider slider-navigation_style-4">
                         <div class="testimonial-item">
                             <div class="testimonial-img">
-                                <img class="lazyload" src="{{ asset('frontend/images/about-us/testimonial/1.png') }}" alt="Munoz's Testimonial Image">
+                                <img class="lazyload" src="{{ asset('frontend/images/about-us/testimonial/1.png') }}"
+                                    alt="Munoz's Testimonial Image">
                             </div>
                             <div class="testimonial-content">
                                 <div class="quote-icon">
@@ -135,7 +141,8 @@
                         </div>
                         <div class="testimonial-item">
                             <div class="testimonial-img">
-                                <img class="lazyload" src="{{ asset('frontend/images/about-us/testimonial/2.png') }}" alt="Munoz's Testimonial Image">
+                                <img class="lazyload" src="{{ asset('frontend/images/about-us/testimonial/2.png') }}"
+                                    alt="Munoz's Testimonial Image">
                             </div>
                             <div class="testimonial-content">
                                 <div class="quote-icon">

@@ -17,7 +17,7 @@
                                 <li><a href="{{ route('frontend.about.index') }}">About Us</a></li>
                                 <li><a href="{{ route('frontend.contact.index') }}">Contact</a></li>
                                 <li><a href="{{ route('product.index') }}">All Product</a></li>
-                                <li><a href="{{ asset('app-debug.apk') }}">apk</a></li>
+                                <li><a href="{{ asset('app-debug.apk') }}">Apk</a></li>
                                 <li><a href="{{ route('login') }}">Admin</a></li>
                             </ul>
                         </nav>
@@ -61,6 +61,8 @@
                                 <li><a href="{{ route('frontend.about.index') }}">About Us</a></li>
                                 <li><a href="{{ route('frontend.contact.index') }}">Contact</a></li>
                                 <li><a href="{{ route('product.index') }}">All Product</a></li>
+                                <li><a href="{{ asset('app-debug.apk') }}">Apk</a></li>
+                                <li><a href="{{ route('login') }}">Admin</a></li>
                             </ul>
                         </nav>
                     </div>

@@ -30,17 +30,17 @@
                         claram anteposuerit litterarum formas human.</p>
                     <div class="single-contact-block">
                         <h4><i class="fa fa-fax"></i> Address</h4>
-                        <p>123 Main Street, Anytown, CA 12345 – USA</p>
+                        <p>INTRA Training Center, RT.1/RW.1, Kedoya Utara, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta</p>
                     </div>
                     <div class="single-contact-block">
                         <h4><i class="fa fa-phone"></i> Phone</h4>
-                        <p>Mobile: (08) 123 456 789</p>
-                        <p>Hotline: 1009 678 456</p>
+                        <p>Mobile: (08) xxx xxx xxx</p>
+                        <p>Hotline: 1009 xxx xxx</p>
                     </div>
                     <div class="single-contact-block last-child">
                         <h4><i class="fa fa-envelope"></i> Email</h4>
-                        <p>yourmail@domain.com</p>
-                        <p>support@hastech.company</p>
+                        <p>im.kilamieaz@gmail.com</p>
+                        <p>support@sarkom.restaurant</p>
                     </div>
                 </div>
             </div>
