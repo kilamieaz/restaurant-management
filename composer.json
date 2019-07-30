@@ -19,8 +19,8 @@
         "laravel/tinker": "^1.0",
         "predis/predis": "^1.1",
         "pusher/pusher-php-server": "^4.0",
-        "renatomarinho/laravel-page-speed": "^1.8",
-        "fzaninotto/faker": "^1.4"
+        "fzaninotto/faker": "^1.4",
+        "renatomarinho/laravel-page-speed": "^1.8"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.2",
