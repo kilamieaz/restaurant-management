@@ -32,7 +32,8 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#mobileMenu" class="mobile-menu_btn toolbar-btn color--white d-lg-none d-block">
+                                <a href="#mobileMenu"
+                                    class="mobile-menu_btn toolbar-btn color--white d-lg-none d-block">
                                     <i class="ion-navicon"></i>
                                 </a>
                             </li>
@@ -68,8 +69,7 @@
                     <div class="header-right_area">
                         <ul>
                             <li>
-                                <a href="#offcanvasMenu"
-                                    class="menu-btn toolbar-btn color--white d-none d-lg-block">
+                                <a href="#offcanvasMenu" class="menu-btn toolbar-btn color--white d-none d-lg-block">
                                     <i class="ion-navicon"></i>
                                 </a>
                             </li>
@@ -99,6 +99,21 @@
                     <ul class="mobile-menu">
                         <li class="menu-item-has-children active"><a href="{{route('frontend.home.index')}}"><span
                                     class="mm-text">Home</span></a>
+                        </li>
+                        <li class="menu-item-has-children active"><a href="{{ route('frontend.about.index') }}"><span
+                                    class="mm-text">About Us</span></a>
+                        </li>
+                        <li class="menu-item-has-children active"><a href="{{ route('frontend.contact.index') }}"><span
+                                    class="mm-text">Contact</span></a>
+                        </li>
+                        <li class="menu-item-has-children active"><a href="{{ route('product.index') }}"><span
+                                    class="mm-text">All Product</span></a>
+                        </li>
+                        <li class="menu-item-has-children active"><a href="{{ asset('app-release.apk') }}"><span
+                                    class="mm-text">Apk</span></a>
+                        </li>
+                        <li class="menu-item-has-children active"><a href="{{ route('login') }}"><span
+                                    class="mm-text">Admin</span></a>
                         </li>
                     </ul>
                 </nav>
