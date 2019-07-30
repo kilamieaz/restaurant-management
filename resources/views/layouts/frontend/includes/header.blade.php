@@ -100,19 +100,19 @@
                         <li class="menu-item-has-children active"><a href="{{route('frontend.home.index')}}"><span
                                     class="mm-text">Home</span></a>
                         </li>
-                        <li class="menu-item-has-children active"><a href="{{ route('frontend.about.index') }}"><span
+                        <li class="menu-item-has-children"><a href="{{ route('frontend.about.index') }}"><span
                                     class="mm-text">About Us</span></a>
                         </li>
-                        <li class="menu-item-has-children active"><a href="{{ route('frontend.contact.index') }}"><span
+                        <li class="menu-item-has-children"><a href="{{ route('frontend.contact.index') }}"><span
                                     class="mm-text">Contact</span></a>
                         </li>
-                        <li class="menu-item-has-children active"><a href="{{ route('product.index') }}"><span
+                        <li class="menu-item-has-children"><a href="{{ route('product.index') }}"><span
                                     class="mm-text">All Product</span></a>
                         </li>
-                        <li class="menu-item-has-children active"><a href="{{ asset('app-release.apk') }}"><span
+                        <li class="menu-item-has-children"><a href="{{ asset('app-release.apk') }}"><span
                                     class="mm-text">Apk</span></a>
                         </li>
-                        <li class="menu-item-has-children active"><a href="{{ route('login') }}"><span
+                        <li class="menu-item-has-children"><a href="{{ route('login') }}"><span
                                     class="mm-text">Admin</span></a>
                         </li>
                     </ul>
