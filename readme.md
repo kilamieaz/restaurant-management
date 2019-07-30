@@ -12,6 +12,7 @@
 - php artisan:passport install
 - npm install
 - npm run dev
+- php artisan storage:link
 - composer dump autoload
 - php artisan config:cache
 - php artisan route:cache
