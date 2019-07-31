@@ -6,6 +6,7 @@ use App\Enums\UserRole;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\MemberRequest;
 use App\User;
+use Illuminate\Support\Facades\Hash;
 
 class MemberController extends Controller
 {
