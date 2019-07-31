@@ -30,6 +30,8 @@ class MemberController extends Controller
     public function update(MemberRequest $request, User $member)
     {
         $member->update($request->all());
+        $member['password'] = Hash::make($request->password);
+        $member->save();
 
         return json_encode(['member' => $member]);
     }

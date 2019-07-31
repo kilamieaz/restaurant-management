@@ -39,6 +39,7 @@ class EmployeeController extends Controller
     public function update(EmployeeRequest $request, User $employee)
     {
         $data = $request->all();
+        $data['password'] = Hash::make($request->password);
         if ($request->hasFile('photo')) {
             Storage::disk('public')->delete($employee->photo);
             $data['photo'] = $request->file('photo')->store('public/photo');
@@ -47,7 +48,8 @@ class EmployeeController extends Controller
             return json_encode(['employee' => $employee]);
         }
         $employee->update($request->except('photo'));
-
+        $employee['password'] = Hash::make($request->password);
+        $employee->save();
         return json_encode(['employee' => $employee]);
     }
 
