@@ -9,7 +9,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-xl-7 col-lg-8 d-none d-lg-block position-static">
+                <div class="col-lg-9 d-none d-lg-block position-static">
                     <div class="main-menu_area">
                         <nav class="main_nav">
                             <ul>
@@ -18,12 +18,13 @@
                                 <li><a href="{{ route('frontend.contact.index') }}">Contact</a></li>
                                 <li><a href="{{ route('product.index') }}">All Product</a></li>
                                 <li><a href="{{ asset('app-debug.apk') }}">Apk</a></li>
+                                <li><a href="{{ asset('Documentation.pdf') }}" target="_blank">Documentation</a></li>
                                 <li><a href="{{ route('login') }}">Admin</a></li>
                             </ul>
                         </nav>
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-2 col-7">
+                <div class="col-lg-1 col-7">
                     <div class="header-right_area">
                         <ul>
                             <li>
@@ -53,7 +54,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-xl-7 col-lg-8 d-none d-lg-block position-static">
+                <div class="col-lg-9 d-none d-lg-block position-static">
                     <div class="main-menu_area">
                         <nav class="main_nav">
                             <ul>
@@ -62,12 +63,13 @@
                                 <li><a href="{{ route('frontend.contact.index') }}">Contact</a></li>
                                 <li><a href="{{ route('product.index') }}">All Product</a></li>
                                 <li><a href="{{ asset('app-debug.apk') }}">Apk</a></li>
+                                <li><a href="{{ asset('Documentation.pdf') }}" target="_blank">Documentation</a></li>
                                 <li><a href="{{ route('login') }}">Admin</a></li>
                             </ul>
                         </nav>
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-2 col-7">
+                <div class="col-lg-1 col-7">
                     <div class="header-right_area">
                         <ul>
                             <li>
@@ -113,6 +115,9 @@
                         </li>
                         <li class="menu-item-has-children"><a href="{{ asset('app-debug.apk') }}"><span
                                     class="mm-text">Apk</span></a>
+                        </li>
+                        <li class="menu-item-has-children"><a href="{{ asset('Documentation.pdf') }}" target="_blank"><span
+                            class="mm-text">Documentation</span></a>
                         </li>
                         <li class="menu-item-has-children"><a href="{{ route('login') }}"><span
                                     class="mm-text">Admin</span></a>
