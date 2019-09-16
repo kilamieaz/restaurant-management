@@ -2,14 +2,16 @@
 
 use Illuminate\Support\Str;
 
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+if(getenv("CLEARDB_DATABASE_URL")) {
     $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-
-    $host = $url["host"];
-    $username = $url["user"];
-    $password = $url["pass"];
-    $database = substr($url["path"], 1);
+    putenv('DB_HOST='.$url['host']);
+    putenv('DB_USERNAME='.$url['user']);
+    putenv('DB_DATABASE='.substr($url["path"], 1));
+    putenv('DB_PASSWORD='.$url['pass']);
+}
 return [
-    
+
     /*
     |--------------------------------------------------------------------------
     | Default Database Connection Name
@@ -52,11 +54,11 @@ return [
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', $host),
+            'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', $database),
-            'username' => env('DB_USERNAME', $username),
-            'password' => env('DB_PASSWORD', $password),
+            'database' => env('DB_DATABASE', 'forge'),
+            'username' => env('DB_USERNAME', 'forge'),
+            'password' => env('DB_PASSWORD', ''),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
