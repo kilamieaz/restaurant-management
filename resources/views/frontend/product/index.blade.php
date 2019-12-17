@@ -11,7 +11,8 @@
                             <div class="product-content">
                                 <div class="product-desc_info">
                                     <h2 class="product-name">
-                                        <a href="{{ route('product.show', $menuRandom->id) }}">{{$menuRandom->name}}.</a>
+                                        <a
+                                            href="{{ route('product.show', $menuRandom->id) }}">{{$menuRandom->name}}.</a>
                                     </h2>
                                     <p class="product-desc">
                                         {{$menuRandom->description}}
@@ -47,11 +48,12 @@
                         <div class="single-product">
                             <div class="product-img">
                                 <a href="{{ route('product.show', $menu->id) }}">
-                                    <img class="lazyload primary-img" src="{{ Storage::url($menu->photo) }}"
+                                    <img class="lazyload primary-img" src="{{ $menu->photo ? Storage::url($menu->photo) : "https://via.placeholder.com/800/303030/FFFFFF/?text=menu"}}"
                                         alt="Munoz's Product Image">
-                                    <img class="lazyload secondary-img" src="{{ Storage::url($menu->photo) }}"
+                                    <img class="lazyload secondary-img" src="{{ $menu->photo ? Storage::url($menu->photo) : "https://via.placeholder.com/800/303030/FFFFFF/?text=example"}}"
                                         alt="Munoz's Product Image">
                                 </a>
+
                                 <span class="sticker">New</span>
                             </div>
                             <div class="product-content">

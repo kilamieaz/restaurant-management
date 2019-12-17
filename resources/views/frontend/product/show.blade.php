@@ -32,31 +32,34 @@
                                                                         "asNavFor": ".sp-img_slider-nav"
                                                                         }'>
                             <div class="single-slide red">
-                                <a class="popup-img venobox vbox-item" href="{{ Storage::url($product->photo) }}"
+                                <a class="popup-img venobox vbox-item"
+                                    href=" {{ $product->photo ? Storage::url($product->photo) : "https://via.placeholder.com/800/303030/FFFFFF/?text=menu_img_1"}}"
                                     data-gall="myGallery">
                                     <i class="fa fa-search"></i>
-                                    <img src="{{ Storage::url($product->photo) }}" alt="Munoz's Product Image">
+                                    <img src="{{ $product->photo ? Storage::url($product->photo) : "https://via.placeholder.com/800/303030/FFFFFF/?text=menu_img_1"}}" alt="Munoz's Product Image">
                                 </a>
                             </div>
                             <div class="single-slide  orange">
-                                <a class="popup-img venobox vbox-item" href="{{ Storage::url($product->photo) }}"
+                                <a class="popup-img venobox vbox-item" href=" {{ $product->photo ? Storage::url($product->photo) : "https://via.placeholder.com/800/303030/FFFFFF/?text=menu_img_1"}}"
                                     data-gall="myGallery">
                                     <i class="fa fa-search"></i>
-                                    <img src="{{ Storage::url($product->photo) }}" alt="Munoz's Product Image">
+                                    <img src="{{ $product->photo ? Storage::url($product->photo) : "https://via.placeholder.com/800/303030/FFFFFF/?text=menu_img_2"}}" alt="Munoz's Product Image">
+
                                 </a>
                             </div>
                             <div class="single-slide brown">
-                                <a class="popup-img venobox vbox-item" href="{{ Storage::url($product->photo) }}"
+                                <a class="popup-img venobox vbox-item" href=" {{ $product->photo ? Storage::url($product->photo) : "https://via.placeholder.com/800/303030/FFFFFF/?text=menu_img_2"}}"
                                     data-gall="myGallery">
                                     <i class="fa fa-search"></i>
-                                    <img src="{{ Storage::url($product->photo) }}" alt="Munoz's Product Image">
+                                    <img src="{{ $product->photo ? Storage::url($product->photo) : "https://via.placeholder.com/800/303030/FFFFFF/?text=menu_img_3"}}" alt="Munoz's Product Image">
+
                                 </a>
                             </div>
                             <div class="single-slide umber">
-                                <a class="popup-img venobox vbox-item" href="{{ Storage::url($product->photo) }}"
+                                <a class="popup-img venobox vbox-item" href=" {{ $product->photo ? Storage::url($product->photo) : "https://via.placeholder.com/800/303030/FFFFFF/?text=menu_img_3"}}"
                                     data-gall="myGallery">
                                     <i class="fa fa-search"></i>
-                                    <img src="{{ Storage::url($product->photo) }}" alt="Munoz's Product Image">
+                                    <img src="{{ $product->photo ? Storage::url($product->photo) : "https://via.placeholder.com/800/303030/FFFFFF/?text=menu_img_4"}}" alt="Munoz's Product Image">
                                 </a>
                             </div>
                         </div>
@@ -71,16 +74,16 @@
                                                                                                 {"breakpoint":321, "settings": {"slidesToShow": 2}}
                                                                                             ]'>
                             <div class="single-slide red">
-                                <img src="{{ Storage::url($product->photo) }}" alt="Munoz's Product Thumnail">
+                                <img src="{{ $product->photo ? Storage::url($product->photo) : "https://via.placeholder.com/800/303030/FFFFFF/?text=menu_img_1"}}" alt="Munoz's Product Thumnail">
                             </div>
                             <div class="single-slide orange">
-                                <img src="{{ Storage::url($product->photo) }}" alt="Munoz's Product Thumnail">
+                                <img src="{{ $product->photo ? Storage::url($product->photo) : "https://via.placeholder.com/800/303030/FFFFFF/?text=menu_img_2"}}" alt="Munoz's Product Thumnail">
                             </div>
                             <div class="single-slide brown">
-                                <img src="{{ Storage::url($product->photo) }}" alt="Munoz's Product Thumnail">
+                                <img src="{{ $product->photo ? Storage::url($product->photo) : "https://via.placeholder.com/800/303030/FFFFFF/?text=menu_img_3"}}" alt="Munoz's Product Thumnail">
                             </div>
                             <div class="single-slide umber">
-                                <img src="{{ Storage::url($product->photo) }}" alt="Munoz's Product Thumnail">
+                                <img src="{{ $product->photo ? Storage::url($product->photo) : "https://via.placeholder.com/800/303030/FFFFFF/?text=menu_img_4"}}" alt="Munoz's Product Thumnail">
                             </div>
                         </div>
                     </div>
@@ -148,19 +151,21 @@
                         <div class="single-product">
                             <div class="product-img">
                                 <a href="{{ route('product.show', $menu->id) }}">
-                                    <img class="primary-img" src="{{ Storage::url($menu->photo) }}"
+                                    <img class="lazyload primary-img" src="{{ $menu->photo ? Storage::url($menu->photo) : "https://via.placeholder.com/800/303030/FFFFFF/?text=menu"}}"
                                         alt="Munoz's Product Image">
-                                    <img class="secondary-img" src="{{ Storage::url($menu->photo) }}"
+                                    <img class="lazyload secondary-img" src="{{ $menu->photo ? Storage::url($menu->photo) : "https://via.placeholder.com/800/303030/FFFFFF/?text=example"}}"
                                         alt="Munoz's Product Image">
                                 </a>
                                 <span class="sticker">New</span>
                             </div>
                             <div class="product-content">
                                 <div class="product-desc_info">
-                                    <div class="product-category"><a href="javascript:void(0)">{{ $menu->category->name }}</a></div>
-                                    <h3 class="product-name"><a href="{{ route('product.show', $menu->id) }}">{{ $menu->name }}</a></h3>
+                                    <div class="product-category"><a
+                                            href="javascript:void(0)">{{ $menu->category->name }}</a></div>
+                                    <h3 class="product-name"><a
+                                            href="{{ route('product.show', $menu->id) }}">{{ $menu->name }}</a></h3>
                                     <div class="price-box">
-                                    <span class="new-price">Rp {{ $menu->price }}</span>
+                                        <span class="new-price">Rp {{ $menu->price }}</span>
                                     </div>
                                 </div>
                             </div>

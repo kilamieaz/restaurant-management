@@ -23,7 +23,7 @@
     <script type="text/javascript" src="{{ asset('js/lazyload.js') }}"></script>
 </head>
 
-<body class="header-fixed sidebar-static sidebar-dark header-light" id="body">
+<body class="header-fixed sidebar-fixed sidebar-dark header-light" id="body">
     <script>
         NProgress.configure({
             showSpinner: false
