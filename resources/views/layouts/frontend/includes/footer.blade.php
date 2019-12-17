@@ -144,28 +144,10 @@
                     <div class="footer-tag_links">
                         <h3 class="footer-tag_title">Tags:</h3>
                         <ul>
-                            <li><a href="javascript:void(0)">Minimal eCommerce</a></li>
-                            <li><a href="javascript:void(0)">Marketing</a></li>
-                            <li><a href="javascript:void(0)">User Exprience</a></li>
-                            <li><a href="javascript:void(0)">Ali Express</a></li>
                             <li><a href="javascript:void(0)">Web</a></li>
-                            <li><a href="javascript:void(0)">Digital Expo</a></li>
-                            <li><a href="javascript:void(0)">Web Search</a></li>
-                            <li><a href="javascript:void(0)">Affiliate</a></li>
-                            <li><a href="javascript:void(0)">UCWeb</a></li>
-                            <li><a href="javascript:void(0)">Support</a></li>
-                            <li><a href="javascript:void(0)">Theme</a></li>
-                            <li><a href="javascript:void(0)">Best Queality</a></li>
                             <li><a href="javascript:void(0)">Mobile</a></li>
-                            <li><a href="javascript:void(0)">24 Support</a></li>
-                            <li><a href="javascript:void(0)">Ali Express</a></li>
-                            <li><a href="javascript:void(0)">Web</a></li>
                             <li><a href="javascript:void(0)">Laptop</a></li>
                             <li><a href="javascript:void(0)">Web Search</a></li>
-                            <li><a href="javascript:void(0)">Affiliate</a></li>
-                            <li><a href="javascript:void(0)">Photoshop</a></li>
-                            <li><a href="javascript:void(0)">Support</a></li>
-                            <li><a href="javascript:void(0)">Theme.</a></li>
                         </ul>
                     </div>
                 </div>
