@@ -9,7 +9,7 @@ class MemberDataTableController extends Controller
 {
     public function index()
     {
-        $users = User::all();
+        $users = User::member();
         $data = [];
         foreach ($users as $index => $list) {
             $row = [];
@@ -18,8 +18,8 @@ class MemberDataTableController extends Controller
             $row[] = $list->email;
             $row[] = $list->handphone;
             $row[] = '<div class="text-center"><div class="btn-group">
-               <button type="button" onclick="editForm('.$list->id.')" class="btn btn-primary btn-sm"><i class="mdi mdi-pencil-box-outline"></i></button>
-               <button type="button" onclick="deleteData('.$list->id.')" class="btn btn-danger btn-sm"><i class="mdi mdi-trash-can-outline"></i></button></div></div>';
+               <button type="button" onclick="editForm(' . $list->id . ')" class="btn btn-primary btn-sm"><i class="mdi mdi-pencil-box-outline"></i></button>
+               <button type="button" onclick="deleteData(' . $list->id . ')" class="btn btn-danger btn-sm"><i class="mdi mdi-trash-can-outline"></i></button></div></div>';
             $data[] = $row;
         }
 
