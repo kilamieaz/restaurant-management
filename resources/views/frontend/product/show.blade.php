@@ -33,33 +33,40 @@
                                                                         }'>
                             <div class="single-slide red">
                                 <a class="popup-img venobox vbox-item"
-                                    href=" {{ $product->photo ? Storage::url($product->photo) : "https://via.placeholder.com/800/303030/FFFFFF/?text=menu_img_1"}}"
+                                    href=" {{ Storage::disk('public')->exists($product->photo) ? Storage::url($product->photo) : asset('image/image.png')}}"
                                     data-gall="myGallery">
                                     <i class="fa fa-search"></i>
-                                    <img src="{{ $product->photo ? Storage::url($product->photo) : "https://via.placeholder.com/800/303030/FFFFFF/?text=menu_img_1"}}" alt="Munoz's Product Image">
+                                    <img src="{{ Storage::disk('public')->exists($product->photo) ? Storage::url($product->photo) : asset('image/image.png')}}"
+                                        alt="Munoz's Product Image">
                                 </a>
                             </div>
                             <div class="single-slide  orange">
-                                <a class="popup-img venobox vbox-item" href=" {{ $product->photo ? Storage::url($product->photo) : "https://via.placeholder.com/800/303030/FFFFFF/?text=menu_img_1"}}"
+                                <a class="popup-img venobox vbox-item"
+                                    href=" {{ Storage::disk('public')->exists($product->photo) ? Storage::url($product->photo) : asset('image/image2.png')}}"
                                     data-gall="myGallery">
                                     <i class="fa fa-search"></i>
-                                    <img src="{{ $product->photo ? Storage::url($product->photo) : "https://via.placeholder.com/800/303030/FFFFFF/?text=menu_img_2"}}" alt="Munoz's Product Image">
+                                    <img src="{{ Storage::disk('public')->exists($product->photo) ? Storage::url($product->photo) : asset('image/image2.png')}}"
+                                        alt="Munoz's Product Image">
 
                                 </a>
                             </div>
                             <div class="single-slide brown">
-                                <a class="popup-img venobox vbox-item" href=" {{ $product->photo ? Storage::url($product->photo) : "https://via.placeholder.com/800/303030/FFFFFF/?text=menu_img_2"}}"
+                                <a class="popup-img venobox vbox-item"
+                                    href=" {{ Storage::disk('public')->exists($product->photo) ? Storage::url($product->photo) : asset('image/image3.png')}}"
                                     data-gall="myGallery">
                                     <i class="fa fa-search"></i>
-                                    <img src="{{ $product->photo ? Storage::url($product->photo) : "https://via.placeholder.com/800/303030/FFFFFF/?text=menu_img_3"}}" alt="Munoz's Product Image">
+                                    <img src="{{ Storage::disk('public')->exists($product->photo) ? Storage::url($product->photo) : asset('image/image3.png')}}"
+                                        alt="Munoz's Product Image">
 
                                 </a>
                             </div>
                             <div class="single-slide umber">
-                                <a class="popup-img venobox vbox-item" href=" {{ $product->photo ? Storage::url($product->photo) : "https://via.placeholder.com/800/303030/FFFFFF/?text=menu_img_3"}}"
+                                <a class="popup-img venobox vbox-item"
+                                    href=" {{ Storage::disk('public')->exists($product->photo) ? Storage::url($product->photo) : asset('image/image4.png')}}"
                                     data-gall="myGallery">
                                     <i class="fa fa-search"></i>
-                                    <img src="{{ $product->photo ? Storage::url($product->photo) : "https://via.placeholder.com/800/303030/FFFFFF/?text=menu_img_4"}}" alt="Munoz's Product Image">
+                                    <img src="{{ Storage::disk('public')->exists($product->photo) ? Storage::url($product->photo) : asset('image/image4.png')}}"
+                                        alt="Munoz's Product Image">
                                 </a>
                             </div>
                         </div>
@@ -74,16 +81,20 @@
                                                                                                 {"breakpoint":321, "settings": {"slidesToShow": 2}}
                                                                                             ]'>
                             <div class="single-slide red">
-                                <img src="{{ $product->photo ? Storage::url($product->photo) : "https://via.placeholder.com/800/303030/FFFFFF/?text=menu_img_1"}}" alt="Munoz's Product Thumnail">
+                                <img src="{{ Storage::disk('public')->exists($product->photo) ? Storage::url($product->photo) : asset('image/image.png')}}"
+                                    alt="Munoz's Product Thumnail">
                             </div>
                             <div class="single-slide orange">
-                                <img src="{{ $product->photo ? Storage::url($product->photo) : "https://via.placeholder.com/800/303030/FFFFFF/?text=menu_img_2"}}" alt="Munoz's Product Thumnail">
+                                <img src="{{ Storage::disk('public')->exists($product->photo) ? Storage::url($product->photo) : asset('image/image2.png')}}"
+                                    alt="Munoz's Product Thumnail">
                             </div>
                             <div class="single-slide brown">
-                                <img src="{{ $product->photo ? Storage::url($product->photo) : "https://via.placeholder.com/800/303030/FFFFFF/?text=menu_img_3"}}" alt="Munoz's Product Thumnail">
+                                <img src="{{ Storage::disk('public')->exists($product->photo) ? Storage::url($product->photo) : asset('image/image3.png')}}"
+                                    alt="Munoz's Product Thumnail">
                             </div>
                             <div class="single-slide umber">
-                                <img src="{{ $product->photo ? Storage::url($product->photo) : "https://via.placeholder.com/800/303030/FFFFFF/?text=menu_img_4"}}" alt="Munoz's Product Thumnail">
+                                <img src="{{ Storage::disk('public')->exists($product->photo) ? Storage::url($product->photo) : asset('image/image4.png')}}"
+                                    alt="Munoz's Product Thumnail">
                             </div>
                         </div>
                     </div>
@@ -151,9 +162,11 @@
                         <div class="single-product">
                             <div class="product-img">
                                 <a href="{{ route('product.show', $menu->id) }}">
-                                    <img class="lazyload primary-img" src="{{ $menu->photo ? Storage::url($menu->photo) : "https://via.placeholder.com/800/303030/FFFFFF/?text=menu"}}"
+                                    <img class="lazyload primary-img"
+                                        src="{{ Storage::disk('public')->exists($menu->photo) ? Storage::url($menu->photo) : asset('image/image.png')}}"
                                         alt="Munoz's Product Image">
-                                    <img class="lazyload secondary-img" src="{{ $menu->photo ? Storage::url($menu->photo) : "https://via.placeholder.com/800/303030/FFFFFF/?text=example"}}"
+                                    <img class="lazyload secondary-img"
+                                        src="{{ Storage::disk('public')->exists($menu->photo) ? Storage::url($menu->photo) : asset('image/image2.png')}}"
                                         alt="Munoz's Product Image">
                                 </a>
                                 <span class="sticker">New</span>

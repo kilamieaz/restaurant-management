@@ -47,9 +47,9 @@
                         <div class="single-product">
                             <div class="product-img">
                                 <a href="{{ route('product.show', $menu->id) }}">
-                                    <img class="lazyload primary-img" src="{{ $menu->photo ? Storage::url($menu->photo) : "https://via.placeholder.com/800/303030/FFFFFF/?text=menu"}}"
+                                    <img class="lazyload primary-img" src="{{ Storage::disk('public')->exists($menu->photo) ? Storage::url($menu->photo) : asset('image/image.png')}}"
                                         alt="Munoz's Product Image">
-                                    <img class="lazyload secondary-img" src="{{ $menu->photo ? Storage::url($menu->photo) : "https://via.placeholder.com/800/303030/FFFFFF/?text=example"}}"
+                                    <img class="lazyload secondary-img" src="{{ Storage::disk('public')->exists($menu->photo) ? Storage::url($menu->photo) : asset('image/image2.png')}}"
                                         alt="Munoz's Product Image">
                                     <span class="sticker">New</span>
                             </div>
