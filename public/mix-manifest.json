@@ -8,5 +8,7 @@
     "/js/moment.js": "/js/moment.js",
     "/js/nprogress.js": "/js/nprogress.js",
     "/js/lazyload.js": "/js/lazyload.js",
-    "/css/nprogress.css": "/css/nprogress.css"
+    "/css/nprogress.css": "/css/nprogress.css",
+    "/frontend/css/frontend.css": "/frontend/css/frontend.css",
+    "/frontend/js/frontend.js": "/frontend/js/frontend.js"
 }
