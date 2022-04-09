@@ -35,7 +35,7 @@
         "datatables.net-responsive": "^2.2.3",
         "laravel-echo": "^1.5.4",
         "lazyload": "^2.0.0-rc.2",
-        "moment": "^2.24.0",
+        "moment": "^2.29.2",
         "nprogress": "^0.2.0",
         "pusher-js": "^4.4.0",
         "select2": "^4.0.7",
